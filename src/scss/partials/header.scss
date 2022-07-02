@@ -2,13 +2,12 @@
 @use '../global/mixins.scss' as *;
 
 .header {
-  background: $white;
   padding: 24px 0;
-  // border-bottom: $base-border;
+  &__wrapper {
+    width: 100%;
+    padding: 0 1.3rem;
+  }
   &__row {
     @include flex($justify: space-between);
   }
-}
-
-.nav {
 }

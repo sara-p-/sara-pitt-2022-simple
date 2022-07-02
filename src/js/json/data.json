@@ -1,14 +1,14 @@
 {
-  "hover-colors": [
-    "hover--color0",
-    "hover--color1",
-    "hover--color2",
-    "hover--color3",
-    "hover--color4",
-    "hover--color5",
-    "hover--color6",
-    "hover--color7",
-    "hover--color8",
-    "hover--color9"
+  "letter-colors": [
+    "color0",
+    "color1",
+    "color2",
+    "color3",
+    "color4",
+    "color5",
+    "color6",
+    "color7",
+    "color8",
+    "color9"
   ]
 }

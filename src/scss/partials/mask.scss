@@ -1,0 +1,20 @@
+@use '../global/variables.scss' as *;
+@use '../global/mixins.scss' as *;
+
+.ghost {
+  @include absolute;
+  height: auto;
+  background: $black;
+  pointer-events: none;
+}
+
+#svg-circle {
+  background: transparent;
+}
+
+.mask-target {
+  mask: url('../../images/circle.svg');
+  mask-repeat: no-repeat;
+  mask-size: 200px;
+  mask-position: var(--mask-position);
+}

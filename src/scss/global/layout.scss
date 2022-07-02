@@ -16,15 +16,11 @@ html {
 
 html,
 body {
-  height: 100%;
+  height: auto;
   width: 100%;
   margin: 0;
   padding: 0;
   background: $white;
-}
-
-main {
-  // padding-top: 75px;
 }
 
 .section {
@@ -62,17 +58,14 @@ main {
   &__col {
     width: 100%;
     max-width: 800px;
-  }
-  // &__content {
-  //   max-width: 500px;
-  //   margin: auto;
-  // }
-}
-
-.header,
-.footer {
-  &__wrapper {
-    @extend .section__wrapper;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -168,11 +161,3 @@ main {
 }
 
 // ********************* BORDER MODIFIERS ********************** //
-.border {
-  &--bottom {
-    border-bottom: 4rem solid $black;
-    &--none {
-      border-bottom: none;
-    }
-  }
-}

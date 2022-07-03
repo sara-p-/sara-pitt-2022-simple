@@ -1,9 +1,9 @@
 import Data from '../json/data.json'
 import { setColors, insertSpans } from './helpers'
 
-export default function rainbowLetters() {
+export function rainbowLetters() {
   // Alright, let's grab all of the elements that have the relavent class, and stuff them into an array
-  const elementArray = document.querySelectorAll('.rainbow-letters')
+  const elementArray = document.querySelectorAll('.letters')
 
   // Now we need to do a few things with each element in the array:
   // 1. Grab all of the characters in the element
@@ -15,8 +15,8 @@ export default function rainbowLetters() {
 
   // Just to recap, we have just replaced the innerText of all the elements (with the class 'rainbow-letters') with a span around each character. The spans that surround characters with letters/punctuation get a class called 'rainbow-letter'.
   // Now we can create a new array of all of every span.rainbow-letter, and assign them a color class!
-  const spanArray = document.querySelectorAll('span.rainbow-letter')
+  const spanArray = document.querySelectorAll('span.letter')
 
   // Oh shit, here we go. Last part! Let's loop through our array of spans, and add the color classes with this nifty % operator (which I only mildy understand. because math.)
-  setColors(spanArray, 'color--')
+  setColors(spanArray, 'color--', 'colorsNuetral')
 }

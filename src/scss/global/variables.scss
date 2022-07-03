@@ -3,11 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 // Fonts
 $base-font-family: 'Poppins', sans-serif;
-$heading-font-family: 'Poppins', sans-serif;
+$heading-font-family: $base-font-family;
 
 // Font Size
 $base-font-size: 24px;
-// $desktop-font-size: 16px;
 $tablet-font-size: 16px;
 $mobile-font-size: 12px;
 
@@ -43,8 +42,9 @@ $positions: top, right, bottom, left;
   --mask-position: center;
   --text-shadow: -3px 2px 5px #363636;
   --box-shadow: 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
+  --box-shadow-inset: inset 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
 
-  // Colors
+  // Colors - Rainbow
   --color9: #fbf8ccff;
   --color8: #fde4cfff;
   --color7: #ffcfd2ff;
@@ -56,15 +56,31 @@ $positions: top, right, bottom, left;
   --color1: #98f5e1ff;
   --color0: #b9fbc0ff;
   --black: #363636;
-  --grey-white: #edede9;
+  --rainbow-grey-white: #f2f2f2;
   --white: #ffffff;
+
+  // Colors - Neutrals
+  --neutral-color0: #d6ccc2;
+  --neutral-color1: #dddddd;
+  --neutral-color2: #cccccc;
+  --neutral-color3: #bbbbbb;
+  --neutral-color4: #aaaaaa;
+  --brown: #6f5e53;
+  --pink: #e0afa0;
+  --neutral-grey-white: #edede9;
+
+  // General
   --blue: blue;
   --red: red;
 }
 
 $black: var(--black);
 $white: var(--white);
-$grey-white: var(--grey-white);
+$neutral--grey-white: var(--neutral-grey-white);
+$rainbow--grey-white: var(--rainbow-grey-white);
+$brown: var(--brown);
+$pink: var(--pink);
+
 $color0: var(--color0);
 $color1: var(--color1);
 $color2: var(--color2);
@@ -75,23 +91,36 @@ $color6: var(--color6);
 $color7: var(--color7);
 $color8: var(--color8);
 $color9: var(--color9);
+
+$neutral0: var(--neutral-color0);
+$neutral1: var(--neutral-color1);
+$neutral2: var(--neutral-color2);
+$neutral3: var(--neutral-color3);
+$neutral4: var(--neutral-color4);
+$neutral5: var(--neutral-color5);
+
 $blue: var(--blue);
 $red: var(--red);
 
 // Font Colors
-$base-font-color: $black;
+$default-font-color--neutral: $brown;
+$default-font-color--rainbow: $black;
 
 // Border
-$base-border-color: $black;
-$base-border: 2px solid $base-border-color;
-$dark-border: 2px solid $white;
+$default-base-border--rainbow: 2px solid $default-font-color--rainbow;
+$default-base-border--neutral: 2px solid $default-font-color--neutral;
 
 // Box Shadow
 // $box-shadow: 0px 0px 5px 0px $black;
 $box-shadow: var(--box-shadow);
+$box-shadow-inset: var(--box-shadow-inset);
+
+// Text Shadow
+$text-shadow: var(--text-shadow);
 
 // Background Colors
-$viewport-background-color: $white;
+$default-background-color--neutral: $neutral--grey-white;
+$default-background-color--rainbow: $rainbow--grey-white;
 
 // Focus
 $focus-outline-color: $blue;

@@ -9,7 +9,6 @@
 }
 
 html {
-  background-color: $viewport-background-color;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -20,7 +19,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background: $white;
+  // background: $grey-white;
 }
 
 .section {
@@ -28,7 +27,6 @@ body {
   position: relative;
   width: 100%;
   margin-bottom: 0;
-  border-bottom: $base-border;
   padding: 0 0 1rem 0;
   &--list {
     @extend .section;
@@ -123,19 +121,6 @@ body {
   }
 }
 
-// ********************* GRID ********************** //
-// .grid {
-//   @for $i from 1 through 5 {
-//     &--#{$grid-space * $i} {
-//       grid-template-columns: repeat(auto-fill, minmax($grid-space * $i, 1fr));
-//       grid-template-rows: repeat(auto-fill, minmax($grid-space * $i, 1fr));
-//     }
-//   }
-//   &--column {
-//     grid-auto-flow: column;
-//   }
-// }
-
 // ********************* LAYOUT MODIFIERS ********************** //
 .padding {
   @each $position in $positions {
@@ -162,34 +147,9 @@ body {
 
 // ********************* PROGRAMATIC BACKGROUND COLORS ********************** //
 .background-color {
-  &--color0 {
-    background-color: $color0;
-  }
-  &--color1 {
-    background-color: $color1;
-  }
-  &--color2 {
-    background-color: $color2;
-  }
-  &--color3 {
-    background-color: $color3;
-  }
-  &--color4 {
-    background-color: $color4;
-  }
-  &--color5 {
-    background-color: $color5;
-  }
-  &--color6 {
-    background-color: $color6;
-  }
-  &--color7 {
-    background-color: $color7;
-  }
-  &--color8 {
-    background-color: $color8;
-  }
-  &--color9 {
-    background-color: $color9;
+  @for $color-index from 0 through 9 {
+    &--color#{$color-index} {
+      background-color: var(--color#{$color-index});
+    }
   }
 }

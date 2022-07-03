@@ -10,4 +10,11 @@ export default function maskMove() {
       `-webkit-mask-position: ${e.pageX - 150}px ${e.pageY - 150}px`
     )
   })
+
+  body.addEventListener('wheel', (e) => {
+    target.setAttribute(
+      'style',
+      `-webkit-mask-position: ${e.pageX - 150}px ${e.pageY - 150}px`
+    )
+  })
 }

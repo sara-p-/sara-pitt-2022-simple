@@ -1,92 +1,6 @@
 @use '../global/variables.scss' as *;
 @use '../global/mixins.scss' as *;
 
-.ghost {
-  @include absolute;
-  height: auto;
-  background: $grey-white;
-  pointer-events: none;
-
-  .nav__link {
-    .hover-color {
-      &--color0 {
-        &:hover,
-        &:focus {
-          color: $color0;
-        }
-      }
-      &--color1 {
-        &:hover,
-        &:focus {
-          color: $color1;
-        }
-      }
-      &--color2 {
-        &:hover,
-        &:focus {
-          color: $color2;
-        }
-      }
-      &--color3 {
-        &:hover,
-        &:focus {
-          color: $color3;
-        }
-      }
-      &--color4 {
-        &:hover,
-        &:focus {
-          color: $color4;
-        }
-      }
-      &--color5 {
-        &:hover,
-        &:focus {
-          color: $color5;
-        }
-      }
-      &--color6 {
-        &:hover,
-        &:focus {
-          color: $color6;
-        }
-      }
-      &--color7 {
-        &:hover,
-        &:focus {
-          color: $color7;
-        }
-      }
-      &--color8 {
-        &:hover,
-        &:focus {
-          color: $color8;
-        }
-      }
-      &--color9 {
-        &:hover,
-        &:focus {
-          color: $color9;
-        }
-      }
-    }
-  }
-
-  .section {
-    border-bottom: $base-border;
-    &--large {
-      @extend .section;
-    }
-    &--medium {
-      @extend .section;
-    }
-  }
-
-  .list__link {
-    box-shadow: $box-shadow;
-  }
-}
-
 #svg-circle {
   background: transparent;
 }
@@ -96,9 +10,9 @@
   mask-repeat: no-repeat;
   mask-size: 300px;
   mask-position: var(--mask-position);
+  transition: mask-position 40ms ease-in-out;
 }
 
 .rainbow-letter {
   text-shadow: var(--text-shadow);
-  cursor: pointer;
 }

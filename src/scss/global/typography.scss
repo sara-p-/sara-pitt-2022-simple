@@ -10,7 +10,6 @@ p span {
   line-height: $base-line-height;
   font-size: $mobile-font-size;
   -webkit-font-smoothing: antialiased;
-  color: $black;
   @include tablet-portrait-up {
     font-size: $tablet-font-size;
   }
@@ -81,37 +80,4 @@ h6,
   text-decoration: none;
   margin-bottom: 0;
   font-size: 32px;
-}
-
-.color {
-  &--color0 {
-    color: $color0;
-  }
-  &--color1 {
-    color: $color1;
-  }
-  &--color2 {
-    color: $color2;
-  }
-  &--color3 {
-    color: $color3;
-  }
-  &--color4 {
-    color: $color4;
-  }
-  &--color5 {
-    color: $color5;
-  }
-  &--color6 {
-    color: $color6;
-  }
-  &--color7 {
-    color: $color7;
-  }
-  &--color8 {
-    color: $color8;
-  }
-  &--color9 {
-    color: $color9;
-  }
 }

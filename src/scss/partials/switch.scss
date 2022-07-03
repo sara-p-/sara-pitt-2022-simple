@@ -1,0 +1,89 @@
+@use '../global/variables.scss' as *;
+@use '../global/mixins.scss' as *;
+
+// ****************** Default ****************** //
+.default {
+  &--neutral {
+    @extend .default;
+    background: $default-background-color--neutral;
+    color: $default-font-color--neutral;
+    .section {
+      border-bottom: $default-base-border--neutral;
+      &--large,
+      &--medium {
+        @extend .section;
+      }
+    }
+    .list__item {
+      background: $default-background-color--neutral;
+      border-bottom: $default-base-border--neutral;
+    }
+    .button--list-link {
+      color: $default-font-color--neutral;
+      &:hover,
+      &:focus {
+        background: $neutral0;
+      }
+    }
+  }
+  &--rainbow {
+    @extend .default;
+    color: $default-font-color--rainbow;
+    .list__item {
+      background: $default-background-color--rainbow;
+      border-bottom: $default-base-border--rainbow;
+    }
+    .section {
+      border-bottom: $default-base-border--rainbow;
+      &--large,
+      &--medium {
+        @extend .section;
+      }
+    }
+  }
+}
+
+// ****************** GHOST PAGE ****************** //
+.ghost {
+  @include absolute;
+  height: auto;
+  pointer-events: none;
+  &--neutral {
+    @extend .ghost;
+    background: $pink;
+    .section {
+      border-bottom: $default-base-border--neutral;
+      &--large,
+      &--medium {
+        @extend .section;
+      }
+    }
+  }
+  &--rainbow {
+    @extend .ghost;
+    background: $white;
+    .section {
+      border-bottom: $default-base-border--rainbow;
+      &--large,
+      &--medium {
+        @extend .section;
+      }
+    }
+  }
+}
+
+// ****************** GENERAL ****************** //
+.color {
+  // Neutral Colors
+  @for $i from 0 through 9 {
+    &--neutral-color#{$i} {
+      color: var(--neutral-color2);
+    }
+  }
+  // Rainbow Colors
+  @for $i from 0 through 9 {
+    &--color#{$i} {
+      color: var(--color#{$i});
+    }
+  }
+}

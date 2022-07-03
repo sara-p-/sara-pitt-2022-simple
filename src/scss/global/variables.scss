@@ -41,6 +41,9 @@ $positions: top, right, bottom, left;
 
 :root {
   --mask-position: center;
+  --text-shadow: -3px 2px 5px #363636;
+  --box-shadow: 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
+
   // Colors
   --color9: #fbf8ccff;
   --color8: #fde4cfff;
@@ -53,6 +56,7 @@ $positions: top, right, bottom, left;
   --color1: #98f5e1ff;
   --color0: #b9fbc0ff;
   --black: #363636;
+  --grey-white: #edede9;
   --white: #ffffff;
   --blue: blue;
   --red: red;
@@ -60,6 +64,7 @@ $positions: top, right, bottom, left;
 
 $black: var(--black);
 $white: var(--white);
+$grey-white: var(--grey-white);
 $color0: var(--color0);
 $color1: var(--color1);
 $color2: var(--color2);
@@ -82,7 +87,8 @@ $base-border: 2px solid $base-border-color;
 $dark-border: 2px solid $white;
 
 // Box Shadow
-$box-shadow: 0px 0px 5px 0px $black;
+// $box-shadow: 0px 0px 5px 0px $black;
+$box-shadow: var(--box-shadow);
 
 // Background Colors
 $viewport-background-color: $white;

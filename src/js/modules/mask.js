@@ -7,7 +7,7 @@ export default function maskMove() {
   body.addEventListener('mousemove', (e) => {
     target.setAttribute(
       'style',
-      `-webkit-mask-position: ${e.pageX - 100}px ${e.pageY - 100}px`
+      `-webkit-mask-position: ${e.pageX - 150}px ${e.pageY - 150}px`
     )
   })
 }

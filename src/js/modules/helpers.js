@@ -1,54 +1,27 @@
 import Data from '../json/data.json'
 import { createSpan } from './html-components'
 
-// Function that holds the loop used in the setColors function below
-// export function removeSetColorClass(elementArray, colorType, className) {
-//   for (
-//     let elementIndex = 0;
-//     elementIndex < elementArray.length;
-//     elementIndex++
-//   ) {
-//     let count = elementIndex % colorArray.length
-//     const element = elementArray[elementIndex]
-//     if (colorType == 'neutral') {
-//       element.classList.remove(`color--color${count}`)
-//       element.classList.add(`${className}${colorArray[count]}`)
-//     } else {
-//       element.classList.remove(`color--neutral-color${count}`)
-//       element.classList.add(`${className}${colorArray[count]}`)
-//     }
-//   }
-// }
-
 // Loop through the given array of elements, and assign them specific color classes
 export function setColors(elementArray, colorType, className) {
   const colorArray = Data[colorType]
 
-  for (
-    let elementIndex = 0;
-    elementIndex < elementArray.length;
-    elementIndex++
-  ) {
-    let count = elementIndex % colorArray.length
-    const element = elementArray[elementIndex]
-    if (colorType == 'colorsNeutral') {
-      element.classList.remove(`color--color${count}`)
-      element.classList.add(`${className}${colorArray[count]}`)
-    } else {
-      element.classList.remove(`color--neutral-color${count}`)
+  if (colorType == 'colorsNeutral') {
+    elementArray.forEach((element, index) => {
+      element.classList = ''
+      element.classList.add('letter', `${className}neutral`)
+    })
+  } else {
+    for (
+      let elementIndex = 0;
+      elementIndex < elementArray.length;
+      elementIndex++
+    ) {
+      let count = elementIndex % colorArray.length
+      const element = elementArray[elementIndex]
+      element.classList.remove(`${className}neutral`)
       element.classList.add(`${className}${colorArray[count]}`)
     }
   }
-
-  // for (
-  //   let elementIndex = 0;
-  //   elementIndex < elementArray.length;
-  //   elementIndex++
-  // ) {
-  //   let count = elementIndex % colorArray.length
-  //   const element = elementArray[elementIndex]
-  //   element.classList.add(`${className}${colorArray[count]}`)
-  // }
 }
 
 // Loop through the given array of elements, and replace each character with a span element containing the character and the specified class

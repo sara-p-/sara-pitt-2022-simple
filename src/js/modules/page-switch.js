@@ -20,6 +20,7 @@ export default function pageSwitch() {
     if (switchInput.value == 0) {
       setSwitchClass('neutral')
       setColors(spanArray, 'colorsNeutral', 'color--')
+      setColors(itemArray, 'colorsNeutral', 'background-color--')
     } else if (switchInput.value == 1) {
       setSwitchClass('rainbow')
       setColors(spanArray, 'colorsRainbow', 'color--')

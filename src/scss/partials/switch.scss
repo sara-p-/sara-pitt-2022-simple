@@ -75,10 +75,8 @@
 // ****************** GENERAL ****************** //
 .color {
   // Neutral Colors
-  @for $i from 0 through 9 {
-    &--neutral-color#{$i} {
-      color: var(--neutral-color2);
-    }
+  &--neutral {
+    color: var(--neutral-color2);
   }
   // Rainbow Colors
   @for $i from 0 through 9 {

@@ -11,3 +11,11 @@
     @include flex($justify: space-between);
   }
 }
+
+.logo {
+  color: $default-font-color--neutral;
+  text-decoration: none;
+  margin-bottom: 0;
+  font-size: 32px;
+  font-weight: 500;
+}

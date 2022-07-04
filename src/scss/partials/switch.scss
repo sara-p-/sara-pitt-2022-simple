@@ -1,5 +1,46 @@
 @use '../global/variables.scss' as *;
 @use '../global/mixins.scss' as *;
+@use 'sass:color';
+
+// ****************** General ****************** //
+// The actual switch input
+.switch {
+  position: relative;
+  height: 1.3rem;
+  width: 2.6rem;
+  display: inline-block;
+  &__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    &:checked + .switch__control:before {
+      transform: translateX(1.25rem);
+    }
+  }
+  &__control {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $default-background-color--neutral;
+    transition: 0.3s;
+    border: $default-base-border--neutral;
+    border-radius: 0.65rem;
+    &:before {
+      position: absolute;
+      content: '';
+      height: 0.9rem;
+      width: 0.9rem;
+      left: 3px;
+      bottom: 3px;
+      background-color: $brown;
+      border-radius: 0.45rem;
+      transition: 0.4s;
+    }
+  }
+}
 
 // ****************** Default ****************** //
 .default {
@@ -22,12 +63,14 @@
       color: $default-font-color--neutral;
       &:hover,
       &:focus {
-        background: $neutral0;
+        background: $default-link-background-hover--neutral;
+        color: $default-link-color-hover--neutral;
       }
     }
   }
   &--rainbow {
     @extend .default;
+    background: $default-background-color--rainbow;
     color: $default-font-color--rainbow;
     .list__item {
       background: $default-background-color--rainbow;
@@ -58,16 +101,31 @@
         @extend .section;
       }
     }
+    .button--list-link {
+      border-bottom: $default-base-border--neutral;
+      background: $ghost-background-color--neutral;
+      color: $ghost-link-color--neutral;
+      &.hover {
+        background: $ghost-background-color-hover--neutral;
+        color: $ghost-link-color-hover--nuetral;
+      }
+    }
   }
   &--rainbow {
     @extend .ghost;
-    background: $white;
+    .letter {
+      text-shadow: $text-shadow;
+    }
+    background: $ghost-background-color--rainbow;
     .section {
       border-bottom: $default-base-border--rainbow;
       &--large,
       &--medium {
         @extend .section;
       }
+    }
+    .list__item {
+      border-bottom: $default-base-border--rainbow;
     }
   }
 }
@@ -76,7 +134,7 @@
 .color {
   // Neutral Colors
   &--neutral {
-    color: var(--neutral-color2);
+    color: $ghost-font-color--neutral;
   }
   // Rainbow Colors
   @for $i from 0 through 9 {

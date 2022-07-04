@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'sass:color';
 // @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Oswald:wght@200;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 // Fonts
@@ -70,16 +71,39 @@ $positions: top, right, bottom, left;
   --neutral-grey-white: #edede9;
 
   // General
-  --blue: blue;
-  --red: red;
+  --blue: #62b6cb;
+  --red: #90323d;
 }
 
 $black: var(--black);
 $white: var(--white);
-$neutral--grey-white: var(--neutral-grey-white);
 $rainbow--grey-white: var(--rainbow-grey-white);
-$brown: var(--brown);
-$pink: var(--pink);
+
+$white--warm: #edede9;
+$white--warm--dark: color.scale($white--warm, $lightness: -40%);
+$white--warm--darker: color.scale($white--warm, $blackness: 60%);
+
+$brown: #6f5e53;
+$brown--dark: color.scale(#6f5e53, $lightness: -40%);
+$brown--light: color.scale(#6f5e53, $lightness: 30%);
+
+$yellow: color.scale(#ffe169, $saturation: -50%, $lightness: 50%);
+$yellow--dark: color.scale(#ffe169, $saturation: -50%);
+
+$red: #90323d;
+$red--light: color.scale($red, $lightness: 50%);
+
+$pink: #e0afa0;
+$pink--dark: color.scale($pink, $lightness: -20%);
+$pink--darker: color.scale($pink, $lightness: -40%);
+
+$blue: #62b6cb;
+$blue--desaturated: color.scale($blue, $saturation: -50%);
+$blue--light: color.scale($blue--desaturated, $lightness: 30%);
+$blue--dark: color.scale($blue--desaturated, $lightness: -30%);
+$blue--darker: color.scale($blue--desaturated, $lightness: -50%);
+
+$purple: #b388eb;
 
 $color0: var(--color0);
 $color1: var(--color1);
@@ -99,28 +123,41 @@ $neutral3: var(--neutral-color3);
 $neutral4: var(--neutral-color4);
 $neutral5: var(--neutral-color5);
 
-$blue: var(--blue);
-$red: var(--red);
-
-// Font Colors
+// ********************** VERSION - NEUTRAL ********************** //
+// Text and Link Colors
 $default-font-color--neutral: $brown;
+$default-link-color-hover--neutral: $white--warm;
+$default-link-background-hover--neutral: $blue--dark;
+$ghost-font-color--neutral: $yellow;
+$ghost-link-color--neutral: $white--warm;
+$ghost-link-color-hover--nuetral: $white--warm--darker;
+
+// Background Colors
+$default-background-color--neutral: $white--warm;
+$ghost-background-color--neutral: $blue--light;
+$ghost-background-color-hover--neutral: $blue--darker;
+
+// Border
+$default-base-border--neutral: 2px solid $default-font-color--neutral;
+
+// ********************** VERSION - RAINBOW ********************** //
+// Text and Link Colors
 $default-font-color--rainbow: $black;
+
+// Background Colors
+$default-background-color--rainbow: $rainbow--grey-white;
+$ghost-background-color--rainbow: $white;
 
 // Border
 $default-base-border--rainbow: 2px solid $default-font-color--rainbow;
-$default-base-border--neutral: 2px solid $default-font-color--neutral;
 
+// ********************** GENERAL ********************** //
 // Box Shadow
-// $box-shadow: 0px 0px 5px 0px $black;
 $box-shadow: var(--box-shadow);
 $box-shadow-inset: var(--box-shadow-inset);
 
 // Text Shadow
 $text-shadow: var(--text-shadow);
-
-// Background Colors
-$default-background-color--neutral: $neutral--grey-white;
-$default-background-color--rainbow: $rainbow--grey-white;
 
 // Focus
 $focus-outline-color: $blue;

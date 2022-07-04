@@ -2,24 +2,30 @@ import Data from '../json/data.json'
 import { createSpan } from './html-components'
 
 // Loop through the given array of elements, and assign them specific color classes
-export function setColors(elementArray, colorType, className) {
-  const colorArray = Data[colorType]
-
-  if (colorType == 'colorsNeutral') {
-    elementArray.forEach((element, index) => {
-      element.classList = ''
-      element.classList.add('letter', `${className}neutral`)
-    })
-  } else {
-    for (
-      let elementIndex = 0;
-      elementIndex < elementArray.length;
-      elementIndex++
-    ) {
-      let count = elementIndex % colorArray.length
-      const element = elementArray[elementIndex]
-      element.classList.remove(`${className}neutral`)
-      element.classList.add(`${className}${colorArray[count]}`)
+export function setColors(elementArray, colorType, className, itemName) {
+  const colorArray = Data['colorsRainbow']
+  for (
+    let elementIndex = 0;
+    elementIndex < elementArray.length;
+    elementIndex++
+  ) {
+    let count = elementIndex % colorArray.length
+    const element = elementArray[elementIndex]
+    if (colorType == 'colorsNeutral') {
+      element.classList.remove(
+        `${className}${colorArray[count]}`,
+        `${itemName}${elementIndex}`
+      )
+      element.classList.add(`${className}neutral`, `${itemName}${elementIndex}`)
+    } else {
+      element.classList.remove(
+        `${className}neutral`,
+        `${itemName}${elementIndex}`
+      )
+      element.classList.add(
+        `${className}${colorArray[count]}`,
+        `${itemName}${elementIndex}`
+      )
     }
   }
 }
@@ -57,18 +63,3 @@ export function setSwitchClass(switchSetting) {
     ghostWrapper.classList.add('ghost--rainbow')
   }
 }
-
-// // Loop through the given array of elements, split each character into its own span element, assign a color class to the span
-// export function rainbowLetters() {
-//   // Alright, let's grab all of the elements that have the relavent class, and stuff them into an array
-//   const elementArray = document.querySelectorAll('.rainbow-letters')
-
-//   insertSpans(elementArray)
-
-//   // Just to recap, we have just replaced the innerText of all the elements (with the class 'rainbow-letters') with a span around each character. The spans that surround characters with letters/punctuation get a class called 'rainbow-letter'.
-//   // Now we can create a new array of all of every span.rainbow-letter, and assign them a color class!
-//   const spanArray = document.querySelectorAll('span.rainbow-letter')
-
-//   // Oh shit, here we go. Last part! Let's loop through our array of spans, and add the color classes with this nifty % operator (which I only mildy understand. because math.)
-//   setColors(spanArray, 'color--')
-// }

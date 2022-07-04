@@ -2,9 +2,11 @@ import Data from '../json/data.json'
 import { setColors, insertSpans, setSwitchClass } from './helpers'
 
 export default function pageSwitch() {
-  const switchInput = document.querySelector('#default-switch input')
-  const itemArray = document.querySelectorAll('.ghost .list__item')
+  const defaultSwitchInput = document.querySelector('#default-switch input')
+  const defaultItemArray = document.querySelectorAll('.default .list__item')
+  const ghostItemArray = document.querySelectorAll('.ghost .list__item')
 
+  // *************** Setting all of the class changes *************** //
   // Grabbing all of the relevant elements, and surrounding each of their innerText characters with spans
   const elementArray = document.querySelectorAll('.letters')
   insertSpans(elementArray, 'letter')
@@ -12,19 +14,52 @@ export default function pageSwitch() {
 
   // The default state is 'neutral', so let's go ahead and set everything up for that
   setSwitchClass('neutral')
-  setColors(spanArray, 'colorsNeutral', 'color--')
+  setColors(spanArray, 'colorsNeutral', 'color--', 'span--')
+  setColors(
+    defaultItemArray,
+    'colorsNeutral',
+    'background-color--',
+    'list__item--'
+  )
+  setColors(
+    ghostItemArray,
+    'colorsNeutral',
+    'background-color--',
+    'list__item--'
+  )
 
-  // Now let's put the logic in place to switch everything over on the switchInput change
-  switchInput.addEventListener('change', (e) => {
-    console.log(`input has changed to: ${switchInput.value}`)
-    if (switchInput.value == 0) {
+  // Now let's put the logic in place to switch everything over on the defaultSwitchInput change
+  defaultSwitchInput.addEventListener('change', (e) => {
+    if (defaultSwitchInput.checked == false) {
       setSwitchClass('neutral')
-      setColors(spanArray, 'colorsNeutral', 'color--')
-      setColors(itemArray, 'colorsNeutral', 'background-color--')
-    } else if (switchInput.value == 1) {
+      setColors(spanArray, 'colorsNeutral', 'color--', 'span--')
+      setColors(
+        defaultItemArray,
+        'colorsNeutral',
+        'background-color--',
+        'list__item--'
+      )
+      setColors(
+        ghostItemArray,
+        'colorsNeutral',
+        'background-color--',
+        'list__item--'
+      )
+    } else if (defaultSwitchInput.checked == true) {
       setSwitchClass('rainbow')
-      setColors(spanArray, 'colorsRainbow', 'color--')
-      setColors(itemArray, 'colorsRainbow', 'background-color--')
+      setColors(spanArray, 'colorsRainbow', 'color--', 'span--')
+      setColors(
+        defaultItemArray,
+        'colorsRainbow',
+        'background-color--',
+        'list__item--'
+      )
+      setColors(
+        ghostItemArray,
+        'colorsRainbow',
+        'background-color--',
+        'list__item--'
+      )
     }
   })
 }

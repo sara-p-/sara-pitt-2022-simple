@@ -63,3 +63,27 @@ export function setSwitchClass(switchSetting) {
     ghostWrapper.classList.add('ghost--rainbow')
   }
 }
+
+// Linking the default item/link mouse events to the ghost item/link
+export function linkTheHoverEvent(
+  defaultArray,
+  ghostArray,
+  className,
+  targetItem
+) {
+  defaultArray.forEach((item, index) => {
+    let ghostItem = ghostArray[index]
+    let ghostLink
+    if (targetItem !== null) {
+      ghostLink = ghostItem.querySelector(targetItem)
+    } else {
+      ghostLink = ghostItem
+    }
+    item.addEventListener('mouseenter', (e) => {
+      ghostLink.classList.add(className)
+    })
+    item.addEventListener('mouseleave', (e) => {
+      ghostLink.classList.remove(className)
+    })
+  })
+}

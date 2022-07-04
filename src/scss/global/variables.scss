@@ -57,7 +57,7 @@ $positions: top, right, bottom, left;
   --color1: #98f5e1ff;
   --color0: #b9fbc0ff;
   --black: #363636;
-  --rainbow-grey-white: #f2f2f2;
+  --grey-white: #f2f2f2;
   --white: #ffffff;
 
   // Colors - Neutrals
@@ -77,7 +77,9 @@ $positions: top, right, bottom, left;
 
 $black: var(--black);
 $white: var(--white);
-$rainbow--grey-white: var(--rainbow-grey-white);
+
+$grey-white: #f2f2f2;
+$grey-white--dark: color.scale($grey-white, $lightness: -30%);
 
 $white--warm: #edede9;
 $white--warm--dark: color.scale($white--warm, $lightness: -40%);
@@ -103,6 +105,11 @@ $blue--light: color.scale($blue--desaturated, $lightness: 30%);
 $blue--dark: color.scale($blue--desaturated, $lightness: -30%);
 $blue--darker: color.scale($blue--desaturated, $lightness: -50%);
 
+$green: #98c9a3;
+$green--desaturated: color.scale($green, $saturation: -50%);
+$green--dark: color.scale($green--desaturated, $lightness: -40%);
+$green--darker: color.scale($green--desaturated, $lightness: -70%);
+
 $purple: #b388eb;
 
 $color0: var(--color0);
@@ -124,13 +131,19 @@ $neutral4: var(--neutral-color4);
 $neutral5: var(--neutral-color5);
 
 // ********************** VERSION - NEUTRAL ********************** //
+// Nav Links/Logo
+$default-nav-icon--neutral: $brown;
+$default-nav-icon-hover--neutral: $blue--dark;
+$ghost-nav-icon--neutral: $yellow;
+$ghost-nav-icon-hover--neutral: $blue--darker;
+
 // Text and Link Colors
-$default-font-color--neutral: $brown;
+$default-text-color--neutral: $brown;
 $default-link-color-hover--neutral: $white--warm;
 $default-link-background-hover--neutral: $blue--dark;
-$ghost-font-color--neutral: $yellow;
+$ghost-text-color--neutral: $yellow;
 $ghost-link-color--neutral: $white--warm;
-$ghost-link-color-hover--nuetral: $white--warm--darker;
+$ghost-link-color-hover--nuetral: $white--warm;
 
 // Background Colors
 $default-background-color--neutral: $white--warm;
@@ -138,14 +151,14 @@ $ghost-background-color--neutral: $blue--light;
 $ghost-background-color-hover--neutral: $blue--darker;
 
 // Border
-$default-base-border--neutral: 2px solid $default-font-color--neutral;
+$default-base-border--neutral: 2px solid $default-text-color--neutral;
 
 // ********************** VERSION - RAINBOW ********************** //
 // Text and Link Colors
 $default-font-color--rainbow: $black;
 
 // Background Colors
-$default-background-color--rainbow: $rainbow--grey-white;
+$default-background-color--rainbow: $grey-white;
 $ghost-background-color--rainbow: $white;
 
 // Border

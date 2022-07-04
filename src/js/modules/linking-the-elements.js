@@ -1,3 +1,5 @@
+import { linkTheHoverEvent } from './helpers'
+
 export default function linkingTheElements() {
   // *************** Linking the Switch Toggle input with the Ghost Switch Toggle input ************** //
   const defaultSwitchInput = document.querySelector('#default-switch input')
@@ -15,14 +17,31 @@ export default function linkingTheElements() {
   const defaultListItemArray = document.querySelectorAll('.default .list__link')
   const ghostListItemArray = document.querySelectorAll('.ghost .list__item')
 
-  defaultListItemArray.forEach((defaultItem, defaultIndex) => {
-    let ghostItem = ghostListItemArray[defaultIndex]
-    let ghostLink = ghostItem.querySelector('.button--list-link')
-    defaultItem.addEventListener('mouseenter', (e) => {
-      ghostLink.classList.add('hover')
-    })
-    defaultItem.addEventListener('mouseleave', (e) => {
-      ghostLink.classList.remove('hover')
-    })
-  })
+  linkTheHoverEvent(
+    defaultListItemArray,
+    ghostListItemArray,
+    'hover',
+    '.button--list-link'
+  )
+
+  // *************** Linking the List Item Links with the Ghost List Item Links  ************** //
+  const defaultNavLinkArray = document.querySelectorAll('.default .nav__link')
+  const ghostNavLinkArray = document.querySelectorAll('.ghost .nav__link')
+
+  linkTheHoverEvent(defaultNavLinkArray, ghostNavLinkArray, 'hover', null)
+
+  // // *************** Linking the Switch Inputs  ************** //
+  // const defaultSwitchInputArray = document.querySelectorAll(
+  //   '.default .switch__input'
+  // )
+  // const ghostSwitchInputArray = document.querySelectorAll(
+  //   '.ghost .switch__input'
+  // )
+
+  // linkTheHoverEvent(
+  //   defaultSwitchInputArray,
+  //   ghostSwitchInputArray,
+  //   'hover',
+  //   null
+  // )
 }

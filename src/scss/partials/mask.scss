@@ -8,7 +8,7 @@
 .mask-target {
   mask: url('../../images/circle.svg');
   mask-repeat: no-repeat;
-  mask-size: 300px;
+  mask-size: 12.5rem;
   mask-position: var(--mask-position);
   transition: mask-position 0ms;
 }

@@ -36,6 +36,7 @@
     ]
   },
   "dependencies": {
-    "fibers": "^5.0.1"
+    "fibers": "^5.0.1",
+    "gsap": "npm:@gsap/shockingly@^3.10.4"
   }
 }

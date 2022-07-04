@@ -13,8 +13,13 @@
     opacity: 0;
     width: 0;
     height: 0;
-    &:checked + .switch__control:before {
-      transform: translateX(1.25rem);
+    &:checked + .switch__control {
+      background: $default-background-color--rainbow;
+      border: $default-base-border--rainbow;
+      &:before {
+        transform: translateX(1.25rem);
+        background-color: $black;
+      }
     }
   }
   &__control {
@@ -42,12 +47,23 @@
   }
 }
 
-// ****************** Default ****************** //
+// ****************** Default Page ****************** //
 .default {
+  // Default -- Neutral
   &--neutral {
+    // Default -- Neutral -- General
     @extend .default;
     background: $default-background-color--neutral;
-    color: $default-font-color--neutral;
+    color: $default-text-color--neutral;
+    // Default -- Neutral -- Header
+    .nav__link {
+      color: $default-nav-icon--neutral;
+      &:hover,
+      &:focus {
+        color: $default-nav-icon-hover--neutral;
+      }
+    }
+    // Default -- Neutral -- Section
     .section {
       border-bottom: $default-base-border--neutral;
       &--large,
@@ -55,12 +71,13 @@
         @extend .section;
       }
     }
+    // Default -- Neutral -- List Items and List Links
     .list__item {
       background: $default-background-color--neutral;
       border-bottom: $default-base-border--neutral;
     }
     .button--list-link {
-      color: $default-font-color--neutral;
+      color: $default-text-color--neutral;
       &:hover,
       &:focus {
         background: $default-link-background-hover--neutral;
@@ -68,19 +85,31 @@
       }
     }
   }
+  // Default -- Rainbow
   &--rainbow {
+    // Default -- Rainbow -- General
     @extend .default;
     background: $default-background-color--rainbow;
     color: $default-font-color--rainbow;
-    .list__item {
-      background: $default-background-color--rainbow;
-      border-bottom: $default-base-border--rainbow;
-    }
+    // Default -- Rainbow -- Section
     .section {
       border-bottom: $default-base-border--rainbow;
       &--large,
       &--medium {
         @extend .section;
+      }
+    }
+    // Default -- Rainbow -- List Items and List Links
+    .list__item {
+      background: $default-background-color--rainbow;
+      border-bottom: $default-base-border--rainbow;
+    }
+    .button--list-link {
+      color: $black;
+      &:hover,
+      &:focus {
+        background: $grey-white--dark;
+        color: $white;
       }
     }
   }
@@ -88,12 +117,22 @@
 
 // ****************** GHOST PAGE ****************** //
 .ghost {
+  // Ghost -- General
   @include absolute;
   height: auto;
   pointer-events: none;
+  // Ghost -- Neutral -- General
   &--neutral {
     @extend .ghost;
     background: $pink;
+    // Ghost -- Neutral -- Header
+    .nav__link {
+      color: $ghost-nav-icon--neutral;
+      &.hover {
+        color: $ghost-nav-icon-hover--neutral;
+      }
+    }
+    // Ghost -- Neutral -- Section
     .section {
       border-bottom: $default-base-border--neutral;
       &--large,
@@ -101,6 +140,7 @@
         @extend .section;
       }
     }
+    // Ghost -- Neutral -- List Items and List Links
     .button--list-link {
       border-bottom: $default-base-border--neutral;
       background: $ghost-background-color--neutral;
@@ -112,11 +152,14 @@
     }
   }
   &--rainbow {
+    // Ghost -- Rainbow -- General
     @extend .ghost;
+    background: $ghost-background-color--rainbow;
+    // Ghost -- Rainbow -- Letters
     .letter {
       text-shadow: $text-shadow;
     }
-    background: $ghost-background-color--rainbow;
+    // Ghost -- Rainbow -- Section
     .section {
       border-bottom: $default-base-border--rainbow;
       &--large,
@@ -124,6 +167,7 @@
         @extend .section;
       }
     }
+    // Ghost -- Rainbow -- List Items and List Links
     .list__item {
       border-bottom: $default-base-border--rainbow;
     }
@@ -134,7 +178,7 @@
 .color {
   // Neutral Colors
   &--neutral {
-    color: $ghost-font-color--neutral;
+    color: $ghost-text-color--neutral;
   }
   // Rainbow Colors
   @for $i from 0 through 9 {

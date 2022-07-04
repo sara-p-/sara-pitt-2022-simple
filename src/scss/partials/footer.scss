@@ -1,2 +1,9 @@
 @use '../global/variables.scss' as *;
 @use '../global/mixins.scss' as *;
+
+.footer {
+  width: 100%;
+  &__wrapper {
+    width: 100%;
+  }
+}

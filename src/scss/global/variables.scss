@@ -103,14 +103,17 @@ $blue: #62b6cb;
 $blue--desaturated: color.scale($blue, $saturation: -50%);
 $blue--light: color.scale($blue--desaturated, $lightness: 30%);
 $blue--dark: color.scale($blue--desaturated, $lightness: -30%);
-$blue--darker: color.scale($blue--desaturated, $lightness: -50%);
+$blue--darker: color.scale($blue--desaturated, $lightness: -60%);
 
 $green: #98c9a3;
 $green--desaturated: color.scale($green, $saturation: -50%);
 $green--dark: color.scale($green--desaturated, $lightness: -40%);
 $green--darker: color.scale($green--desaturated, $lightness: -70%);
 
-$purple: #b388eb;
+$purple: #a663cc;
+$purple--light: color.scale($purple, $lightness: 40%);
+$purple--dark: color.scale($purple, $lightness: -40%);
+$purple--darker: color.scale($purple, $lightness: -70%);
 
 $color0: var(--color0);
 $color1: var(--color1);
@@ -155,14 +158,15 @@ $default-base-border--neutral: 2px solid $default-text-color--neutral;
 
 // ********************** VERSION - RAINBOW ********************** //
 // Text and Link Colors
-$default-font-color--rainbow: $black;
+$default-link-color--rainbow: $purple;
+$default-link-hover-color--rainbow: $purple--darker;
 
 // Background Colors
 $default-background-color--rainbow: $grey-white;
 $ghost-background-color--rainbow: $white;
 
 // Border
-$default-base-border--rainbow: 2px solid $default-font-color--rainbow;
+$default-base-border--rainbow: 2px solid $black;
 
 // ********************** GENERAL ********************** //
 // Box Shadow

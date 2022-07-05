@@ -2,14 +2,16 @@ import Data from '../json/data.json'
 import { setColors, insertSpans, setSwitchClass } from './helpers'
 
 export default function pageSwitch() {
-  const defaultSwitchInput = document.querySelector('#default-switch input')
+  const defaultSwitchInput = document.querySelector(
+    '#default-header-switch input'
+  )
   const defaultItemArray = document.querySelectorAll('.default .list__item')
   const ghostItemArray = document.querySelectorAll('.ghost .list__item')
 
   // *************** Setting all of the class changes *************** //
   // Grabbing all of the relevant elements, and surrounding each of their innerText characters with spans
   const elementArray = document.querySelectorAll('.letters')
-  insertSpans(elementArray, 'letter')
+  insertSpans(elementArray, ['letter'])
   const spanArray = document.querySelectorAll('span.letter')
 
   // The default state is 'neutral', so let's go ahead and set everything up for that

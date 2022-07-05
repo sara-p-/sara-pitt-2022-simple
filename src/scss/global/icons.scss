@@ -61,6 +61,16 @@
       content: '\f105';
     }
   }
+  &--angle-right--before {
+    &:before {
+      display: inline-block;
+      font-style: normal;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      font: var(--fa-font-solid);
+      content: '\f105';
+    }
+  }
   &--book {
     @extend .icon;
     &:after {

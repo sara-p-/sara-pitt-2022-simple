@@ -84,13 +84,22 @@
         color: $default-link-color-hover--neutral;
       }
     }
+    // Default -- Neutral -- Footer Contact Button
+    .contact-button {
+      color: $default-text-color--neutral;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        color: $blue--dark;
+      }
+    }
   }
   // Default -- Rainbow
   &--rainbow {
     // Default -- Rainbow -- General
     @extend .default;
     background: $default-background-color--rainbow;
-    color: $default-font-color--rainbow;
+    // color: $black;
     // Default -- Rainbow -- Section
     .section {
       border-bottom: $default-base-border--rainbow;
@@ -140,6 +149,7 @@
         @extend .section;
       }
     }
+
     // Ghost -- Neutral -- List Items and List Links
     .button--list-link {
       border-bottom: $default-base-border--neutral;
@@ -150,6 +160,13 @@
         color: $ghost-link-color-hover--nuetral;
       }
     }
+    // Ghost -- Neutral -- Footer Contact Button
+    .contact-button {
+      color: $blue--dark;
+      &.hover {
+        color: $white;
+      }
+    }
   }
   &--rainbow {
     // Ghost -- Rainbow -- General
@@ -158,6 +175,12 @@
     // Ghost -- Rainbow -- Letters
     .letter {
       text-shadow: $text-shadow;
+    }
+    // Ghost -- Rainbow -- Header
+    .nav__link {
+      &.hover {
+        color: $purple;
+      }
     }
     // Ghost -- Rainbow -- Section
     .section {

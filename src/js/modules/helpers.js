@@ -31,7 +31,7 @@ export function setColors(elementArray, colorType, className, itemName) {
 }
 
 // Loop through the given array of elements, and replace each character with a span element containing the character and the specified class
-export function insertSpans(elementArray, className) {
+export function insertSpans(elementArray, classNameArray) {
   elementArray.forEach((element) => {
     // 1. Grab all of the characters in the element
     let theInnerText = element.innerText
@@ -41,7 +41,7 @@ export function insertSpans(elementArray, className) {
     element.innerText = ''
     // 3. Loop through the characterArray, and replace each character with a span tag. We also need to deal with the spaces in the array (because we don't want the spaces to claim a color), so each span should have a class that declares whether it's a character or a space.
     characterArray.forEach((character) => {
-      element.append(createSpan(character, className))
+      element.append(createSpan(character, classNameArray))
     })
   })
 }
@@ -86,4 +86,14 @@ export function linkTheHoverEvent(
       ghostLink.classList.remove(className)
     })
   })
+}
+
+// Getting the computed style webkitMaskSize of the mask, and dividing it by 2
+export function getTheCenter(target) {
+  const targetStyle = getComputedStyle(target)
+  const targetSize = parseFloat(targetStyle.webkitMaskSize)
+
+  const center = targetSize / 2
+
+  return center
 }

@@ -41,7 +41,7 @@ $positions: top, right, bottom, left;
 
 :root {
   --mask-position: center;
-  --text-shadow: -3px 2px 5px #363636;
+  --text-shadow: -3px 2px 5px rgba(54, 54, 54, 0.5);
   --box-shadow: 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
   --box-shadow-inset: inset 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
 
@@ -78,6 +78,11 @@ $positions: top, right, bottom, left;
 $black: var(--black);
 $white: var(--white);
 
+$grey: #bcb8b1;
+$grey--medium: #8a817c;
+$grey--medium-dark: #ccc5b9;
+$grey--dark: #463f3a;
+
 $grey-white: #f2f2f2;
 $grey-white--dark: color.scale($grey-white, $lightness: -30%);
 
@@ -95,6 +100,7 @@ $yellow--dark: color.scale(#ffe169, $saturation: -50%);
 $red: #90323d;
 $red--light: color.scale($red, $lightness: 50%);
 
+$pink--light: #e6beb2;
 $pink: #e0afa0;
 $pink--dark: color.scale($pink, $lightness: -20%);
 $pink--darker: color.scale($pink, $lightness: -40%);
@@ -107,8 +113,9 @@ $blue--darker: color.scale($blue--desaturated, $lightness: -60%);
 
 $green: #98c9a3;
 $green--desaturated: color.scale($green, $saturation: -50%);
-$green--dark: color.scale($green--desaturated, $lightness: -40%);
+// $green--dark: color.scale($green--desaturated, $lightness: -40%);
 $green--darker: color.scale($green--desaturated, $lightness: -70%);
+$green--dark: #3f5327;
 
 $purple: #a663cc;
 $purple--light: color.scale($purple, $lightness: 40%);
@@ -144,7 +151,7 @@ $ghost-nav-icon-hover--neutral: $blue--darker;
 $default-text-color--neutral: $brown;
 $default-link-color-hover--neutral: $white--warm;
 $default-link-background-hover--neutral: $blue--dark;
-$ghost-text-color--neutral: $yellow;
+$ghost-text-color--neutral: $green--dark;
 $ghost-link-color--neutral: $white--warm;
 $ghost-link-color-hover--nuetral: $white--warm;
 
@@ -158,15 +165,16 @@ $default-base-border--neutral: 2px solid $default-text-color--neutral;
 
 // ********************** VERSION - RAINBOW ********************** //
 // Text and Link Colors
-$default-link-color--rainbow: $purple;
-$default-link-hover-color--rainbow: $purple--darker;
+$default-nav-link-color--rainbow: $black;
+$default-nav-link-hover-color--rainbow: $purple--light;
 
 // Background Colors
 $default-background-color--rainbow: $grey-white;
-$ghost-background-color--rainbow: $white;
+$ghost-background-color--rainbow: $black;
 
 // Border
 $default-base-border--rainbow: 2px solid $black;
+$ghost-base-border--rainbow: 2px solid $white;
 
 // ********************** GENERAL ********************** //
 // Box Shadow
@@ -175,6 +183,7 @@ $box-shadow-inset: var(--box-shadow-inset);
 
 // Text Shadow
 $text-shadow: var(--text-shadow);
+$text-shadow--hard: -5px 5px 0px #363636;
 
 // Focus
 $focus-outline-color: $blue;

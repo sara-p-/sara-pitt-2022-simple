@@ -19,6 +19,7 @@ export function setColors(elementArray, colorType, className, itemName) {
       element.classList.add(`${className}neutral`, `${itemName}${elementIndex}`)
     } else {
       element.classList.remove(
+        `${className}${colorArray[count]}`,
         `${className}neutral`,
         `${itemName}${elementIndex}`
       )

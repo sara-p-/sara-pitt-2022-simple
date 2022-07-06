@@ -96,10 +96,16 @@
   }
   // Default -- Rainbow
   &--rainbow {
-    // Default -- Rainbow -- General
     @extend .default;
     background: $default-background-color--rainbow;
-    // color: $black;
+    // Default -- Neutral -- Header
+    .nav__link {
+      color: $default-nav-link-color--rainbow;
+      &:hover,
+      &:focus {
+        color: $default-nav-link-hover-color--rainbow;
+      }
+    }
     // Default -- Rainbow -- Section
     .section {
       border-bottom: $default-base-border--rainbow;
@@ -113,12 +119,17 @@
       background: $default-background-color--rainbow;
       border-bottom: $default-base-border--rainbow;
     }
+    // .list__title {
+    //   background: $white;
+    //   display: inline;
+    //   padding: 0.4rem 1rem;
+    // }
     .button--list-link {
       color: $black;
       &:hover,
       &:focus {
-        background: $grey-white--dark;
-        color: $white;
+        background: $black;
+        color: $grey-white;
       }
     }
   }
@@ -133,7 +144,7 @@
   // Ghost -- Neutral -- General
   &--neutral {
     @extend .ghost;
-    background: $pink;
+    background: $pink--light;
     // Ghost -- Neutral -- Header
     .nav__link {
       color: $ghost-nav-icon--neutral;
@@ -172,6 +183,7 @@
     // Ghost -- Rainbow -- General
     @extend .ghost;
     background: $ghost-background-color--rainbow;
+    // @include spot-background;
     // Ghost -- Rainbow -- Letters
     .letter {
       text-shadow: $text-shadow;
@@ -184,7 +196,7 @@
     }
     // Ghost -- Rainbow -- Section
     .section {
-      border-bottom: $default-base-border--rainbow;
+      border-bottom: $ghost-base-border--rainbow;
       &--large,
       &--medium {
         @extend .section;
@@ -192,7 +204,30 @@
     }
     // Ghost -- Rainbow -- List Items and List Links
     .list__item {
-      border-bottom: $default-base-border--rainbow;
+      border-bottom: 2px solid $grey-white;
+      // background-color: $white;
+      // @include spot-background;
+    }
+    .button--list-link {
+      // border-bottom: $default-base-border--neutral;
+      background: $grey-white;
+      &.hover {
+        // background: $grey-white;
+        // color: $ghost-link-color-hover--nuetral;
+      }
+    }
+    .hover-color {
+      @for $i from 0 through 9 {
+        &--color#{$i} {
+          .list__link {
+            &.hover {
+              // background: var(--color#{$i});
+              background: $grey-white;
+              border: 2px solid $black;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -204,9 +239,34 @@
     color: $ghost-text-color--neutral;
   }
   // Rainbow Colors
+
   @for $i from 0 through 9 {
     &--color#{$i} {
       color: var(--color#{$i});
+    }
+  }
+}
+
+.hover-color {
+  @for $i from 0 through 9 {
+    &--color#{$i} {
+      .list__link {
+        &:hover,
+        &:focus {
+          // background: var(--color#{$i});
+          background: $black;
+        }
+      }
+    }
+  }
+}
+
+// ********************* PROGRAMATIC BACKGROUND COLORS ********************** //
+.background-color {
+  @for $color-index from 0 through 9 {
+    &--color#{$color-index} {
+      // background-color: var(--color#{$color-index});
+      background-color: $grey-white;
     }
   }
 }

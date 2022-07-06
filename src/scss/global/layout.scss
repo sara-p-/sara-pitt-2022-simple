@@ -144,12 +144,3 @@ body {
     }
   }
 }
-
-// ********************* PROGRAMATIC BACKGROUND COLORS ********************** //
-.background-color {
-  @for $color-index from 0 through 9 {
-    &--color#{$color-index} {
-      background-color: var(--color#{$color-index});
-    }
-  }
-}

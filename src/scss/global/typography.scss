@@ -9,6 +9,7 @@ p span {
   font-weight: $base-font-weight;
   line-height: $base-line-height;
   font-size: $mobile-font-size;
+  color: $black;
   -webkit-font-smoothing: antialiased;
   @include tablet-portrait-up {
     font-size: $tablet-font-size;

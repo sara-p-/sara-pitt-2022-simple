@@ -10,5 +10,6 @@
     "color7",
     "color8",
     "color9"
-  ]
+  ],
+  "colorsGrey": ["grey0", "grey1", "grey2"]
 }

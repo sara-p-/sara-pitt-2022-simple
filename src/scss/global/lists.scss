@@ -20,6 +20,7 @@
     padding: 32px 32px;
     width: 100%;
     display: inherit;
+    @include heading-style(2rem);
   }
   &__title {
     margin-bottom: 0;

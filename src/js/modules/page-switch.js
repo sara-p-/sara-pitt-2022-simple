@@ -31,37 +31,38 @@ export default function pageSwitch() {
   )
 
   // Now let's put the logic in place to switch everything over on the defaultSwitchInput change
-  defaultSwitchInput.addEventListener('change', (e) => {
-    if (defaultSwitchInput.checked == false) {
-      setSwitchClass('neutral')
-      setColors(spanArray, 'colorsNeutral', 'color--', 'span--')
-      setColors(
-        defaultItemArray,
-        'colorsNeutral',
-        'background-color--',
-        'list__item--'
-      )
-      setColors(
-        ghostItemArray,
-        'colorsNeutral',
-        'background-color--',
-        'list__item--'
-      )
-    } else if (defaultSwitchInput.checked == true) {
-      setSwitchClass('rainbow')
-      setColors(spanArray, 'colorsRainbow', 'color--', 'span--')
-      setColors(
-        defaultItemArray,
-        'colorsRainbow',
-        'background-color--',
-        'list__item--'
-      )
-      setColors(
-        ghostItemArray,
-        'colorsRainbow',
-        'background-color--',
-        'list__item--'
-      )
-    }
-  })
+  // defaultSwitchInput.addEventListener('change', (e) => {
+  //   // If the Header switch gets clicked, all the other switches should follow
+  //   if (defaultSwitchInput.checked == false) {
+  //     setSwitchClass('neutral')
+  //     setColors(spanArray, 'colorsNeutral', 'color--', 'span--')
+  //     setColors(
+  //       defaultItemArray,
+  //       'colorsNeutral',
+  //       'hover-color--',
+  //       'list__item--'
+  //     )
+  //     setColors(
+  //       ghostItemArray,
+  //       'colorsNeutral',
+  //       'background-color--',
+  //       'list__item--'
+  //     )
+  //   } else if (defaultSwitchInput.checked == true) {
+  //     setSwitchClass('rainbow')
+  //     setColors(spanArray, 'colorsRainbow', 'color--', 'span--')
+  //     setColors(
+  //       defaultItemArray,
+  //       'colorsRainbow',
+  //       'hover-color--',
+  //       'list__item--'
+  //     )
+  //     setColors(
+  //       ghostItemArray,
+  //       'colorsRainbow',
+  //       'hover-color--',
+  //       'list__item--'
+  //     )
+  //   }
+  // })
 }

@@ -41,148 +41,62 @@ $positions: top, right, bottom, left;
 
 :root {
   --mask-position: center;
-  --text-shadow: -3px 2px 5px rgba(54, 54, 54, 0.5);
-  --box-shadow: 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
-  --box-shadow-inset: inset 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
-
-  // Colors - Rainbow
-  --color9: #fbf8ccff;
-  --color8: #fde4cfff;
-  --color7: #ffcfd2ff;
-  --color6: #f1c0e8ff;
-  --color5: #cfbaf0ff;
-  --color4: #a3c4f3ff;
-  --color3: #90dbf4ff;
-  --color2: #8eecf5ff;
-  --color1: #98f5e1ff;
-  --color0: #b9fbc0ff;
-  --black: #363636;
-  --grey-white: #f2f2f2;
-  --white: #ffffff;
-
-  // Colors - Neutrals
-  --neutral-color0: #d6ccc2;
-  --neutral-color1: #dddddd;
-  --neutral-color2: #cccccc;
-  --neutral-color3: #bbbbbb;
-  --neutral-color4: #aaaaaa;
-  --brown: #6f5e53;
-  --pink: #e0afa0;
-  --neutral-grey-white: #edede9;
-
-  // General
-  --blue: #62b6cb;
-  --red: #90323d;
 }
 
-$black: var(--black);
-$white: var(--white);
-
-$grey: #bcb8b1;
-$grey--medium: #8a817c;
-$grey--medium-dark: #ccc5b9;
-$grey--dark: #463f3a;
-
-$grey-white: #f2f2f2;
-$grey-white--dark: color.scale($grey-white, $lightness: -30%);
-
-$white--warm: #edede9;
-$white--warm--dark: color.scale($white--warm, $lightness: -40%);
-$white--warm--darker: color.scale($white--warm, $blackness: 60%);
+$black: #363636;
+$white: #f4f3eeff;
+// $white: #edede9;
 
 $brown: #6f5e53;
-$brown--dark: color.scale(#6f5e53, $lightness: -40%);
-$brown--light: color.scale(#6f5e53, $lightness: 30%);
+$pink: #e6beb2;
+$red: #91462f;
+$blue: #4f7984;
+$green: #3f5327;
 
-$yellow: color.scale(#ffe169, $saturation: -50%, $lightness: 50%);
-$yellow--dark: color.scale(#ffe169, $saturation: -50%);
+$dark-lava: #463f3aff;
+$middle-grey: #6c6460;
+$pale-silver: #bcb8b1ff;
+// $isabelline: #f4f3eeff;
+$melon: #e0afa0ff;
 
-$red: #90323d;
-$red--light: color.scale($red, $lightness: 50%);
-
-$pink--light: #e6beb2;
-$pink: #e0afa0;
-$pink--dark: color.scale($pink, $lightness: -20%);
-$pink--darker: color.scale($pink, $lightness: -40%);
-
-$blue: #62b6cb;
-$blue--desaturated: color.scale($blue, $saturation: -50%);
-$blue--light: color.scale($blue--desaturated, $lightness: 30%);
-$blue--dark: color.scale($blue--desaturated, $lightness: -30%);
-$blue--darker: color.scale($blue--desaturated, $lightness: -60%);
-
-$green: #98c9a3;
-$green--desaturated: color.scale($green, $saturation: -50%);
-// $green--dark: color.scale($green--desaturated, $lightness: -40%);
-$green--darker: color.scale($green--desaturated, $lightness: -70%);
-$green--dark: #3f5327;
-
-$purple: #a663cc;
-$purple--light: color.scale($purple, $lightness: 40%);
-$purple--dark: color.scale($purple, $lightness: -40%);
-$purple--darker: color.scale($purple, $lightness: -70%);
-
-$color0: var(--color0);
-$color1: var(--color1);
-$color2: var(--color2);
-$color3: var(--color3);
-$color4: var(--color4);
-$color5: var(--color5);
-$color6: var(--color6);
-$color7: var(--color7);
-$color8: var(--color8);
-$color9: var(--color9);
-
-$neutral0: var(--neutral-color0);
-$neutral1: var(--neutral-color1);
-$neutral2: var(--neutral-color2);
-$neutral3: var(--neutral-color3);
-$neutral4: var(--neutral-color4);
-$neutral5: var(--neutral-color5);
-
-// ********************** VERSION - NEUTRAL ********************** //
+// ********************** Specifics ********************** //
 // Nav Links/Logo
-$default-nav-icon--neutral: $brown;
-$default-nav-icon-hover--neutral: $blue--dark;
-$ghost-nav-icon--neutral: $yellow;
-$ghost-nav-icon-hover--neutral: $blue--darker;
+$default-nav-icon: $brown;
+$default-nav-icon-hover: $blue;
+$ghost-nav-icon: $pink;
+$ghost-nav-icon-hover: $white;
 
-// Text and Link Colors
-$default-text-color--neutral: $brown;
-$default-link-color-hover--neutral: $white--warm;
-$default-link-background-hover--neutral: $blue--dark;
-$ghost-text-color--neutral: $green--dark;
-$ghost-link-color--neutral: $white--warm;
-$ghost-link-color-hover--nuetral: $white--warm;
+// Text Colors
+$default-text-color: $dark-lava;
+$ghost-text-color: $white;
 
-// Background Colors
-$default-background-color--neutral: $white--warm;
-$ghost-background-color--neutral: $blue--light;
-$ghost-background-color-hover--neutral: $blue--darker;
+// List Links
+$default-list-background-color--hover: $blue;
+$ghost-list-link-color: $pink;
+$ghost-list-link-color--hover: $white;
+$ghost-list-background-color: $middle-grey;
+$ghost-list-background-color--hover: $melon;
 
-// Border
-$default-base-border--neutral: 2px solid $default-text-color--neutral;
-
-// ********************** VERSION - RAINBOW ********************** //
-// Text and Link Colors
-$default-nav-link-color--rainbow: $black;
-$default-nav-link-hover-color--rainbow: $purple--light;
+// Other Links
+$default-link-color--hover: $white;
+$ghost-link-color: $pink;
+$ghost-link-color--hover: $white;
 
 // Background Colors
-$default-background-color--rainbow: $grey-white;
-$ghost-background-color--rainbow: $black;
+$default-background-color: $white;
+$ghost-background-color: $middle-grey;
 
 // Border
-$default-base-border--rainbow: 2px solid $black;
-$ghost-base-border--rainbow: 2px solid $white;
+$default-base-border: 2px solid $default-text-color;
+$ghost-base-border: 2px solid $white;
 
 // ********************** GENERAL ********************** //
 // Box Shadow
-$box-shadow: var(--box-shadow);
-$box-shadow-inset: var(--box-shadow-inset);
+$box-shadow: 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
+$box-shadow-inset: inset 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
 
 // Text Shadow
-$text-shadow: var(--text-shadow);
+$text-shadow: -3px 2px 5px rgba(54, 54, 54, 0.5);
 $text-shadow--hard: -5px 5px 0px #363636;
 
 // Focus

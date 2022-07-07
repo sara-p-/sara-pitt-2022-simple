@@ -9,7 +9,7 @@ p span {
   font-weight: $base-font-weight;
   line-height: $base-line-height;
   font-size: $mobile-font-size;
-  color: $black;
+  color: $default-text-color;
   -webkit-font-smoothing: antialiased;
   @include tablet-portrait-up {
     font-size: $tablet-font-size;
@@ -72,7 +72,7 @@ h6,
   text-decoration: underline;
   &:hover,
   &:focus {
-    color: $red;
+    color: $green;
   }
 }
 

@@ -14,8 +14,8 @@
     width: 0;
     height: 0;
     &:checked + .switch__control {
-      background: $default-background-color--rainbow;
-      border: $default-base-border--rainbow;
+      background: $default-background-color;
+      border: $default-base-border;
       &:before {
         transform: translateX(1.25rem);
         background-color: $black;
@@ -29,9 +29,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: $default-background-color--neutral;
+    background: $default-background-color;
     transition: 0.3s;
-    border: $default-base-border--neutral;
+    border: $default-base-border;
     border-radius: 0.65rem;
     &:before {
       position: absolute;
@@ -47,226 +47,12 @@
   }
 }
 
-// ****************** Default Page ****************** //
-.default {
-  // Default -- Neutral
-  &--neutral {
-    // Default -- Neutral -- General
-    @extend .default;
-    background: $default-background-color--neutral;
-    color: $default-text-color--neutral;
-    // Default -- Neutral -- Header
-    .nav__link {
-      color: $default-nav-icon--neutral;
-      &:hover,
-      &:focus {
-        color: $default-nav-icon-hover--neutral;
-      }
-    }
-    // Default -- Neutral -- Section
-    .section {
-      border-bottom: $default-base-border--neutral;
-      &--large,
-      &--medium {
-        @extend .section;
-      }
-    }
-    // Default -- Neutral -- List Items and List Links
-    .list__item {
-      background: $default-background-color--neutral;
-      border-bottom: $default-base-border--neutral;
-    }
-    .button--list-link {
-      color: $default-text-color--neutral;
-      &:hover,
-      &:focus {
-        background: $default-link-background-hover--neutral;
-        color: $default-link-color-hover--neutral;
-      }
-    }
-    // Default -- Neutral -- Footer Contact Button
-    .contact-button {
-      color: $default-text-color--neutral;
-      cursor: pointer;
-      &:hover,
-      &:focus {
-        color: $blue--dark;
-      }
-    }
-  }
-  // Default -- Rainbow
-  &--rainbow {
-    @extend .default;
-    background: $default-background-color--rainbow;
-    // Default -- Neutral -- Header
-    .nav__link {
-      color: $default-nav-link-color--rainbow;
-      &:hover,
-      &:focus {
-        color: $default-nav-link-hover-color--rainbow;
-      }
-    }
-    // Default -- Rainbow -- Section
-    .section {
-      border-bottom: $default-base-border--rainbow;
-      &--large,
-      &--medium {
-        @extend .section;
-      }
-    }
-    // Default -- Rainbow -- List Items and List Links
-    .list__item {
-      background: $default-background-color--rainbow;
-      border-bottom: $default-base-border--rainbow;
-    }
-    // .list__title {
-    //   background: $white;
-    //   display: inline;
-    //   padding: 0.4rem 1rem;
-    // }
-    .button--list-link {
-      color: $black;
-      &:hover,
-      &:focus {
-        background: $black;
-        color: $grey-white;
-      }
-    }
-  }
-}
-
-// ****************** GHOST PAGE ****************** //
-.ghost {
-  // Ghost -- General
-  @include absolute;
-  height: auto;
-  pointer-events: none;
-  // Ghost -- Neutral -- General
-  &--neutral {
-    @extend .ghost;
-    background: $pink--light;
-    // Ghost -- Neutral -- Header
-    .nav__link {
-      color: $ghost-nav-icon--neutral;
-      &.hover {
-        color: $ghost-nav-icon-hover--neutral;
-      }
-    }
-    // Ghost -- Neutral -- Section
-    .section {
-      border-bottom: $default-base-border--neutral;
-      &--large,
-      &--medium {
-        @extend .section;
-      }
-    }
-
-    // Ghost -- Neutral -- List Items and List Links
-    .button--list-link {
-      border-bottom: $default-base-border--neutral;
-      background: $ghost-background-color--neutral;
-      color: $ghost-link-color--neutral;
-      &.hover {
-        background: $ghost-background-color-hover--neutral;
-        color: $ghost-link-color-hover--nuetral;
-      }
-    }
-    // Ghost -- Neutral -- Footer Contact Button
-    .contact-button {
-      color: $blue--dark;
-      &.hover {
-        color: $white;
-      }
-    }
-  }
-  &--rainbow {
-    // Ghost -- Rainbow -- General
-    @extend .ghost;
-    background: $ghost-background-color--rainbow;
-    // @include spot-background;
-    // Ghost -- Rainbow -- Letters
-    .letter {
-      text-shadow: $text-shadow;
-    }
-    // Ghost -- Rainbow -- Header
-    .nav__link {
-      &.hover {
-        color: $purple;
-      }
-    }
-    // Ghost -- Rainbow -- Section
-    .section {
-      border-bottom: $ghost-base-border--rainbow;
-      &--large,
-      &--medium {
-        @extend .section;
-      }
-    }
-    // Ghost -- Rainbow -- List Items and List Links
-    .list__item {
-      border-bottom: 2px solid $grey-white;
-      // background-color: $white;
-      // @include spot-background;
-    }
-    .button--list-link {
-      // border-bottom: $default-base-border--neutral;
-      background: $grey-white;
-      &.hover {
-        // background: $grey-white;
-        // color: $ghost-link-color-hover--nuetral;
-      }
-    }
-    .hover-color {
-      @for $i from 0 through 9 {
-        &--color#{$i} {
-          .list__link {
-            &.hover {
-              // background: var(--color#{$i});
-              background: $grey-white;
-              border: 2px solid $black;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-// ****************** GENERAL ****************** //
-.color {
-  // Neutral Colors
-  &--neutral {
-    color: $ghost-text-color--neutral;
-  }
-  // Rainbow Colors
-
-  @for $i from 0 through 9 {
-    &--color#{$i} {
-      color: var(--color#{$i});
-    }
-  }
-}
-
-.hover-color {
-  @for $i from 0 through 9 {
-    &--color#{$i} {
-      .list__link {
-        &:hover,
-        &:focus {
-          // background: var(--color#{$i});
-          background: $black;
-        }
-      }
-    }
-  }
-}
-
 // ********************* PROGRAMATIC BACKGROUND COLORS ********************** //
-.background-color {
-  @for $color-index from 0 through 9 {
-    &--color#{$color-index} {
-      // background-color: var(--color#{$color-index});
-      background-color: $grey-white;
-    }
-  }
-}
+// .background-color {
+//   @for $color-index from 0 through 9 {
+//     &--color#{$color-index} {
+//       // background-color: var(--color#{$color-index});
+//       background-color: $grey-white;
+//     }
+//   }
+// }

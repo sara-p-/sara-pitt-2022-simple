@@ -8,18 +8,25 @@
 .button {
   @include clear-btn;
   @include btn-base;
-  border-bottom: 2px solid $black;
-  padding: 0.25rem;
+  color: $default-text-color;
   &--list-link {
     @include clear-btn;
-    text-decoration: none;
-    background: transparent;
+    background: $default-background-color;
     text-align: left;
     overflow: hidden;
     transition: all 300ms;
+    padding: 1.35rem;
+    color: $default-text-color;
+    border-bottom: $default-base-border;
+    @include heading-style(2rem);
+    &:hover,
+    &:focus {
+      background: $default-list-background-color--hover;
+      color: $default-link-color--hover;
+    }
   }
   &--contact {
-    @include clear-btn;
+    @extend .button;
     @include heading-style(6rem);
   }
 }

@@ -1,22 +1,24 @@
 @use './variables.scss' as *;
 @use './mixins.scss' as *;
 
-html,
+html {
+  font-size: var(--mobile-font-size);
+
+  @include tablet-portrait-up {
+    font-size: var(--tablet-font-size);
+  }
+  @include desktop-up {
+    font-size: var(--base-font-size);
+  }
+}
 p,
 .p,
 p span {
   font-family: var(--base-font-family);
   font-weight: var(--base-font-weight);
   line-height: var(--base-line-height);
-  font-size: var(--mobile-font-size);
-  color: var(--text-color);
+  color: var(--secondary-color);
   -webkit-font-smoothing: antialiased;
-  @include tablet-portrait-up {
-    font-size: var(--tablet-font-size);
-  }
-  @include desktop-up {
-    font-size: var(--desktop-font-size);
-  }
 }
 
 p {

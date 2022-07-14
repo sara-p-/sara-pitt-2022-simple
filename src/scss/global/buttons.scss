@@ -14,7 +14,7 @@
     overflow: hidden;
     padding: var(--spacing-32);
     border: none;
-    border-bottom: var(--link-border-hover-color);
+    border-bottom: $base-border;
     @include heading-style(2rem);
     // &:hover,
     // &:focus {

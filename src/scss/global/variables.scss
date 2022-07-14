@@ -2,7 +2,8 @@
 @use 'sass:color';
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
-:root {
+:root,
+[data-theme='default'] {
   // Mask
   --mask-position: center;
 
@@ -42,13 +43,13 @@
   --site-width-s: 840px;
 
   // Spacing
-  $spacing-8: 0.333rem;
-  $spacing-16: 0.667rem;
-  $spacing-24: 1rem;
-  $spacing-32: 1.333rem;
-  $spacing-48: 2rem;
-  $spacing-64: 2.667rem;
-  $spacing-120: 5rem;
+  --spacing-8: 0.333rem;
+  --spacing-16: 0.667rem;
+  --spacing-24: 1rem;
+  --spacing-32: 1.333rem;
+  --spacing-48: 2rem;
+  --spacing-64: 2.667rem;
+  --spacing-120: 5rem;
 
   // Box Shadow
   --box-shadow: 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
@@ -61,27 +62,6 @@
   // Transitions
   --base-duration: 300ms;
   --base-timing: ease-in-out;
-
-  // ****************** DEFAULT VARIABLES ********************//
-
-  // Background
-  --background-color: var(--primary-color);
-  // Text
-  --text-color: var(--secondary-color);
-  // Links
-  --link-color: var(--secondary-color);
-  --link-color-hover: var(--accent-color);
-  // Buttons
-  --link-background-color: var(var(--primary-color));
-  --link-background-hover-color: var(var(--accent-color));
-  --link-border-color: var(var(--secondary-color));
-  --link-border-hover-color: var(var(--secondary-color));
-
-  // Focus
-  --focus-outline-color: var(--secondary-color);
-  --focus-outline-width: 3px;
-  --focus-outline: --focus-outline-width solid --focus-outline-color;
-  --focus-outline-offset: 3px;
 }
 
 [data-theme='default'] {
@@ -93,10 +73,13 @@
 
 [data-theme='dark'] {
   // Colors
-  --primary-color: var(--dark-lava);
-  --secondary-color: var(--isabelline);
+  --primary-color: var(--melon);
+  --secondary-color: var(--medium-carmine);
   --accent-color: var(--melon);
 }
+
+// Border
+$base-border: 2px solid var(--secondary-color);
 
 // Layout Modifier Sizes (see layout.scss)
 $sizes: 8px, 16px, 24px, 32px, 48px, 64px, 120px, 160px, 200px;

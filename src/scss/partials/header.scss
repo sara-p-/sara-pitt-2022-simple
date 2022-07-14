@@ -3,6 +3,7 @@
 
 .header {
   padding: 24px 0;
+  background-color: var(--primary-color);
   &__wrapper {
     width: 100%;
     padding: 0 1.3rem;
@@ -13,7 +14,7 @@
 }
 
 .logo {
-  color: var(--font-color);
+  color: var(--secondary-color);
   text-decoration: none;
   margin-bottom: 0;
   font-size: 2rem;

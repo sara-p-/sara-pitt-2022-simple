@@ -1,110 +1,103 @@
 @use 'sass:math';
 @use 'sass:color';
-// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Oswald:wght@200;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
-// Fonts
-$base-font-family: 'Poppins', sans-serif;
-$heading-font-family: $base-font-family;
 
-// Font Size
-$base-font-size: 24px;
-$tablet-font-size: 16px;
-$mobile-font-size: 12px;
+:root {
+  // Mask
+  --mask-position: center;
 
-// Line Height
-$base-line-height: 1.35;
-$heading-line-height: 1;
+  // Colors
+  --dark-lava: hsla(25, 9%, 25%, 1);
+  --melon: hsla(14, 51%, 76%, 1);
+  --isabelline: hsla(50, 21%, 95%, 1);
+  --medium-carmine: hsla(14, 51%, 44%, 1);
 
-// Font Weight
-$base-font-weight: 300;
-$heading-font-weight: 700;
+  // Fonts
+  --base-font-family: 'Poppins', sans-serif;
 
-// Site Width
-$site-width-extra-large: 1905px;
-$site-width-large: 1400px;
-$site-width-medium: 1040px;
-$site-width-small: 840px;
+  // Font Size
+  --base-font-size: 24px;
+  --tablet-font-size: 16px;
+  --mobile-font-size: 12px;
 
-// Spacing
-$spacing-8: 8px;
-$spacing-16: 16px;
-$spacing-24: 24px;
-$spacing-32: 32px;
-$spacing-48: 48px;
-$spacing-64: 64px;
-$spacing-120: 120px;
-$spacing-200: 200px;
+  --h1-font-size: 6rem;
+  --h2-font-size: 5rem;
+  --h3-font-size: 4rem;
+  --h4-font-size: 3rem;
+  --h5-font-size: 2rem;
+  --h6-font-size: 1rem;
+
+  // Line Height
+  --base-line-height: 1.35;
+  --heading-line-height: 1;
+
+  // Font Weight
+  --base-font-weight: 300;
+  --heading-font-weight: 700;
+
+  // Site Width
+  --site-width-xl: 1905px;
+  --site-width-l: 1400px;
+  --site-width-m: 1040px;
+  --site-width-s: 840px;
+
+  // Spacing
+  $spacing-8: 0.333rem;
+  $spacing-16: 0.667rem;
+  $spacing-24: 1rem;
+  $spacing-32: 1.333rem;
+  $spacing-48: 2rem;
+  $spacing-64: 2.667rem;
+  $spacing-120: 5rem;
+
+  // Box Shadow
+  --box-shadow: 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
+  --box-shadow-inset: inset 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
+
+  // Text Shadow
+  --text-shadow: -3px 2px 5px rgba(54, 54, 54, 0.5);
+  --text-shadow--hard: -5px 5px 0px #363636;
+
+  // Transitions
+  --base-duration: 300ms;
+  --base-timing: ease-in-out;
+
+  // ****************** DEFAULT VARIABLES ********************//
+
+  // Background
+  --background-color: var(--primary-color);
+  // Text
+  --text-color: var(--secondary-color);
+  // Links
+  --link-color: var(--secondary-color);
+  --link-color-hover: var(--accent-color);
+  // Buttons
+  --link-background-color: var(var(--primary-color));
+  --link-background-hover-color: var(var(--accent-color));
+  --link-border-color: var(var(--secondary-color));
+  --link-border-hover-color: var(var(--secondary-color));
+
+  // Focus
+  --focus-outline-color: var(--secondary-color);
+  --focus-outline-width: 3px;
+  --focus-outline: --focus-outline-width solid --focus-outline-color;
+  --focus-outline-offset: 3px;
+}
+
+[data-theme='default'] {
+  // Colors
+  --primary-color: var(--isabelline);
+  --secondary-color: var(--dark-lava);
+  --accent-color: var(--medium-carmine);
+}
+
+[data-theme='dark'] {
+  // Colors
+  --primary-color: var(--dark-lava);
+  --secondary-color: var(--isabelline);
+  --accent-color: var(--melon);
+}
 
 // Layout Modifier Sizes (see layout.scss)
 $sizes: 8px, 16px, 24px, 32px, 48px, 64px, 120px, 160px, 200px;
 $positions: top, right, bottom, left;
-
-:root {
-  --mask-position: center;
-}
-
-$black: #363636;
-$white: #f4f3eeff;
-// $white: #edede9;
-
-$brown: #6f5e53;
-$pink: #e6beb2;
-$red: #91462f;
-$blue: #4f7984;
-$green: #3f5327;
-
-$dark-lava: #463f3aff;
-$middle-grey: #6c6460;
-$pale-silver: #bcb8b1ff;
-// $isabelline: #f4f3eeff;
-$melon: #e0afa0ff;
-
-// ********************** Specifics ********************** //
-// Nav Links/Logo
-$default-nav-icon: $brown;
-$default-nav-icon-hover: $blue;
-$ghost-nav-icon: $pink;
-$ghost-nav-icon-hover: $white;
-
-// Text Colors
-$default-text-color: $dark-lava;
-$ghost-text-color: $white;
-
-// List Links
-$default-list-background-color--hover: $blue;
-$ghost-list-link-color: $pink;
-$ghost-list-link-color--hover: $white;
-$ghost-list-background-color: $middle-grey;
-$ghost-list-background-color--hover: $melon;
-
-// Other Links
-$default-link-color--hover: $white;
-$ghost-link-color: $pink;
-$ghost-link-color--hover: $white;
-
-// Background Colors
-$default-background-color: $white;
-$ghost-background-color: $middle-grey;
-
-// Border
-$default-base-border: 2px solid $default-text-color;
-$ghost-base-border: 2px solid $white;
-
-// ********************** GENERAL ********************** //
-// Box Shadow
-$box-shadow: 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
-$box-shadow-inset: inset 0px 0px 13px 6px rgba(54, 54, 54, 0.71);
-
-// Text Shadow
-$text-shadow: -3px 2px 5px rgba(54, 54, 54, 0.5);
-$text-shadow--hard: -5px 5px 0px #363636;
-
-// Focus
-$focus-outline-color: $blue;
-$focus-outline-width: 3px;
-$focus-outline: $focus-outline-width solid $focus-outline-color;
-$focus-outline-offset: 0px;
-
-// Transitions
-$base-duration: 300ms;
-$base-timing: ease-in-out;

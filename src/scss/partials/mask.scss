@@ -13,48 +13,48 @@
   transition: mask-position 0ms;
 }
 
-.rainbow-letter {
-  text-shadow: var(--text-shadow);
-}
+// .rainbow-letter {
+//   text-shadow: var(--text-shadow);
+// }
 
-// ****************** GHOST PAGE ****************** //
-.ghost {
-  // Ghost -- General
-  @include absolute;
-  height: auto;
-  pointer-events: none;
-  background: $ghost-background-color;
-  color: $ghost-text-color;
-  // Ghost -- Header
-  .nav__link {
-    color: $ghost-nav-icon;
-    &.hover {
-      color: $ghost-nav-icon-hover;
-    }
-  }
-  // Ghost -- Section
-  .section {
-    border-bottom: $ghost-base-border;
-    &--large,
-    &--medium {
-      @extend .section;
-    }
-    // Ghost -- Footer Contact Button
-    // .contact-button {
-    //   color: $blue;
-    //   &.hover {
-    //     color: $white;
-    //   }
-    // }
-  }
-  // Ghost -- List Items and List Links
-  .button--list-link {
-    border-bottom: $ghost-base-border;
-    background: $ghost-list-background-color;
-    color: $ghost-list-link-color;
-    &.hover {
-      background: $ghost-list-background-color--hover;
-      color: $ghost-list-link-color--hover;
-    }
-  }
-}
+// // ****************** GHOST PAGE ****************** //
+// .ghost {
+//   // Ghost -- General
+//   @include absolute;
+//   height: auto;
+//   pointer-events: none;
+//   background: $ghost-background-color;
+//   color: $ghost-text-color;
+//   // Ghost -- Header
+//   .nav__link {
+//     color: $ghost-nav-icon;
+//     &.hover {
+//       color: $ghost-nav-icon-hover;
+//     }
+//   }
+//   // Ghost -- Section
+//   .section {
+//     border-bottom: $ghost-base-border;
+//     &--large,
+//     &--medium {
+//       @extend .section;
+//     }
+//     // Ghost -- Footer Contact Button
+//     // .contact-button {
+//     //   color: $blue;
+//     //   &.hover {
+//     //     color: $white;
+//     //   }
+//     // }
+//   }
+//   // Ghost -- List Items and List Links
+//   .button--list-link {
+//     border-bottom: $ghost-base-border;
+//     background: $ghost-list-background-color;
+//     color: $ghost-list-link-color;
+//     &.hover {
+//       background: $ghost-list-background-color--hover;
+//       color: $ghost-list-link-color--hover;
+//     }
+//   }
+// }

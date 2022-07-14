@@ -6,24 +6,21 @@
 }
 
 .button {
-  @include clear-btn;
-  @include btn-base;
-  color: $default-text-color;
+  @include button-base;
+
   &--list-link {
-    @include clear-btn;
-    background: $default-background-color;
+    @extend .button;
     text-align: left;
     overflow: hidden;
-    transition: all 300ms;
-    padding: 1.35rem;
-    color: $default-text-color;
-    border-bottom: $default-base-border;
+    padding: var(--spacing-32);
+    border: none;
+    border-bottom: var(--link-border-hover-color);
     @include heading-style(2rem);
-    &:hover,
-    &:focus {
-      background: $default-list-background-color--hover;
-      color: $default-link-color--hover;
-    }
+    // &:hover,
+    // &:focus {
+    //   background: $default-list-background-color--hover;
+    //   color: $default-link-color--hover;
+    // }
   }
   &--contact {
     @extend .button;

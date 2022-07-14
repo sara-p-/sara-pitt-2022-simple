@@ -7,16 +7,16 @@
   }
   &__item {
     display: inline-block;
-    margin-left: 16px;
+    margin-left: var(--spacing-16);
   }
   &__link {
     text-decoration: none;
     font-weight: 400;
-    font-size: 32px;
-    color: $default-nav-icon;
-    &:hover,
-    &:focus {
-      color: $default-nav-icon-hover;
-    }
+    font-size: 2rem;
+    // // color: $default-nav-icon;
+    // &:hover,
+    // &:focus {
+    //   color: $default-nav-icon-hover;
+    // }
   }
 }

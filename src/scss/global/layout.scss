@@ -19,7 +19,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background: $default-background-color;
+  background: var(--background-color);
 }
 
 .section {
@@ -28,7 +28,7 @@ body {
   width: 100%;
   margin-bottom: 0;
   padding: 0 0 1rem 0;
-  border-bottom: $default-base-border;
+  border-bottom: var(--base-border);
   &--list {
     @extend .section;
     padding: 0;
@@ -44,9 +44,9 @@ body {
   }
   &__wrapper {
     width: 100%;
-    max-width: $site-width-extra-large;
+    max-width: var(--site-width-xl);
     margin-right: auto;
-    padding: 0 32px;
+    padding: 0 var(--spacing-32);
   }
   &__row {
     width: 100%;
@@ -66,6 +66,12 @@ body {
       margin-bottom: 1rem;
     }
   }
+}
+
+.ghost {
+  @include absolute;
+  height: auto;
+  pointer-events: none;
 }
 
 .visually-hidden,

@@ -28,20 +28,15 @@
 }
 
 // Styleguide
-@mixin heading-style($font-size: 15rem) {
-  font-family: $heading-font-family;
+@mixin heading-style($size: var(--h1-font-size)) {
+  font-family: var(--base-font-family);
   font-weight: 500;
   line-height: 1.2;
-  font-size: $font-size;
+  font-size: $size;
   margin: 0;
 }
 
 // Utility
-@mixin link-style() {
-  font-family: $base-font-family;
-  letter-spacing: 0.155em;
-  text-transform: uppercase;
-}
 
 @mixin image-cover() {
   width: 100%;
@@ -59,7 +54,7 @@
   padding: 0;
 }
 
-@mixin clear-btn() {
+@mixin button-base() {
   position: relative;
   top: auto;
   left: auto;
@@ -67,47 +62,38 @@
   width: auto;
   height: auto;
   padding: 0;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
+  font-family: var(--base-font-family);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
   background: transparent;
-  border: none;
-  color: $black;
+  border: var(--base-border);
+  color: var(--link-color);
+  text-align: center;
   // transform: translate(0);
   text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  background-color: var(--link-background-color);
   text-decoration: none;
   border-radius: 0;
   box-shadow: none;
   text-shadow: none;
-  // &:before,
-  // &:after {
-  //   content: none;
-  // }
-}
-
-// Button base
-@mixin btn-base() {
-  position: relative;
-  display: inline-block;
   padding: 17px 8px 15px;
-  text-align: center;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 500;
-  line-height: 1;
-  text-decoration: none;
-  color: $default-text-color;
-  background-color: transparent;
-  border-radius: 0;
-  transition: all $base-duration $base-timing;
+  transition: all var(--base-duration) var(--base-timing);
   user-select: none;
   vertical-align: middle;
   appearance: none;
   box-sizing: border-box;
+  display: inline-block;
   cursor: pointer;
+  &:hover,
   &:focus {
-    outline: $focus-outline;
-    outline-offset: $focus-outline-offset;
+    background-color: var(--link-background-hover-color);
+    color: var(--link-color-hover);
+  }
+  &:focus {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
   }
 }
 
@@ -146,8 +132,8 @@
 }
 
 @mixin focus {
-  outline: $focus-outline;
-  outline-offset: $focus-outline-offset;
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
 }
 
 @mixin fullscreen {
@@ -177,11 +163,4 @@
     display: table;
     clear: both;
   }
-}
-
-@mixin spot-background {
-  background-image: url('../../images/background--spot--grey.svg');
-  background-size: 1rem;
-  background-repeat: repeat;
-  background-position: center;
 }

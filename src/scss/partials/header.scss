@@ -13,9 +13,9 @@
 }
 
 .logo {
-  color: $default-text-color;
+  color: var(--font-color);
   text-decoration: none;
   margin-bottom: 0;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 500;
 }

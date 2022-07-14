@@ -48,12 +48,6 @@
     &:after {
       content: '\f35d';
     }
-    // &--white {
-    //   @extend .icon--up-right-from-square;
-    //   &:after {
-    //     color: $white;
-    //   }
-    // }
   }
   &--angle-right {
     @extend .icon;

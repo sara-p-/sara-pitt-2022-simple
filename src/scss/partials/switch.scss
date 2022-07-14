@@ -14,11 +14,11 @@
     width: 0;
     height: 0;
     &:checked + .switch__control {
-      background: $default-background-color;
-      border: $default-base-border;
+      background: var(--background-color);
+      border: var(--base-border);
       &:before {
         transform: translateX(1.25rem);
-        background-color: $black;
+        background-color: var(--link-color);
       }
     }
   }
@@ -29,9 +29,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: $default-background-color;
+    background: var(--background-color);
     transition: 0.3s;
-    border: $default-base-border;
+    border: var(--base-border);
     border-radius: 0.65rem;
     &:before {
       position: absolute;
@@ -40,19 +40,9 @@
       width: 0.9rem;
       left: 3px;
       bottom: 3px;
-      background-color: $brown;
+      background-color: var(--link-color);
       border-radius: 0.45rem;
       transition: 0.4s;
     }
   }
 }
-
-// ********************* PROGRAMATIC BACKGROUND COLORS ********************** //
-// .background-color {
-//   @for $color-index from 0 through 9 {
-//     &--color#{$color-index} {
-//       // background-color: var(--color#{$color-index});
-//       background-color: $grey-white;
-//     }
-//   }
-// }

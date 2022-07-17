@@ -1,0 +1,32 @@
+@use 'sass:color';
+@use '../global/variables.scss' as *;
+@use '../global/mixins.scss' as *;
+
+[data-theme='alt'] {
+  .color {
+    @for $i from 0 through 9 {
+      &--color#{$i} {
+        color: var(--color#{$i});
+      }
+    }
+  }
+
+  .background-color {
+    @for $i from 0 through 9 {
+      &--color#{$i} {
+        .list__link {
+          background: var(--color#{$i});
+          color: var(--primary-color);
+          // background: var(--tertiary-color);
+          &.hover {
+            &:after {
+              content: '';
+              @include absolute;
+              background: rgba(0, 0, 0, 0.3);
+            }
+          }
+        }
+      }
+    }
+  }
+}

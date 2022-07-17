@@ -4,6 +4,7 @@
 .nav {
   &__list {
     @include clear-list;
+    @include flex($wrap: nowrap);
   }
   &__item {
     display: inline-block;
@@ -13,10 +14,10 @@
     text-decoration: none;
     font-weight: 400;
     font-size: 2rem;
-    // // color: $default-nav-icon;
-    // &:hover,
-    // &:focus {
-    //   color: $default-nav-icon-hover;
-    // }
+    color: var(--secondary-color);
+    &:hover,
+    &:focus {
+      color: var(--tertiary-color);
+    }
   }
 }

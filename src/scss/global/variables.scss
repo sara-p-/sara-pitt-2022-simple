@@ -9,9 +9,42 @@
 
   // Colors
   --dark-lava: hsla(25, 9%, 25%, 1);
-  --melon: hsla(14, 51%, 76%, 1);
   --isabelline: hsla(50, 21%, 95%, 1);
+  --melon: hsla(14, 51%, 76%, 1);
+  --blast-off-bronze: #9e6e5fff;
   --medium-carmine: hsla(14, 51%, 44%, 1);
+  --caput-mortuum: hsla(15, 51%, 24%, 1);
+
+  --white: hsla(0, 0%, 100%, 1);
+  --black: #000000;
+
+  --deep-space-sparkle: hsla(193, 34%, 30%, 1);
+  --blue-sapphire: hsla(190, 100%, 23%, 1);
+  --viridian-green: hsla(181, 88%, 31%, 1);
+  --middle-blue-green: hsla(160, 41%, 70%, 1);
+  --dark-olive-green: hsla(74, 32%, 32%, 1);
+
+  --lemon-chiffon: hsla(56, 85%, 89%, 1);
+  --champagne-pink: hsla(27, 92%, 90%, 1);
+  --baby-pink: hsla(356, 100%, 91%, 1);
+  --pink-lavender: hsla(311, 64%, 85%, 1);
+  --mauve: hsla(263, 64%, 84%, 1);
+  --baby-blue-eyes: hsla(215, 77%, 80%, 1);
+  --non-photo-blue: hsla(195, 82%, 76%, 1);
+  --electric-blue: hsla(185, 84%, 76%, 1);
+  --magic-mint: hsla(167, 82%, 78%, 1);
+  --granny-smith-apple: hsla(126, 89%, 85%, 1);
+
+  --color0: #fbf8cc;
+  --color1: #fde4cf;
+  --color2: #ffcfd2;
+  --color3: #f1c0e8;
+  --color4: #cfbaf0;
+  --color5: #a3c4f3;
+  --color6: #90dbf4;
+  --color7: #8eecf5;
+  --color8: #98f5e1;
+  --color9: #b9fbc0;
 
   // Fonts
   --base-font-family: 'Poppins', sans-serif;
@@ -68,18 +101,21 @@
   // Colors
   --primary-color: var(--isabelline);
   --secondary-color: var(--dark-lava);
-  --accent-color: var(--medium-carmine);
+  --tertiary-color: var(--melon);
+  --accent-color: var(--caput-mortuum);
 }
 
-[data-theme='dark'] {
+[data-theme='alt'] {
   // Colors
-  --primary-color: var(--melon);
-  --secondary-color: var(--medium-carmine);
-  --accent-color: var(--melon);
+  --primary-color: var(--dark-lava);
+  --secondary-color: var(--isabelline);
+  --tertiary-color: var(--melon);
+  // --tertiary-color: var(--blast-off-bronze);
+  --accent-color: var(--caput-mortuum);
 }
 
 // Border
-$base-border: 2px solid var(--secondary-color);
+$base-border: 3px solid var(--secondary-color);
 
 // Layout Modifier Sizes (see layout.scss)
 $sizes: 8px, 16px, 24px, 32px, 48px, 64px, 120px, 160px, 200px;

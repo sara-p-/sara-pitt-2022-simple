@@ -7,20 +7,22 @@
 
 .button {
   @include button-base;
-
   &--list-link {
     @extend .button;
     text-align: left;
     overflow: hidden;
     padding: var(--spacing-32);
     border: none;
+    // border-top: $base-border;
     border-bottom: $base-border;
+    background: var(--primary-color);
     @include heading-style(2rem);
-    // &:hover,
-    // &:focus {
-    //   background: $default-list-background-color--hover;
-    //   color: $default-link-color--hover;
-    // }
+    &.hover,
+    &:hover,
+    &:focus {
+      background: var(--tertiary-color);
+      color: var(--accent-color);
+    }
   }
   &--contact {
     @extend .button;

@@ -1,8 +1,8 @@
 import Data from '../json/data.json'
 import { createSpan } from './html-components'
 
-// Loop through the given array of elements, and assign them specific color classes
-export function setColors(elementArray, colorType, className, itemName) {
+// Loop through the given array and add or remove the rainbow color classes
+export function setColorClasses(elementArray, className) {
   const colorArray = Data['colorsRainbow']
   for (
     let elementIndex = 0;
@@ -11,23 +11,7 @@ export function setColors(elementArray, colorType, className, itemName) {
   ) {
     let count = elementIndex % colorArray.length
     const element = elementArray[elementIndex]
-    if (colorType == 'colorsNeutral') {
-      element.classList.remove(
-        `${className}${colorArray[count]}`,
-        `${itemName}${elementIndex}`
-      )
-      element.classList.add(`${className}neutral`, `${itemName}${elementIndex}`)
-    } else {
-      element.classList.remove(
-        `${className}${colorArray[count]}`,
-        `${className}neutral`,
-        `${itemName}${elementIndex}`
-      )
-      element.classList.add(
-        `${className}${colorArray[count]}`,
-        `${itemName}${elementIndex}`
-      )
-    }
+    element.classList.add(`${className}${colorArray[count]}`)
   }
 }
 
@@ -45,24 +29,6 @@ export function insertSpans(elementArray, classNameArray) {
       element.append(createSpan(character, classNameArray))
     })
   })
-}
-
-// Setting the Default and Ghost classes
-export function setSwitchClass(switchSetting) {
-  const defaultWrapper = document.querySelector('.default')
-  const ghostWrapper = document.querySelector('.ghost')
-
-  if (switchSetting == 'neutral') {
-    defaultWrapper.classList.remove('default--rainbow')
-    defaultWrapper.classList.add('default--neutral')
-    ghostWrapper.classList.remove('ghost--rainbow')
-    ghostWrapper.classList.add('ghost--neutral')
-  } else {
-    defaultWrapper.classList.remove('default--neutral')
-    defaultWrapper.classList.add('default--rainbow')
-    ghostWrapper.classList.remove('ghost--neutral')
-    ghostWrapper.classList.add('ghost--rainbow')
-  }
 }
 
 // Linking the default item/link mouse events to the ghost item/link

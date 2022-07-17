@@ -2,6 +2,7 @@
 @use '../global/mixins.scss' as *;
 
 .footer {
+  background: var(--primary-color);
   .section {
     &--small {
       padding: 24px 0;

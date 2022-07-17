@@ -14,11 +14,11 @@
     width: 0;
     height: 0;
     &:checked + .switch__control {
-      background: var(--background-color);
-      border: var(--base-border);
+      background: var(--primary-color);
+      border: $base-border;
       &:before {
         transform: translateX(1.25rem);
-        background-color: var(--link-color);
+        background-color: var(--secondary-color);
       }
     }
   }
@@ -29,9 +29,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--background-color);
+    background: var(--primary-color);
     transition: 0.3s;
-    border: var(--base-border);
+    border: $base-border;
     border-radius: 0.65rem;
     &:before {
       position: absolute;
@@ -40,7 +40,7 @@
       width: 0.9rem;
       left: 3px;
       bottom: 3px;
-      background-color: var(--link-color);
+      background-color: var(--secondary-color);
       border-radius: 0.45rem;
       transition: 0.4s;
     }

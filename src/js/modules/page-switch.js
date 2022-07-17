@@ -1,68 +1,37 @@
 import Data from '../json/data.json'
-import { setColors, insertSpans, setSwitchClass } from './helpers'
+import { setColorClasses, insertSpans } from './helpers'
 
 export default function pageSwitch() {
   const defaultSwitchInput = document.querySelector(
     '#default-header-switch input'
   )
-  const defaultItemArray = document.querySelectorAll('.default .list__item')
-  const ghostItemArray = document.querySelectorAll('.ghost .list__item')
+  const itemArray = document.querySelectorAll('.list__item')
+  const navLinkArray = document.querySelectorAll('.nav__link')
+  const letterArray = document.querySelectorAll('.letters')
 
   // *************** Setting all of the class changes *************** //
   // Grabbing all of the relevant elements, and surrounding each of their innerText characters with spans
-  const elementArray = document.querySelectorAll('.letters')
-  insertSpans(elementArray, ['letter'])
-  const spanArray = document.querySelectorAll('span.letter')
+  insertSpans(letterArray, ['letter'])
 
-  // The default state is 'neutral', so let's go ahead and set everything up for that
-  setSwitchClass('neutral')
-  setColors(spanArray, 'colorsNeutral', 'color--', 'span--')
-  setColors(
-    defaultItemArray,
-    'colorsNeutral',
-    'background-color--',
-    'list__item--'
-  )
-  setColors(
-    ghostItemArray,
-    'colorsNeutral',
-    'background-color--',
-    'list__item--'
-  )
+  let spanArray = document.querySelectorAll('span.letter')
+
+  // Adding the color classes
+  setColorClasses(spanArray, 'color--')
+  setColorClasses(navLinkArray, 'color--')
+  setColorClasses(itemArray, 'background-color--')
 
   // Now let's put the logic in place to switch everything over on the defaultSwitchInput change
-  // defaultSwitchInput.addEventListener('change', (e) => {
-  //   // If the Header switch gets clicked, all the other switches should follow
-  //   if (defaultSwitchInput.checked == false) {
-  //     setSwitchClass('neutral')
-  //     setColors(spanArray, 'colorsNeutral', 'color--', 'span--')
-  //     setColors(
-  //       defaultItemArray,
-  //       'colorsNeutral',
-  //       'hover-color--',
-  //       'list__item--'
-  //     )
-  //     setColors(
-  //       ghostItemArray,
-  //       'colorsNeutral',
-  //       'background-color--',
-  //       'list__item--'
-  //     )
-  //   } else if (defaultSwitchInput.checked == true) {
-  //     setSwitchClass('rainbow')
-  //     setColors(spanArray, 'colorsRainbow', 'color--', 'span--')
-  //     setColors(
-  //       defaultItemArray,
-  //       'colorsRainbow',
-  //       'hover-color--',
-  //       'list__item--'
-  //     )
-  //     setColors(
-  //       ghostItemArray,
-  //       'colorsRainbow',
-  //       'hover-color--',
-  //       'list__item--'
-  //     )
-  //   }
-  // })
+  defaultSwitchInput.addEventListener('change', (e) => {
+    // Okay, if the header switch changes, we need to switch the [data-theme] attribute value
+    const fakeBodyArray = document.querySelectorAll('.fake-body')
+    fakeBodyArray.forEach((item) => {
+      const theme = item.dataset.theme
+
+      if (theme == 'default') {
+        item.setAttribute('data-theme', 'alt')
+      } else {
+        item.setAttribute('data-theme', 'default')
+      }
+    })
+  })
 }

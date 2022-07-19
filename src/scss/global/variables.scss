@@ -15,7 +15,7 @@
   --medium-carmine: hsla(14, 51%, 44%, 1);
   --caput-mortuum: hsla(15, 51%, 24%, 1);
 
-  --white: hsla(0, 0%, 100%, 1);
+  --white: #ffffff;
   --black: #000000;
 
   --deep-space-sparkle: hsla(193, 34%, 30%, 1);
@@ -45,6 +45,17 @@
   --color7: #8eecf5;
   --color8: #98f5e1;
   --color9: #b9fbc0;
+
+  --color0-hover: #eee12f;
+  --color1-hover: #eb6f0a;
+  --color2-hover: #ff3341;
+  --color3-hover: #d747bc;
+  --color4-hover: #7e47d7;
+  --color5-hover: #4a8ce8;
+  --color6-hover: #33bdeb;
+  --color7-hover: #1edaeb;
+  --color8-hover: #20e9bd;
+  --color9-hover: #3ef450;
 
   // Fonts
   --base-font-family: 'Poppins', sans-serif;
@@ -99,19 +110,26 @@
 
 [data-theme='default'] {
   // Colors
-  --primary-color: var(--isabelline);
-  --secondary-color: var(--dark-lava);
+  --primary-color: var(--white);
+  --secondary-color: var(--black);
   --tertiary-color: var(--melon);
   --accent-color: var(--caput-mortuum);
+  // --primary-color: var(--isabelline);
+  // --secondary-color: var(--dark-lava);
+  // --tertiary-color: var(--melon);
+  // --accent-color: var(--caput-mortuum);
 }
 
 [data-theme='alt'] {
   // Colors
-  --primary-color: var(--dark-lava);
-  --secondary-color: var(--isabelline);
+  --primary-color: var(--black);
+  --secondary-color: var(--white);
   --tertiary-color: var(--melon);
-  // --tertiary-color: var(--blast-off-bronze);
   --accent-color: var(--caput-mortuum);
+  // --primary-color: var(--dark-lava);
+  // --secondary-color: var(--isabelline);
+  // --tertiary-color: var(--melon);
+  // --accent-color: var(--caput-mortuum);
 }
 
 // Border

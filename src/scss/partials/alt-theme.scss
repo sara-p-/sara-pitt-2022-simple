@@ -18,12 +18,14 @@
           background: var(--color#{$i});
           color: var(--primary-color);
           // background: var(--tertiary-color);
-          &.hover {
-            &:after {
-              content: '';
-              @include absolute;
-              background: rgba(0, 0, 0, 0.3);
-            }
+          &.hover,
+          &:hover {
+            background: var(--color#{$i}-hover);
+            // &:after {
+            //   content: '';
+            //   @include absolute;
+            //   background: rgba(0, 0, 0, 0.3);
+            // }
           }
         }
       }

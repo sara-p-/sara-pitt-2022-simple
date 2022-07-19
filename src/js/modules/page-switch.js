@@ -5,6 +5,7 @@ export default function pageSwitch() {
   const defaultSwitchInput = document.querySelector(
     '#default-header-switch input'
   )
+  const switchButton = document.querySelector('#dark-light-button')
   const itemArray = document.querySelectorAll('.list__item')
   const navLinkArray = document.querySelectorAll('.nav__link')
   const letterArray = document.querySelectorAll('.letters')
@@ -17,11 +18,11 @@ export default function pageSwitch() {
 
   // Adding the color classes
   setColorClasses(spanArray, 'color--')
-  setColorClasses(navLinkArray, 'color--')
+  // setColorClasses(navLinkArray, 'color--')
   setColorClasses(itemArray, 'background-color--')
 
   // Now let's put the logic in place to switch everything over on the defaultSwitchInput change
-  defaultSwitchInput.addEventListener('change', (e) => {
+  switchButton.addEventListener('click', (e) => {
     // Okay, if the header switch changes, we need to switch the [data-theme] attribute value
     const fakeBodyArray = document.querySelectorAll('.fake-body')
     fakeBodyArray.forEach((item) => {

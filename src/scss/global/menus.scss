@@ -5,19 +5,32 @@
   &__list {
     @include clear-list;
     @include flex($wrap: nowrap);
+    gap: var(--spacing-16);
   }
   &__item {
-    display: inline-block;
-    margin-left: var(--spacing-16);
+    display: block;
+    flex: 1;
+    // margin-left: var(--spacing-16);
   }
   &__link {
     text-decoration: none;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--secondary-color);
     &:hover,
     &:focus {
       color: var(--tertiary-color);
     }
+  }
+  &--social {
+    @extend .nav;
+    position: absolute;
+    top: 100%;
+    right: -3px;
+    z-index: 1;
+    border: $base-border;
+    padding: var(--spacing-16);
+    transform-origin: right top;
+    transform: rotate(-180deg);
   }
 }

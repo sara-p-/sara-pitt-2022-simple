@@ -55,7 +55,7 @@
   padding: 0;
 }
 
-@mixin button-base() {
+@mixin clear-button {
   position: relative;
   top: auto;
   left: auto;
@@ -67,20 +67,18 @@
   font-size: var(--base-font-size);
   line-height: var(--base-line-height);
   background: transparent;
-  border: var(--base-border);
-  color: var(--link-color);
+  border: none;
+  color: var(--secondary-color);
   text-align: center;
-  // transform: translate(0);
   text-transform: none;
   -webkit-font-smoothing: antialiased;
+  transition: all var(--base-duration) var(--base-timing);
   font-weight: 500;
-  background-color: var(--link-background-color);
+  background-color: transparent;
   text-decoration: none;
   border-radius: 0;
   box-shadow: none;
-  text-shadow: none;
   padding: 17px 8px 15px;
-  transition: all var(--base-duration) var(--base-timing);
   user-select: none;
   vertical-align: middle;
   appearance: none;
@@ -89,13 +87,16 @@
   cursor: pointer;
   &:hover,
   &:focus {
-    background-color: var(--link-background-hover-color);
-    color: var(--link-color-hover);
+    background-color: transparent;
+    color: var(--primary-color);
   }
   &:focus {
     outline: var(--focus-outline);
     outline-offset: var(--focus-outline-offset);
   }
+}
+
+@mixin button-base() {
 }
 
 @mixin aspect-ratio($width, $height) {

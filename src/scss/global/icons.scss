@@ -9,6 +9,60 @@
     -webkit-font-smoothing: antialiased;
     font: var(--fa-font-solid);
   }
+  &--message {
+    @extend .icon;
+    &:after {
+      content: '\f27a';
+    }
+  }
+  &--circle-info {
+    @extend .icon;
+    &:after {
+      content: '\f05a';
+    }
+  }
+  &--circle-half-stroke {
+    @extend .icon;
+    &:after {
+      content: '\f042';
+    }
+  }
+  &--circle-plus {
+    @extend .icon;
+    &:after {
+      content: '\f055';
+    }
+  }
+  &--circle-minus {
+    @extend .icon;
+    &:after {
+      content: '\f056';
+    }
+  }
+  &--circle {
+    @extend .icon;
+    &:after {
+      content: '\f111';
+    }
+  }
+  &--circle-dot {
+    @extend .icon;
+    &:after {
+      content: '\f192';
+    }
+  }
+  &--sun {
+    @extend .icon;
+    &:after {
+      content: '\f185';
+    }
+  }
+  &--moon {
+    @extend .icon;
+    &:after {
+      content: '\f186';
+    }
+  }
   &--arrow-long-right {
     @extend .icon;
     &:after {

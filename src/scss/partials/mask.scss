@@ -8,9 +8,12 @@
 .mask-target {
   mask: url('../../images/circle.svg');
   mask-repeat: no-repeat;
-  mask-size: 17.5rem;
+  mask-size: 0rem;
   mask-position: var(--mask-position);
-  transition: mask-position 0ms;
+  transition: mask-position 0ms, mask-size 300ms;
+  &[data-active='true'] {
+    mask-size: 17.5rem;
+  }
 }
 
 // .rainbow-letter {

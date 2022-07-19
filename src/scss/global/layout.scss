@@ -21,6 +21,14 @@ body {
   padding: 0;
 }
 
+.fake-body {
+  overflow: hidden;
+}
+
+.main {
+  padding-top: calc(1.5rem + calc(var(--spacing-16) * 2));
+}
+
 .section {
   $self: &;
   position: relative;

@@ -2,8 +2,14 @@
 @use '../global/mixins.scss' as *;
 
 .header {
-  padding: 24px 0;
-  background-color: var(--primary-color);
+  padding: var(--spacing-16) 0;
+  background-color: var(--melon);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: $base-border;
+  z-index: 9;
   &__wrapper {
     width: 100%;
     padding: 0 1.3rem;
@@ -19,4 +25,5 @@
   margin-bottom: 0;
   font-size: 2rem;
   font-weight: 500;
+  line-height: 0;
 }

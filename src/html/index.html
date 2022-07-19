@@ -17,44 +17,68 @@
         <div class="header__wrapper">
           <div class="header__row">
             <a href="/" class="logo h4 nav__link">SP</a>
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__item">
-                  <a href="/" class="nav__link icon--linkedin"
-                    ><span class="visually-hidden">LinkedIn</span></a
-                  >
-                </li>
-                <li class="nav__item">
-                  <a href="/" class="nav__link icon--github"
-                    ><span class="visually-hidden">Github</span></a
-                  >
-                </li>
-                <li class="nav__item">
-                  <a href="/" class="nav__link icon--instagram"
-                    ><span class="visually-hidden">Instagram</span></a
-                  >
-                </li>
-                <li class="nav__item">
-                  <a href="/" class="nav__link icon--paper-plane"
-                    ><span class="visually-hidden">Contact</span></a
-                  >
-                </li>
-                <li class="nav__item">
-                  <label
-                    id="default-header-switch"
-                    class="switch"
-                    for="default-header-switch-checkbox"
-                    ><span class="visually-hidden">Switch On/Off</span>
-                    <input
-                      class="switch__input"
-                      id="default-header-switch-checkbox"
-                      type="checkbox"
-                      name="page-switch" />
-                    <span class="switch__control"></span
-                  ></label>
-                </li>
-              </ul>
-            </nav>
+            <div class="nav-box">
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <button
+                      id="dark-light-button"
+                      type="button"
+                      class="dark-light button--clear nav__link icon--circle-half-stroke"
+                    >
+                      <span class="visually-hidden">Dark/Light Mode</span>
+                    </button>
+                  </li>
+                  <li class="nav__item">
+                    <button
+                      id="spot-on-off-button"
+                      type="button"
+                      class="button--clear nav__link icon--circle-minus"
+                    >
+                      <span class="visually-hidden">Spot On/Off</span>
+                    </button>
+                  </li>
+                  <li class="nav__item">
+                    <button
+                      id="social-button"
+                      type="button"
+                      aria-expanded="false"
+                      class="button--clear nav__link icon--circle-info"
+                    >
+                      <span class="visually-hidden">Contact</span>
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+              <div
+                aria-hidden="true"
+                aria-labelledby="social-button"
+                class="nav--social"
+              >
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a href="/" class="nav__link icon--linkedin"
+                      ><span class="visually-hidden">LinkedIn</span></a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a href="/" class="nav__link icon--github"
+                      ><span class="visually-hidden">Github</span></a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a href="/" class="nav__link icon--instagram"
+                      ><span class="visually-hidden">Instagram</span></a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a href="/" class="nav__link icon--paper-plane"
+                      ><span class="visually-hidden">Contact</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -169,49 +193,74 @@
       data-theme="alt"
       class="fake-body ghost mask-target"
       aria-hidden="true"
+      data-active="true"
     >
       <div class="header">
         <div class="header__wrapper">
           <div class="header__row">
             <span class="h4 nav__link">SP</span>
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__item">
-                  <span class="nav__link icon--linkedin"
-                    ><span class="visually-hidden">LinkedIn</span></span
-                  >
-                </li>
-                <li class="nav__item">
-                  <span class="nav__link icon--github"
-                    ><span class="visually-hidden">Github</span></span
-                  >
-                </li>
-                <li class="nav__item">
-                  <span class="nav__link icon--instagram"
-                    ><span class="visually-hidden">Instagram</span></span
-                  >
-                </li>
-                <li class="nav__item">
-                  <span class="nav__link icon--paper-plane"
-                    ><span class="visually-hidden">Contact</span></span
-                  >
-                </li>
-                <li class="nav__item">
-                  <label
-                    id="ghost-header-switch"
-                    class="switch"
-                    for="ghost-header-switch-checkbox"
-                    ><span class="visually-hidden">Switch On/Off</span>
-                    <input
-                      class="switch__input"
-                      id="ghost-header-switch-checkbox"
-                      type="checkbox"
-                      name="page-switch" />
-                    <span class="switch__control"></span
-                  ></label>
-                </li>
-              </ul>
-            </nav>
+            <div class="nav-box">
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <button
+                      id="dark-light-button"
+                      type="button"
+                      class="dark-light button--clear nav__link icon--circle-half-stroke"
+                    >
+                      <span class="visually-hidden">Dark/Light Mode</span>
+                    </button>
+                  </li>
+                  <li class="nav__item">
+                    <button
+                      id="spot-on-off-button"
+                      type="button"
+                      class="button--clear nav__link icon--circle-minus"
+                    >
+                      <span class="visually-hidden">Spot On/Off</span>
+                    </button>
+                  </li>
+                  <li class="nav__item">
+                    <button
+                      id="social-button"
+                      type="button"
+                      aria-expanded="false"
+                      class="button--clear nav__link icon--circle-info"
+                    >
+                      <span class="visually-hidden">Contact</span>
+                    </button>
+                  </li>
+                </ul>
+              </nav>
+              <div
+                aria-hidden="true"
+                aria-labelledby="social-button"
+                class="nav--social"
+              >
+                <ul class="nav__list">
+                  <li class="nav__item">
+                    <a href="/" class="nav__link icon--linkedin"
+                      ><span class="visually-hidden">LinkedIn</span></a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a href="/" class="nav__link icon--github"
+                      ><span class="visually-hidden">Github</span></a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a href="/" class="nav__link icon--instagram"
+                      ><span class="visually-hidden">Instagram</span></a
+                    >
+                  </li>
+                  <li class="nav__item">
+                    <a href="/" class="nav__link icon--paper-plane"
+                      ><span class="visually-hidden">Contact</span></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

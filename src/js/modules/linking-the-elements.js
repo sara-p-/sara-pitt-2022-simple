@@ -2,41 +2,41 @@ import { linkTheHoverEvent } from './helpers'
 
 export default function linkingTheElements() {
   // *************** Linking the Switch Toggle input with the Ghost Switch Toggle input ************** //
-  const defaultHeaderSwitchInput = document.querySelector(
-    '#default-header-switch input'
-  )
-  const ghostHeaderSwitchInput = document.querySelector(
-    '#ghost-header-switch input'
-  )
-  const defaultFooterSwitchInput = document.querySelector(
-    '#default-footer-switch input'
-  )
-  const ghostFooterSwitchInput = document.querySelector(
-    '#ghost-footer-switch input'
-  )
+  // const defaultHeaderSwitchInput = document.querySelector(
+  //   '#default-header-switch input'
+  // )
+  // const ghostHeaderSwitchInput = document.querySelector(
+  //   '#ghost-header-switch input'
+  // )
+  // const defaultFooterSwitchInput = document.querySelector(
+  //   '#default-footer-switch input'
+  // )
+  // const ghostFooterSwitchInput = document.querySelector(
+  //   '#ghost-footer-switch input'
+  // )
 
-  defaultHeaderSwitchInput.addEventListener('change', (e) => {
-    if (defaultHeaderSwitchInput.checked == false) {
-      ghostHeaderSwitchInput.checked = false
-      ghostFooterSwitchInput.checked = false
-      defaultFooterSwitchInput.checked = false
-    } else {
-      ghostHeaderSwitchInput.checked = true
-      ghostFooterSwitchInput.checked = true
-      defaultFooterSwitchInput.checked = true
-    }
-  })
-  defaultFooterSwitchInput.addEventListener('change', (e) => {
-    if (defaultFooterSwitchInput.checked == false) {
-      ghostFooterSwitchInput.checked = false
-      ghostHeaderSwitchInput.checked = false
-      defaultHeaderSwitchInput.checked = false
-    } else {
-      ghostFooterSwitchInput.checked = true
-      ghostHeaderSwitchInput.checked = true
-      defaultHeaderSwitchInput.checked = true
-    }
-  })
+  // defaultHeaderSwitchInput.addEventListener('change', (e) => {
+  //   if (defaultHeaderSwitchInput.checked == false) {
+  //     ghostHeaderSwitchInput.checked = false
+  //     ghostFooterSwitchInput.checked = false
+  //     defaultFooterSwitchInput.checked = false
+  //   } else {
+  //     ghostHeaderSwitchInput.checked = true
+  //     ghostFooterSwitchInput.checked = true
+  //     defaultFooterSwitchInput.checked = true
+  //   }
+  // })
+  // defaultFooterSwitchInput.addEventListener('change', (e) => {
+  //   if (defaultFooterSwitchInput.checked == false) {
+  //     ghostFooterSwitchInput.checked = false
+  //     ghostHeaderSwitchInput.checked = false
+  //     defaultHeaderSwitchInput.checked = false
+  //   } else {
+  //     ghostFooterSwitchInput.checked = true
+  //     ghostHeaderSwitchInput.checked = true
+  //     defaultHeaderSwitchInput.checked = true
+  //   }
+  // })
 
   // *************** Linking the List Item Links with the Ghost List Item Links  ************** //
   const defaultListItemArray = document.querySelectorAll('.default .list__link')

@@ -3,6 +3,9 @@
 @use '../global/mixins.scss' as *;
 
 [data-theme='alt'] {
+  .header {
+    background-color: var(--secondary-color);
+  }
   .color {
     @for $i from 0 through 9 {
       &--color#{$i} {
@@ -15,12 +18,13 @@
     @for $i from 0 through 9 {
       &--color#{$i} {
         .list__link {
-          background: var(--color#{$i});
+          background: var(--pale-silver);
           color: var(--primary-color);
           // background: var(--tertiary-color);
           &.hover,
           &:hover {
-            background: var(--color#{$i}-hover);
+            background: var(--color#{$i});
+            // background: var(--color#{$i}-hover);
             // &:after {
             //   content: '';
             //   @include absolute;

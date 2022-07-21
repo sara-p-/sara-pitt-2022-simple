@@ -7,23 +7,6 @@
 
 .button {
   @include clear-button;
-  &--list-link {
-    @extend .button;
-    text-align: left;
-    overflow: hidden;
-    padding: var(--spacing-32);
-    border: none;
-    // border-top: $base-border;
-    border-bottom: $base-border;
-    background: var(--primary-color);
-    @include heading-style(2rem);
-    &.hover,
-    &:hover,
-    &:focus {
-      background: var(--secondary-color);
-      color: var(--primary-color);
-    }
-  }
   &--contact {
     @extend .button;
     @include heading-style(6rem);

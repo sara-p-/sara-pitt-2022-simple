@@ -121,37 +121,144 @@
           </section>
         </div>
       </div>
-      <section id="work" class="section--list">
-        <ul class="list">
-          <li class="list__item">
-            <a href="/" class="button--list-link list__link"
-              >Red Ball Recycling</a
+      <section id="work" class="section--accordion">
+        <ul class="accordion">
+          <li class="accordion__item">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="accordion__panel1"
+              class="accordion__button"
+              id="accordion__button1"
             >
-          </li>
-          <li class="list__item">
-            <a href="/" class="button--list-link list__link">IMC Licensing</a>
-          </li>
-          <li class="list__item">
-            <a href="/" class="button--list-link list__link">1SI</a>
-          </li>
-          <li class="list__item">
-            <a href="/" class="button--list-link list__link">
-              American Printing House
-            </a>
-          </li>
-          <li class="list__item">
-            <a href="/" class="button--list-link list__link">NBA2Lou</a>
-          </li>
-          <li class="list__item">
-            <a href="/" class="button--list-link list__link"
-              >Frost Brown Todd</a
+              <span class="accordion__title">Red Ball Recycling</span>
+              <span class="accordion__icon icon--angle-down"></span>
+            </button>
+            <div
+              id="accordion__panel1"
+              class="panel"
+              role="region"
+              aria-labelledby="accordion__button1"
             >
+              <div class="panel__wrapper">
+                <div class="panel__row">
+                  <div class="panel__col">
+                    <figure class="panel__figure">
+                      <img
+                        src="<%=require('../../images/redball.jpg')%>"
+                        alt="Red Ball Recycling Homepage Screenshot"
+                        class="panel__image image--contain"
+                      />
+                    </figure>
+                  </div>
+                  <div class="panel__col">
+                    <h1 class="h6">
+                      Red Ball is a bomb-ass scrapyard with incredible taste.
+                    </h1>
+                    <p>
+                      Aside from a lot of subtle animations and parallax
+                      elements, this site utilized some special styling and a
+                      JQuery plugin called slabtext.js to achieve print-ad text
+                      effects.
+                    </p>
+                    <div class="buttons">
+                      <a
+                        href="/"
+                        target="_blank"
+                        class="panel__link icon--angle-right"
+                        >Visit
+                        <span class="visually-hidden">Redball Recycling</span>
+                        Website</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
-          <li class="list__item">
-            <a href="/" class="button--list-link list__link">The Parklands</a>
+          <li class="accordion__item">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="accordion__panel2"
+              class="accordion__button"
+              id="accordion__button2"
+            >
+              <span class="accordion__title">IMC Licensing</span>
+              <span class="accordion__icon icon--angle-down"></span>
+            </button>
           </li>
-          <li class="list__item">
-            <a href="/" class="button--list-link list__link">New Directions</a>
+          <li class="accordion__item">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="accordion__panel3"
+              class="accordion__button"
+              id="accordion__button3"
+            >
+              <span class="accordion__title">1SI</span>
+              <span class="accordion__icon icon--angle-down"></span>
+            </button>
+          </li>
+          <li class="accordion__item">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="accordion__panel4"
+              class="accordion__button"
+              id="accordion__button4"
+            >
+              <span class="accordion__title">American Printing House</span>
+              <span class="accordion__icon icon--angle-down"></span>
+            </button>
+          </li>
+          <li class="accordion__item">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="accordion__panel5"
+              class="accordion__button"
+              id="accordion__button5"
+            >
+              <span class="accordion__title">NBA2Lou</span>
+              <span class="accordion__icon icon--angle-down"></span>
+            </button>
+          </li>
+          <li class="accordion__item">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="accordion__panel6"
+              class="accordion__button"
+              id="accordion__button6"
+            >
+              <span class="accordion__title">Frost Brown Todd</span>
+              <span class="accordion__icon icon--angle-down"></span>
+            </button>
+          </li>
+          <li class="accordion__item">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="accordion__panel7"
+              class="accordion__button"
+              id="accordion__button7"
+            >
+              <span class="accordion__title">The Parklands</span>
+              <span class="accordion__icon icon--angle-down"></span>
+            </button>
+          </li>
+          <li class="accordion__item">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="accordion__panel8"
+              class="accordion__button"
+              id="accordion__button8"
+            >
+              <span class="accordion__title">New Directions</span>
+              <span class="accordion__icon icon--angle-down"></span>
+            </button>
           </li>
         </ul>
       </section>

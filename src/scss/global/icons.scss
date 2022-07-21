@@ -9,6 +9,18 @@
     -webkit-font-smoothing: antialiased;
     font: var(--fa-font-solid);
   }
+  &--angle-up {
+    @extend .icon;
+    &:after {
+      content: '\f106';
+    }
+  }
+  &--angle-down {
+    @extend .icon;
+    &:after {
+      content: '\f107';
+    }
+  }
   &--message {
     @extend .icon;
     &:after {

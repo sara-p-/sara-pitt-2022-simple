@@ -37,7 +37,7 @@ body {
   padding: 0 0 1rem 0;
   border-bottom: $base-border;
   background: var(--primary-color);
-  &--list {
+  &--accordion {
     @extend .section;
     padding: 0;
     border-bottom: none;

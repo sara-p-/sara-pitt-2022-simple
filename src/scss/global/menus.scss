@@ -16,10 +16,16 @@
     text-decoration: none;
     font-weight: 400;
     font-size: 1.5rem;
-    color: var(--black);
+    line-height: 1;
+    border-radius: 0.75rem;
+    color: var(--dark-lava);
     &:hover,
     &:focus {
-      color: var(--white);
+      color: var(--medium-carmine);
+    }
+    &:focus {
+      outline: 3px solid var(--isabelline);
+      outline-offset: 3px;
     }
   }
   &--social {
@@ -32,6 +38,7 @@
     padding: var(--spacing-16);
     transform-origin: right top;
     transform: rotate(-180deg);
+    background: var(--melon);
     display: none;
     &[aria-hidden='false'] {
       display: block;

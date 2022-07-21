@@ -1,5 +1,6 @@
 import Data from '../json/data.json'
 import { setColorClasses, insertSpans } from './helpers'
+import { toggleDarkLightButton } from './animations'
 
 export default function pageSwitch() {
   const defaultSwitchInput = document.querySelector(
@@ -23,11 +24,22 @@ export default function pageSwitch() {
 
   // Now let's put the logic in place to switch everything over on the defaultSwitchInput change
   switchButton.addEventListener('click', (e) => {
-    // Okay, if the header switch changes, we need to switch the [data-theme] attribute value
-    const fakeBodyArray = document.querySelectorAll('.fake-body')
+    // Okay, lets animate the button so that it rotates when it's clicked
+    const buttonState = e.target.dataset.buttonState
+
+    console.log(buttonState)
+    if (buttonState == 'light') {
+      toggleDarkLightButton(switchButton).play()
+      e.target.setAttribute('data-button-state', 'dark')
+    } else {
+      toggleDarkLightButton(switchButton).reverse()
+      e.target.setAttribute('data-button-state', 'light')
+    }
+
+    // Stellar. Now let's switch out the data-theme attribute values
+    const fakeBodyArray = document.querySelectorAll('.mask-section, body')
     fakeBodyArray.forEach((item) => {
       const theme = item.dataset.theme
-
       if (theme == 'default') {
         item.setAttribute('data-theme', 'alt')
       } else {

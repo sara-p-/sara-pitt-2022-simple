@@ -27,8 +27,10 @@ export default function maskMove() {
 
     if (maskActive == 'true') {
       target.setAttribute('data-active', 'false')
+      button.classList.replace('icon--circle-minus', 'icon--circle-plus')
     } else {
       target.setAttribute('data-active', 'true')
+      button.classList.replace('icon--circle-plus', 'icon--circle-minus')
     }
   })
 }

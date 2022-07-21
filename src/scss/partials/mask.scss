@@ -15,3 +15,12 @@
     mask-size: 17.5rem;
   }
 }
+
+.mask-parent {
+  position: relative;
+  display: block;
+}
+
+.mask-child {
+  @include absolute;
+}

@@ -7,87 +7,85 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="body">
-    <div
-      id="body-wrapper"
-      data-theme="default"
-      class="fake-body body__wrapper default"
-    >
-      <header class="header">
-        <div class="header__wrapper">
-          <div class="header__row">
-            <a href="/" class="logo h4 nav__link">SP</a>
-            <div class="nav-box">
-              <nav class="nav">
-                <ul class="nav__list">
-                  <li class="nav__item">
-                    <button
-                      id="dark-light-button"
-                      type="button"
-                      class="dark-light button--clear nav__link icon--circle-half-stroke"
-                    >
-                      <span class="visually-hidden">Dark/Light Mode</span>
-                    </button>
-                  </li>
-                  <li class="nav__item">
-                    <button
-                      id="spot-on-off-button"
-                      type="button"
-                      class="button--clear nav__link icon--circle-minus"
-                    >
-                      <span class="visually-hidden">Spot On/Off</span>
-                    </button>
-                  </li>
-                  <li class="nav__item">
-                    <button
-                      id="social-button"
-                      type="button"
-                      aria-expanded="false"
-                      class="button--clear nav__link icon--circle-info"
-                    >
-                      <span class="visually-hidden">Contact</span>
-                    </button>
-                  </li>
-                </ul>
-              </nav>
-              <div
-                aria-hidden="true"
-                aria-labelledby="social-button"
-                class="nav--social"
-              >
-                <ul class="nav__list">
-                  <li class="nav__item">
-                    <a href="/" class="nav__link icon--linkedin"
-                      ><span class="visually-hidden">LinkedIn</span></a
-                    >
-                  </li>
-                  <li class="nav__item">
-                    <a href="/" class="nav__link icon--github"
-                      ><span class="visually-hidden">Github</span></a
-                    >
-                  </li>
-                  <li class="nav__item">
-                    <a href="/" class="nav__link icon--instagram"
-                      ><span class="visually-hidden">Instagram</span></a
-                    >
-                  </li>
-                  <li class="nav__item">
-                    <a href="/" class="nav__link icon--paper-plane"
-                      ><span class="visually-hidden">Contact</span></a
-                    >
-                  </li>
-                  <li class="nav__item">
-                    <a href="/" class="nav__link icon--chevron-right"
-                      ><span class="visually-hidden">Close Social Menu</span></a
-                    >
-                  </li>
-                </ul>
-              </div>
+  <body class="body" data-theme="default">
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="header__row">
+          <a href="/" class="logo h4 nav__link">SP</a>
+          <div class="nav-box">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <button
+                    id="dark-light-button"
+                    type="button"
+                    class="dark-light button--clear nav__link icon--circle-half-stroke"
+                    data-button-state="light"
+                  >
+                    <span class="visually-hidden">Dark/Light Mode</span>
+                  </button>
+                </li>
+                <li class="nav__item">
+                  <button
+                    id="spot-on-off-button"
+                    type="button"
+                    class="button--clear nav__link icon--circle-minus"
+                  >
+                    <span class="visually-hidden">Spot On/Off</span>
+                  </button>
+                </li>
+                <li class="nav__item">
+                  <button
+                    id="social-button"
+                    type="button"
+                    aria-expanded="false"
+                    class="button--clear nav__link icon--circle-info"
+                  >
+                    <span class="visually-hidden">Contact</span>
+                  </button>
+                </li>
+              </ul>
+            </nav>
+            <div
+              aria-hidden="true"
+              aria-labelledby="social-button"
+              class="nav--social"
+            >
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="/" class="nav__link icon--linkedin"
+                    ><span class="visually-hidden">LinkedIn</span></a
+                  >
+                </li>
+                <li class="nav__item">
+                  <a href="/" class="nav__link icon--github"
+                    ><span class="visually-hidden">Github</span></a
+                  >
+                </li>
+                <li class="nav__item">
+                  <a href="/" class="nav__link icon--instagram"
+                    ><span class="visually-hidden">Instagram</span></a
+                  >
+                </li>
+                <li class="nav__item">
+                  <a href="/" class="nav__link icon--paper-plane"
+                    ><span class="visually-hidden">Contact</span></a
+                  >
+                </li>
+                <li class="nav__item">
+                  <a href="/" class="nav__link icon--chevron-right"
+                    ><span class="visually-hidden">Close Social Menu</span></a
+                  >
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </header>
-      <main class="main">
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="mask-parent mask-section" data-theme="default">
         <section id="about" class="section--large">
           <div class="section__wrapper">
             <h1 class="h1--large letters">Hello.</h1>
@@ -101,275 +99,116 @@
             <h3 class="letters">Here are some things I have made.</h3>
           </div>
         </section>
-        <section id="work" class="section--list">
-          <ul class="list">
-            <li class="list__item">
-              <a href="/" class="button--list-link list__link"
-                >Red Ball Recycling</a
-              >
-            </li>
-            <li class="list__item">
-              <a href="/" class="button--list-link list__link">IMC Licensing</a>
-            </li>
-            <li class="list__item">
-              <a href="/" class="button--list-link list__link">1SI</a>
-            </li>
-            <li class="list__item">
-              <a href="/" class="button--list-link list__link">
-                American Printing House
-              </a>
-            </li>
-            <li class="list__item">
-              <a href="/" class="button--list-link list__link">NBA2Lou</a>
-            </li>
-            <li class="list__item">
-              <a href="/" class="button--list-link list__link"
-                >Frost Brown Todd</a
-              >
-            </li>
-            <li class="list__item">
-              <a href="/" class="button--list-link list__link">The Parklands</a>
-            </li>
-            <li class="list__item">
-              <a href="/" class="button--list-link list__link"
-                >New Directions</a
-              >
-            </li>
-          </ul>
-        </section>
-      </main>
-      <footer class="footer">
-        <section class="section--large">
-          <div class="section__wrapper">
-            <a
-              class="h1 button--contact contact-button icon--angle-right--before animation--text-bounce"
-            >
-              Contact me.
-            </a>
-            <h1 class="h4 letters">Let's make something weird.</h1>
-          </div>
-        </section>
-        <section class="section--small">
-          <div class="section__wrapper">
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__item">
-                  <a href="/" class="nav__link icon--linkedin"
-                    ><span class="visually-hidden">LinkedIn</span></a
-                  >
-                </li>
-                <li class="nav__item">
-                  <a href="/" class="nav__link icon--github"
-                    ><span class="visually-hidden">Github</span></a
-                  >
-                </li>
-                <li class="nav__item">
-                  <a href="/" class="nav__link icon--instagram"
-                    ><span class="visually-hidden">Instagram</span></a
-                  >
-                </li>
-                <li class="nav__item">
-                  <a href="/" class="nav__link icon--paper-plane"
-                    ><span class="visually-hidden">Contact</span></a
-                  >
-                </li>
-                <li class="nav__item">
-                  <label
-                    id="default-footer-switch"
-                    class="switch"
-                    for="default-footer-switch-checkbox"
-                    ><span class="visually-hidden">Switch On/Off</span>
-                    <input
-                      class="switch__input"
-                      id="default-footer-switch-checkbox"
-                      type="checkbox"
-                      name="page-switch" />
-                    <span class="switch__control"></span
-                  ></label>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </section>
-      </footer>
-    </div>
-    <!-- Ghost Page -->
-    <div
-      data-theme="alt"
-      class="fake-body ghost mask-target"
-      aria-hidden="true"
-      data-active="true"
-    >
-      <div class="header">
-        <div class="header__wrapper">
-          <div class="header__row">
-            <span class="h4 nav__link">SP</span>
-            <div class="nav-box">
-              <nav class="nav">
-                <ul class="nav__list">
-                  <li class="nav__item">
-                    <button
-                      id="ghost-dark-light-button"
-                      type="button"
-                      class="dark-light button--clear nav__link icon--circle-half-stroke"
-                    >
-                      <span class="visually-hidden">Dark/Light Mode</span>
-                    </button>
-                  </li>
-                  <li class="nav__item">
-                    <button
-                      id="ghost-spot-on-off-button"
-                      type="button"
-                      class="spot-on-off button--clear nav__link icon--circle-minus"
-                    >
-                      <span class="visually-hidden">Spot On/Off</span>
-                    </button>
-                  </li>
-                  <li class="nav__item">
-                    <button
-                      id="ghost-social-button"
-                      type="button"
-                      aria-expanded="false"
-                      class="social-button button--clear nav__link icon--circle-info"
-                    >
-                      <span class="visually-hidden">Contact</span>
-                    </button>
-                  </li>
-                </ul>
-              </nav>
-              <div
-                aria-hidden="true"
-                aria-labelledby="ghost-social-button"
-                class="nav--social"
-              >
-                <ul class="nav__list">
-                  <li class="nav__item">
-                    <a href="/" class="nav__link icon--linkedin"
-                      ><span class="visually-hidden">LinkedIn</span></a
-                    >
-                  </li>
-                  <li class="nav__item">
-                    <a href="/" class="nav__link icon--github"
-                      ><span class="visually-hidden">Github</span></a
-                    >
-                  </li>
-                  <li class="nav__item">
-                    <a href="/" class="nav__link icon--instagram"
-                      ><span class="visually-hidden">Instagram</span></a
-                    >
-                  </li>
-                  <li class="nav__item">
-                    <a href="/" class="nav__link icon--paper-plane"
-                      ><span class="visually-hidden">Contact</span></a
-                    >
-                  </li>
-                </ul>
-              </div>
+        <!-- Ghost Section -->
+        <div
+          data-theme="alt"
+          class="mask-section mask-child ghost mask-target"
+          aria-hidden="true"
+          data-active="true"
+        >
+          <section class="section--large">
+            <div class="section__wrapper">
+              <h1 class="h1--large letters">Hello.</h1>
+              <h2 class="letters">
+                My name is Sara. I am a web developer and artist.
+              </h2>
             </div>
-          </div>
+          </section>
+          <section class="section--medium">
+            <div class="section__wrapper">
+              <h3 class="letters">Here are some things I have made.</h3>
+            </div>
+          </section>
         </div>
       </div>
-      <div class="main">
-        <section class="section--large">
-          <div class="section__wrapper">
-            <h1 class="h1--large letters">Hello.</h1>
-            <h2 class="letters">
-              My name is Sara. I am a web developer and artist.
-            </h2>
-          </div>
-        </section>
-        <section class="section--medium">
-          <div class="section__wrapper">
-            <h3 class="letters">Here are some things I have made.</h3>
-          </div>
-        </section>
-        <section class="section--list">
-          <ul class="list">
-            <li class="list__item">
-              <span class="button--list-link list__link"
-                >Red Ball Recycling</span
-              >
-            </li>
-            <li class="list__item">
-              <span class="button--list-link list__link">IMC Licensing</span>
-            </li>
-            <li class="list__item">
-              <span class="button--list-link list__link">1SI</span>
-            </li>
-            <li class="list__item">
-              <span class="button--list-link list__link"
-                >American Printing House</span
-              >
-            </li>
-            <li class="list__item">
-              <span class="button--list-link list__link">NBA2Lou</span>
-            </li>
-            <li class="list__item">
-              <span class="button--list-link list__link">Frost Brown Todd</span>
-            </li>
-            <li class="list__item">
-              <span class="button--list-link list__link">The Parklands</span>
-            </li>
-            <li class="list__item">
-              <span class="button--list-link list__link">New Directions</span>
-            </li>
-          </ul>
-        </section>
-      </div>
-      <div class="footer">
-        <section class="section--large">
-          <div class="section__wrapper">
-            <a
-              class="h1 button--contact contact-button icon--angle-right--before animation--text-bounce"
+      <section id="work" class="section--list">
+        <ul class="list">
+          <li class="list__item">
+            <a href="/" class="button--list-link list__link"
+              >Red Ball Recycling</a
             >
-              Contact me.
+          </li>
+          <li class="list__item">
+            <a href="/" class="button--list-link list__link">IMC Licensing</a>
+          </li>
+          <li class="list__item">
+            <a href="/" class="button--list-link list__link">1SI</a>
+          </li>
+          <li class="list__item">
+            <a href="/" class="button--list-link list__link">
+              American Printing House
             </a>
-            <h1 class="h4 letters">Let's make something weird.</h1>
-          </div>
-        </section>
-        <section class="section--small">
-          <div class="section__wrapper">
-            <div class="nav">
-              <ul class="nav__list">
-                <li class="nav__item">
-                  <a href="/" class="nav__link icon--linkedin"
-                    ><span class="visually-hidden">LinkedIn</span></a
-                  >
-                </li>
-                <li class="nav__item">
-                  <a href="/" class="nav__link icon--github"
-                    ><span class="visually-hidden">Github</span></a
-                  >
-                </li>
-                <li class="nav__item">
-                  <a href="/" class="nav__link icon--instagram"
-                    ><span class="visually-hidden">Instagram</span></a
-                  >
-                </li>
-                <li class="nav__item">
-                  <a href="/" class="nav__link icon--paper-plane"
-                    ><span class="visually-hidden">Contact</span></a
-                  >
-                </li>
-                <li class="nav__item">
-                  <label
-                    id="ghost-footer-switch"
-                    class="switch"
-                    for="ghost-footer-switch-checkbox"
-                    ><span class="visually-hidden">Switch On/Off</span>
-                    <input
-                      class="switch__input"
-                      id="ghost-footer-switch-checkbox"
-                      type="checkbox"
-                      name="page-switch" />
-                    <span class="switch__control"></span
-                  ></label>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
+          </li>
+          <li class="list__item">
+            <a href="/" class="button--list-link list__link">NBA2Lou</a>
+          </li>
+          <li class="list__item">
+            <a href="/" class="button--list-link list__link"
+              >Frost Brown Todd</a
+            >
+          </li>
+          <li class="list__item">
+            <a href="/" class="button--list-link list__link">The Parklands</a>
+          </li>
+          <li class="list__item">
+            <a href="/" class="button--list-link list__link">New Directions</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="section--large">
+        <div class="section__wrapper">
+          <a
+            class="h1 button--contact contact-button icon--angle-right--before animation--text-bounce"
+          >
+            Contact me.
+          </a>
+          <h1 class="h4 letters">Let's make something weird.</h1>
+        </div>
+      </section>
+      <section class="section--small">
+        <div class="section__wrapper">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="/" class="nav__link icon--linkedin"
+                  ><span class="visually-hidden">LinkedIn</span></a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="/" class="nav__link icon--github"
+                  ><span class="visually-hidden">Github</span></a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="/" class="nav__link icon--instagram"
+                  ><span class="visually-hidden">Instagram</span></a
+                >
+              </li>
+              <li class="nav__item">
+                <a href="/" class="nav__link icon--paper-plane"
+                  ><span class="visually-hidden">Contact</span></a
+                >
+              </li>
+              <li class="nav__item">
+                <label
+                  id="default-footer-switch"
+                  class="switch"
+                  for="default-footer-switch-checkbox"
+                  ><span class="visually-hidden">Switch On/Off</span>
+                  <input
+                    class="switch__input"
+                    id="default-footer-switch-checkbox"
+                    type="checkbox"
+                    name="page-switch" />
+                  <span class="switch__control"></span
+                ></label>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>

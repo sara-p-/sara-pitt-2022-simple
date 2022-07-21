@@ -27,6 +27,12 @@
   &--contact {
     @extend .button;
     @include heading-style(6rem);
+    &.hover,
+    &:hover,
+    &:focus {
+      background: transparent;
+      color: var(--accent-color);
+    }
   }
   &--clear {
     @include clear-button;

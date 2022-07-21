@@ -1,12 +1,11 @@
 import { toggleSocialMenu } from './animations'
 
-export default function socialMenu() {
+// socialMenu - function that toggles the secondary social menu in from the side of the page, as well as changing certain element attribute values
+export function socialMenu() {
   // Alright, let's grab our elements
   const socialButtonOpen = document.querySelector('#social-button')
   const socialButtonClose = document.querySelector('#social-button-close')
   const socialNav = document.querySelector('.nav--social')
-
-  console.log(socialButtonOpen)
 
   // Now let's work on changing the data-attributes of the relevant elements on click
   socialButtonOpen.addEventListener('click', (e) => {

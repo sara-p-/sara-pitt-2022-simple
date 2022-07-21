@@ -4,7 +4,7 @@
 
 [data-theme='alt'] {
   .header {
-    background-color: var(--secondary-color);
+    // background-color: var(--secondary-color);
   }
   .color {
     @for $i from 0 through 9 {
@@ -14,23 +14,28 @@
     }
   }
 
-  .background-color {
-    @for $i from 0 through 9 {
-      &--color#{$i} {
-        .list__link {
-          background: var(--pale-silver);
-          color: var(--primary-color);
-          // background: var(--tertiary-color);
-          &.hover,
-          &:hover {
-            background: var(--color#{$i});
-            // background: var(--color#{$i}-hover);
-            // &:after {
-            //   content: '';
-            //   @include absolute;
-            //   background: rgba(0, 0, 0, 0.3);
-            // }
-          }
+  // .background-color {
+  //   @for $i from 0 through 9 {
+  //     &--color#{$i} {
+  //       .list__link {
+  //         background: var(--primary-color);
+  //         color: var(--secondary-color);
+  //         &.hover,
+  //         &:hover {
+  //           // background: var(--color#{$i});
+  //           background: var(--secondary-color);
+  //           color: var(--primary-color);
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  [data-theme='default'] {
+    .color {
+      @for $i from 0 through 9 {
+        &--color#{$i} {
+          color: var(--secondary-color);
         }
       }
     }

@@ -18,9 +18,9 @@ export default function pageSwitch() {
   let spanArray = document.querySelectorAll('span.letter')
 
   // Adding the color classes
-  setColorClasses(spanArray, 'color--')
+  // setColorClasses(spanArray, 'color--')
   // setColorClasses(navLinkArray, 'color--')
-  setColorClasses(itemArray, 'background-color--')
+  // setColorClasses(itemArray, 'background-color--')
 
   // Now let's put the logic in place to switch everything over on the defaultSwitchInput change
   switchButton.addEventListener('click', (e) => {

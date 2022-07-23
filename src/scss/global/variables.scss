@@ -15,22 +15,34 @@
   --medium-carmine: hsla(14, 51%, 44%, 1);
   --caput-mortuum: hsla(15, 51%, 24%, 1);
 
-  --white: #ffffff;
-  --black: #000000;
-  --pale-silver: #bcb8b1ff;
+  --black: hsla(0, 0%, 0%, 1);
+  --onyx: hsla(0, 0%, 25%, 1);
+  --granite-gray: hsla(0, 0%, 38%, 1);
+  --sonic-silver: hsla(0, 0%, 44%, 1);
 
-  --deep-space-sparkle: hsla(193, 34%, 30%, 1);
-  --blue-sapphire: hsla(190, 100%, 23%, 1);
-  --viridian-green: hsla(181, 88%, 31%, 1);
-  --middle-blue-green: hsla(160, 41%, 70%, 1);
-  --dark-olive-green: hsla(74, 32%, 32%, 1);
+  --gray-web: hsla(0, 0%, 50%, 1);
+  --quick-silver: hsla(0, 0%, 63%, 1);
+  --silver: hsla(0, 0%, 75%, 1);
+  --gainsboro: #e0e0e0ff;
+  --cultured: #f0f0f0ff;
+  --white: hsla(0, 0%, 100%, 1);
 
-  --timberwolf: hsla(35, 17%, 86%, 1);
-  --linen: hsla(31, 51%, 92%, 1);
-  --bone: hsla(31, 30%, 86%, 1);
-  --champagne-pink: hsla(26, 31%, 84%, 1);
-  --desert-sand: hsla(22, 31%, 76%, 1);
-  --desert-sand2: #e7cbb0;
+  // --white: #ffffff;
+  // --black: #000000;
+  // --pale-silver: #bcb8b1ff;
+
+  // --deep-space-sparkle: hsla(193, 34%, 30%, 1);
+  // --blue-sapphire: hsla(190, 100%, 23%, 1);
+  // --viridian-green: hsla(181, 88%, 31%, 1);
+  // --middle-blue-green: hsla(160, 41%, 70%, 1);
+  // --dark-olive-green: hsla(74, 32%, 32%, 1);
+
+  // --timberwolf: hsla(35, 17%, 86%, 1);
+  // --linen: hsla(31, 51%, 92%, 1);
+  // --bone: hsla(31, 30%, 86%, 1);
+  // --champagne-pink: hsla(26, 31%, 84%, 1);
+  // --desert-sand: hsla(22, 31%, 76%, 1);
+  // --desert-sand2: #e7cbb0;
 
   --color0: var(--timberwolf);
   --color1: var(--pale-silver);
@@ -92,26 +104,16 @@
 
 [data-theme='default'] {
   // Colors
-  --primary-color: var(--isabelline);
-  --secondary-color: var(--dark-lava);
-  --accent-color: var(--medium-carmine);
-  // --accent-color: var(--melon);
-  // --primary-color: var(--isabelline);
-  // --secondary-color: var(--dark-lava);
-  // --accent-color: var(--melon);
-  // --accent-color: var(--caput-mortuum);
+  --primary-color: var(--silver);
+  --secondary-color: var(--black);
+  --accent-color: var(--granite-gray);
 }
 
 [data-theme='alt'] {
   // Colors
-  --primary-color: var(--dark-lava);
-  --secondary-color: var(--isabelline);
-  --accent-color: var(--melon);
-  // --accent-color: var(--caput-mortuum);
-  // --primary-color: var(--dark-lava);
-  // --secondary-color: var(--isabelline);
-  // --accent-color: var(--melon);
-  // --accent-color: var(--caput-mortuum);
+  --primary-color: var(--white);
+  --secondary-color: var(--granite-gray);
+  --accent-color: var(--onyx);
 }
 
 // Border

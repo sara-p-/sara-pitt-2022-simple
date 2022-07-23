@@ -10,6 +10,11 @@
     width: 100%;
     position: relative;
     z-index: 0;
+    margin-top: -3px;
+    &[data-position='sticky'] {
+      position: sticky;
+      top: 72.02px;
+    }
   }
   &__button {
     @include clear-button;
@@ -17,12 +22,12 @@
     display: inherit;
     text-align: left;
     overflow: hidden;
-    padding: var(--spacing-32);
+    padding: var(--spacing-24);
     border: none;
     border-bottom: $base-border;
     border-top: $base-border;
     background: var(--primary-color);
-    @include heading-style(2rem);
+    @include heading-style(var(--h6-font-size));
     &.hover,
     &:hover,
     &:focus {
@@ -35,12 +40,12 @@
   }
 
   .panel {
-    // position: absolute;
-    // top: 100%;
-    // left: 0;
+    // height: calc(100vh - calc(127.56px + 72.02px));
+    height: auto;
     background: var(--primary-color);
-    // height: 500px;
     width: 100%;
+    // border-top: $base-border;
+
     &__wrapper {
       width: 100%;
       max-width: var(--site-width-l);

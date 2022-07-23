@@ -18,13 +18,13 @@
     font-size: 1.5rem;
     line-height: 1;
     border-radius: 0.75rem;
-    color: var(--dark-lava);
+    color: var(--secondary-color);
     &:hover,
     &:focus {
-      color: var(--medium-carmine);
+      color: var(--accent-color);
     }
     &:focus {
-      outline: 3px solid var(--isabelline);
+      outline: 3px solid var(--accent-color);
       outline-offset: 3px;
     }
   }

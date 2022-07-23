@@ -7,13 +7,13 @@
   display: block;
   &[data-accordion-active='true'] {
     .accordion__item {
-      margin-top: -1rem;
+      // margin-top: -1rem;
       box-shadow: 1px -3px 10px 0px rgba(0, 0, 0, 0.4);
     }
-    .accordion__button {
-      font-size: 1rem;
-      padding: var(--spacing-16);
-    }
+    // .accordion__button {
+    //   font-size: 1rem;
+    //   padding: var(--spacing-16);
+    // }
   }
   &__item {
     display: block;
@@ -23,10 +23,10 @@
     margin-top: -3px;
     transition: margin-top var(--base-duration-long),
       box-shadow var(--base-duration-long);
-    &[data-item-sticky='true'] {
-      position: sticky;
-      top: 72.02px;
-    }
+    // &[data-item-sticky='true'] {
+    //   position: sticky;
+    //   top: 72.02px;
+    // }
   }
   &__button {
     @include clear-button;
@@ -41,6 +41,7 @@
     background: var(--primary-color);
     @include heading-style(var(--h5-font-size));
     @include flex($justify: space-between);
+    // transition: font-size 300ms, padding 300ms;
     &.hover,
     &:hover,
     &:focus {
@@ -57,11 +58,11 @@
     height: 0;
     background: var(--primary-color);
     width: 100%;
-    transition: height 1s;
+    // transition: height 1s;
     // border-top: $base-border;
-    &[aria-hidden='false'] {
-      height: auto;
-    }
+    // &[aria-hidden='false'] {
+    //   height: auto;
+    // }
 
     &__wrapper {
       width: 100%;

@@ -80,3 +80,22 @@ export function setTheAttributes(array, attr, val) {
     item.setAttribute(attr, val)
   })
 }
+
+// Accordion - figure out how far to scroll the window to get the passed element to stop right under the header
+export function scrollAmount(element) {
+  const windowScrollAmount = window.pageYOffset
+  const pixelsToTop = element.getBoundingClientRect().top
+  const headerHeight = document.querySelector('.header').offsetHeight
+  const distance = pixelsToTop + windowScrollAmount - headerHeight
+  return distance
+}
+
+// Accordion - return an array of all the items EXCEPT for the clicked item, and the next item after it
+export function arrayOfUnclickedItems(array, clickedItemIndex) {
+  const newArray = [...array].filter((item, index) => {
+    if (index !== clickedItemIndex && index !== clickedItemIndex + 1) {
+      return item
+    }
+  })
+  return newArray
+}

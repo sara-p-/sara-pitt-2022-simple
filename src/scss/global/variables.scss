@@ -99,13 +99,14 @@
 
   // Transitions
   --base-duration: 300ms;
+  --base-duration-long: 1s;
   --base-timing: ease-in-out;
 }
 
 [data-theme='default'] {
   // Colors
-  --primary-color: var(--silver);
-  --secondary-color: var(--black);
+  --primary-color: var(--cultured);
+  --secondary-color: var(--onyx);
   --accent-color: var(--granite-gray);
 }
 

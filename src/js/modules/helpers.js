@@ -64,3 +64,19 @@ export function getTheCenter(target) {
 
   return center
 }
+
+// Accordion - loop through the array and set all but the current item attribute to the desired state
+export function setAriaClosed(array, i, attr, val) {
+  array.forEach((item, index) => {
+    if (index !== i) {
+      item.setAttribute(attr, val)
+    }
+  })
+}
+
+// Accordion - loop through the array and set all but the current item attribute to the desired state
+export function setTheAttributes(array, attr, val) {
+  array.forEach((item, index) => {
+    item.setAttribute(attr, val)
+  })
+}

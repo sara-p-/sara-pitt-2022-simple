@@ -34,28 +34,27 @@ export function toggleDarkLightButton(element) {
   return t1
 }
 
-// Accordion - get the header height
-export function theHeaderHeight() {
-  return document.querySelector('.header').offsetHeight
+// Accordion - scroll the window to position the element right under the header
+export function scrollTheWindow(element) {
+  const windowScrollAmount = window.pageYOffset
+  const pixelsToTop = element.getBoundingClientRect().top
+  const headerHeight = document.querySelector('.header').offsetHeight
+  const distance = pixelsToTop + windowScrollAmount - headerHeight
+  window.scroll({ top: distance, left: 0 })
 }
 
 // Accordion - scrolling the accordion item to the top of the page on click
-export function moveToTop(element, amount) {
-  const headerHeight = theHeaderHeight()
-  console.log(headerHeight)
-  console.log(`amount:${amount} - headerHeight:${headerHeight}`)
-  const distance = (amount - headerHeight) * -1
-  const t1 = gsap.timeline({ paused: true })
+// export function toggleAccordionItem(element) {
+//   const panel = element.querySelector('.accordion__panel')
+//   const button = element.querySelector('.accordion__button')
+//   const headerHeight = document.querySelector('.header').offsetHeight
+//   const height =
+//   const t1 = gsap.timeline({ paused: true })
 
-  t1.to(element, {
-    y: distance,
-    duration: 0.5,
-    onStart: function (ele) {
-      ele.setAttribute('style', `top: ${headerHeight}px`)
-      ele.setAttribute('data-position', 'sticky')
-    },
-    onStartParams: [element],
-  })
-
-  return t1
-}
+//   t1.to(panel, {
+//     height: 'auto',
+//     duration: 1,
+//     onStart: scrollTheWindow(element),
+//     onStartParams: [element],
+//   })
+// }

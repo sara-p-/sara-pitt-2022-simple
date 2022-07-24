@@ -65,6 +65,21 @@ export function shrinkAccordionButtons(element) {
   return t1
 }
 
+export function unShrinkAccordionButtons(element) {
+  // The 'element' is the general accordion, so let's get all of the child items
+  const buttons = element.querySelectorAll('.accordion__button')
+  const t1 = gsap.timeline()
+
+  t1.to(buttons, {
+    fontSize: '',
+    padding: '',
+    stagger: 0.03,
+    duration: 0.1,
+  })
+
+  return t1
+}
+
 // Accordion - move the window
 export function moveTheWindow(element, clickedIndex) {
   // The 'element' is the general accordion, so let's get all of the child items
@@ -91,17 +106,25 @@ export function stackTheItems(element, clickedIndex) {
 
   // Also, before we start animating, we need an array of all the items, excluding the clicked item, and the item beneath it. Since we want to push the clicked button to the top of the window, we don't want its margin-top to animate. Additionally, we don't want the margin-top of the next item to animate, because we don't want it to 'stack' on top of the clicked button
   const unclickedItems = arrayOfUnclickedItems(items, clickedIndex)
+  t1.to(unclickedItems, {
+    marginTop: '-32px',
+    stagger: 0.03,
+    duration: 0.3,
+  })
+  return t1
+}
+export function unStackTheItems(element, clickedIndex) {
+  // The 'element' is the general accordion, so let's get all of the child items
+  const items = element.querySelectorAll('.accordion__item')
+  const t1 = gsap.timeline()
 
-  t1.to(
-    unclickedItems,
-    {
-      marginTop: '-32px',
-      stagger: 0.03,
-      duration: 0.3,
-    },
-    '<'
-  )
-
+  // Also, before we start animating, we need an array of all the items, excluding the clicked item, and the item beneath it. Since we want to push the clicked button to the top of the window, we don't want its margin-top to animate. Additionally, we don't want the margin-top of the next item to animate, because we don't want it to 'stack' on top of the clicked button
+  const unclickedItems = arrayOfUnclickedItems(items, clickedIndex)
+  t1.to(unclickedItems, {
+    marginTop: '',
+    stagger: 0.03,
+    duration: 0.3,
+  })
   return t1
 }
 
@@ -119,7 +142,20 @@ export function openThePanel(element, clickedIndex) {
   return t1
 }
 
-// Accordion - the Master Timeline
+export function closeThePanel(element, clickedIndex) {
+  // The 'element' is the general accordion, so let's get all of the child items
+  const panels = element.querySelectorAll('.panel')
+  const t1 = gsap.timeline()
+
+  // Now we can open the panel beneath the clicked button
+  t1.to(panels[clickedIndex], {
+    height: 0,
+    duration: 1,
+  })
+
+  return t1
+}
+// Accordion - the Master Timeline -- Open
 export function accordionOpen(element, clickedIndex) {
   const t1 = gsap.timeline({ paused: true })
 
@@ -127,6 +163,29 @@ export function accordionOpen(element, clickedIndex) {
   t1.add(shrinkAccordionButtons(element))
   t1.add(stackTheItems(element, clickedIndex), '<')
   t1.add(openThePanel(element, clickedIndex))
+
+  return t1
+}
+
+// Accordion - the Master Timeline -- Close
+export function accordionClose(element, clickedIndex) {
+  const t1 = gsap.timeline({ paused: true })
+
+  t1.add(closeThePanel(element, clickedIndex))
+  t1.add(unStackTheItems(element, clickedIndex))
+  t1.add(unShrinkAccordionButtons(element))
+
+  return t1
+}
+
+// Accordion - the Master Timeline -- Switch
+export function accordionSwitch(element, closeIndex, openIndex) {
+  const t1 = gsap.timeline({ paused: true })
+
+  t1.add(closeThePanel(element, closeIndex))
+  t1.add(openThePanel(element, openIndex))
+  // t1.add(unStackTheItems(element, clickedIndex))
+  // t1.add(unShrinkAccordionButtons(element))
 
   return t1
 }

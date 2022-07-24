@@ -6,14 +6,6 @@
   width: 100%;
   display: block;
   &[data-accordion-active='true'] {
-    .accordion__item {
-      // margin-top: -1rem;
-      box-shadow: 1px -3px 10px 0px rgba(0, 0, 0, 0.4);
-    }
-    // .accordion__button {
-    //   font-size: 1rem;
-    //   padding: var(--spacing-16);
-    // }
   }
   &__item {
     display: block;
@@ -21,12 +13,10 @@
     position: relative;
     z-index: 0;
     margin-top: -3px;
-    transition: margin-top var(--base-duration-long),
-      box-shadow var(--base-duration-long);
-    // &[data-item-sticky='true'] {
-    //   position: sticky;
-    //   top: 72.02px;
-    // }
+    &[data-item-sticky='true'] {
+      position: sticky;
+      top: 72.02px;
+    }
   }
   &__button {
     @include clear-button;

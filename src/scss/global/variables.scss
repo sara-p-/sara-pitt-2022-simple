@@ -10,16 +10,30 @@
   // Colors
   --dark-lava: hsla(25, 9%, 25%, 1);
   --isabelline: hsla(50, 21%, 95%, 1);
+  --old-lace: hsla(35, 65%, 92%, 1);
   --melon: hsla(14, 51%, 76%, 1);
   --blast-off-bronze: #9e6e5fff;
   --medium-carmine: hsla(14, 51%, 44%, 1);
+  --liver: hsla(15, 28%, 34%, 1);
   --caput-mortuum: hsla(15, 51%, 24%, 1);
 
+  --ivory: #fdfae9ff;
+  --silver: #c0c0c0ff;
+  --pale-silver: #beb7afff;
+  --camel: #ba9963ff;
+  --green-dark: #373d20;
+  --french-bistre: #806c4fff;
+  --tan: #cdb68eff;
+  --bone: #e0cfb8ff;
+  --shadow: #8a7b64ff;
+  --davys-grey: #54504dff;
+
   --black: hsla(0, 0%, 0%, 1);
+  --eerie-black: #1e1e1e;
+  --jet: #312f2f;
   --onyx: hsla(0, 0%, 25%, 1);
   --granite-gray: hsla(0, 0%, 38%, 1);
   --sonic-silver: hsla(0, 0%, 44%, 1);
-
   --gray-web: hsla(0, 0%, 50%, 1);
   --quick-silver: hsla(0, 0%, 63%, 1);
   --silver: hsla(0, 0%, 75%, 1);
@@ -105,15 +119,15 @@
 
 [data-theme='default'] {
   // Colors
-  --primary-color: var(--cultured);
-  --secondary-color: var(--onyx);
+  --primary-color: var(--isabelline);
+  --secondary-color: var(--dark-lava);
   --accent-color: var(--granite-gray);
 }
 
 [data-theme='alt'] {
   // Colors
-  --primary-color: var(--white);
-  --secondary-color: var(--granite-gray);
+  --primary-color: var(--camel);
+  --secondary-color: var(--green-dark);
   --accent-color: var(--onyx);
 }
 

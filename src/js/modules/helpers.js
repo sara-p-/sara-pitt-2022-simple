@@ -99,3 +99,5 @@ export function arrayOfUnclickedItems(array, clickedItemIndex) {
   })
   return newArray
 }
+
+// Accordion - get the JS version of 100vh by getting the window size and then subtracting various element heights

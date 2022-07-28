@@ -8,7 +8,11 @@ import {
   scrollTheWindow,
   shrinkTheAccordion,
 } from './animations'
-import { setAriaClosed, setTheAttributes } from './helpers'
+import {
+  heightOfOtherElements,
+  setAriaClosed,
+  setTheAttributes,
+} from './helpers'
 
 export default function accordion() {
   const items = document.querySelectorAll('.accordion__item')
@@ -32,11 +36,14 @@ export default function accordion() {
         theAccordion.setAttribute('data-accordion-active', 'true')
         //1b. Animate the opening of the accordion panel
         accordionOpen(theAccordion, index).play()
+
         //1c. Switch out all of the aria properties of the button and panel
         button.setAttribute('aria-expanded', 'true')
         itemPanels[index].setAttribute('aria-hidden', 'false')
         // 1d. Set the accordion item to be 'sticky'
         items[index].setAttribute('data-item-sticky', 'true')
+
+        heightOfOtherElements(button.parentElement)
 
         // 2. If the accordion element is 'active', that means that another button is still open. So:
       } else {

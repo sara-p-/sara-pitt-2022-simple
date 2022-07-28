@@ -100,4 +100,28 @@ export function arrayOfUnclickedItems(array, clickedItemIndex) {
   return newArray
 }
 
-// Accordion - get the JS version of 100vh by getting the window size and then subtracting various element heights
+// Accordion - function that grabs all the accordion items BELOW the current item, grabs the height (minus the top-margin), and returns the number of pixels that should be subtracted from the total height of the page (to get the panel to be full screen-ish)
+export function heightOfOtherElements(currentItem) {
+  // First let's grab the header height and let's throw all of the accordion elements into an array
+  const headerHeight = document.querySelector('.header').offsetHeight
+  const allAccordionItems = document.querySelectorAll('.accordion__item')
+
+  const allItemHeights = [...allAccordionItems].map((item, index) => {
+    // const itemStyle = item.style.marginTop
+    const itemMargin = item.style.marginTop.replace(/\D/g, '')
+    console.log(itemMargin)
+    // return item.offsetHeight - Math.abs(itemStyle.marginTop)
+  })
+
+  // console.log(allItemHeights)
+
+  // Now we need a small function to grab the height and margin of each accordion and put them in an array
+
+  // Then let's split that array into 2: one with all the items ABOVE the current item, and one with those BELOW.
+
+  // Next, for each array, get the sum of the heights (minus the top margin)
+
+  // Panel Height (100vh - ?) = Header + Top + Bottom  + Current Item height
+
+  // Top array + header height = height the window needs to scroll to AND the 'top' property for the current item
+}

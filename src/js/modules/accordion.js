@@ -20,6 +20,10 @@ export default function accordion() {
   const itemPanels = document.querySelectorAll('.panel')
   const theAccordion = document.querySelector('.accordion')
 
+  gsap.set(items, {
+    marginTop: '-3px',
+  })
+
   itemButtons.forEach((button, index) => {
     button.addEventListener('click', (e) => {
       // Okay, first lets store the various data states in variables
@@ -43,7 +47,7 @@ export default function accordion() {
         // 1d. Set the accordion item to be 'sticky'
         items[index].setAttribute('data-item-sticky', 'true')
 
-        heightOfOtherElements(button.parentElement)
+        heightOfOtherElements(button.parentElement, index)
 
         // 2. If the accordion element is 'active', that means that another button is still open. So:
       } else {

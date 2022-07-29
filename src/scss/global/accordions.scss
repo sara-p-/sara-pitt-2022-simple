@@ -17,6 +17,10 @@
       position: sticky;
       top: 72.02px;
     }
+    &:after {
+      @include absolute;
+      margin-top: -32px;
+    }
   }
   &__button {
     @include clear-button;

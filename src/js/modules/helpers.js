@@ -101,23 +101,26 @@ export function arrayOfUnclickedItems(array, clickedItemIndex) {
 }
 
 // Accordion - function that grabs all the accordion items BELOW the current item, grabs the height (minus the top-margin), and returns the number of pixels that should be subtracted from the total height of the page (to get the panel to be full screen-ish)
-export function heightOfOtherElements(currentItem) {
+export function heightOfOtherElements(currentItem, currentIndex) {
   // First let's grab the header height and let's throw all of the accordion elements into an array
   const headerHeight = document.querySelector('.header').offsetHeight
   const allAccordionItems = document.querySelectorAll('.accordion__item')
 
-  const allItemHeights = [...allAccordionItems].map((item, index) => {
-    // const itemStyle = item.style.marginTop
-    const itemMargin = item.style.marginTop.replace(/\D/g, '')
-    console.log(itemMargin)
-    // return item.offsetHeight - Math.abs(itemStyle.marginTop)
-  })
-
-  // console.log(allItemHeights)
-
   // Now we need a small function to grab the height and margin of each accordion and put them in an array
-
+  const allItemHeights = [...allAccordionItems].map((item) => {
+    const itemStyle = window.getComputedStyle(item, ':after')
+    return [
+      item,
+      item.offsetHeight - parseInt(itemStyle.marginTop.replace(/\D/g, '')),
+    ]
+  })
   // Then let's split that array into 2: one with all the items ABOVE the current item, and one with those BELOW.
+  const itemHeightAbove = allItemHeights.filter((item, index) => {
+    if (index < currentIndex) {
+      return item
+    }
+  })
+  console.log(itemHeightAbove)
 
   // Next, for each array, get the sum of the heights (minus the top margin)
 

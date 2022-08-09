@@ -81,18 +81,23 @@ export function unShrinkAccordionButtons(element) {
 }
 
 // Accordion - move the window
-export function moveTheWindow(element, clickedIndex) {
+export function moveTheWindow(element, clickedIndex, top) {
   // The 'element' is the general accordion, so let's get all of the child items
   const buttons = element.querySelectorAll('.accordion__button')
   // First let's move the clicked button to the top of the screen. To do this while maintaining the flow/order of the page, we need to:
   // Get the number of pixels between the clicked button and the top of the screen, subtract the height of the header from that number (because we want the top of the button to sit right under the header), and finally scroll the entire window to that number.
-  const windowScrollAmount = scrollAmount(buttons[clickedIndex])
+  const windowScrollAmount = scrollAmount(buttons[clickedIndex], top)
 
   const t1 = gsap.timeline()
   // Now that we know how far to scroll, let's do it:
   t1.to(window, {
     scrollTo: windowScrollAmount,
     duration: 0.5,
+    onStart: function (top) {
+      console.log(buttons[clickedIndex].parentElement.style.top)
+      buttons[clickedIndex].parentElement.style.top = top
+    },
+    onStartParams: [top],
   })
 
   return t1
@@ -156,10 +161,10 @@ export function closeThePanel(element, clickedIndex) {
   return t1
 }
 // Accordion - the Master Timeline -- Open
-export function accordionOpen(element, clickedIndex) {
+export function accordionOpen(element, clickedIndex, top, outsideHeight) {
   const t1 = gsap.timeline({ paused: true })
 
-  t1.add(moveTheWindow(element, clickedIndex))
+  t1.add(moveTheWindow(element, clickedIndex, top))
   t1.add(shrinkAccordionButtons(element))
   t1.add(stackTheItems(element, clickedIndex), '<')
   t1.add(openThePanel(element, clickedIndex))

@@ -38,8 +38,13 @@ export default function accordion() {
       if (accordionElementState !== 'true') {
         //1a. Make it active
         theAccordion.setAttribute('data-accordion-active', 'true')
+        // 1ab. Grab the height measurements (for the top and the bottom)
+        const [toTop, subtractAmount] = heightOfOtherElements(
+          button.parentElement,
+          index
+        )
         //1b. Animate the opening of the accordion panel
-        accordionOpen(theAccordion, index).play()
+        accordionOpen(theAccordion, index, toTop, subtractAmount).play()
 
         //1c. Switch out all of the aria properties of the button and panel
         button.setAttribute('aria-expanded', 'true')
@@ -47,7 +52,7 @@ export default function accordion() {
         // 1d. Set the accordion item to be 'sticky'
         items[index].setAttribute('data-item-sticky', 'true')
 
-        heightOfOtherElements(button.parentElement, index)
+        console.log(`toTop: ${toTop}, subtractAmount: ${subtractAmount}`)
 
         // 2. If the accordion element is 'active', that means that another button is still open. So:
       } else {

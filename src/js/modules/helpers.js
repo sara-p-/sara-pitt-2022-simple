@@ -82,11 +82,14 @@ export function setTheAttributes(array, attr, val) {
 }
 
 // Accordion - figure out how far to scroll the window to get the passed element to stop right under the header
-export function scrollAmount(element) {
+export function scrollAmount(element, top) {
   const windowScrollAmount = window.pageYOffset
+  console.log(windowScrollAmount)
   const pixelsToTop = element.getBoundingClientRect().top
   const headerHeight = document.querySelector('.header').offsetHeight
-  const distance = pixelsToTop + windowScrollAmount - headerHeight
+  const windowAndElement = windowScrollAmount + pixelsToTop
+  const topAndHeader = top + headerHeight
+  const distance = windowAndElement - topAndHeader
   return distance
 }
 
@@ -109,22 +112,33 @@ export function heightOfOtherElements(currentItem, currentIndex) {
   // Now we need a small function to grab the height and margin of each accordion and put them in an array
   const allItemHeights = [...allAccordionItems].map((item) => {
     const itemStyle = window.getComputedStyle(item, ':after')
-    return [
-      item,
-      item.offsetHeight - parseInt(itemStyle.marginTop.replace(/\D/g, '')),
-    ]
+    return item.offsetHeight - parseInt(itemStyle.marginTop.replace(/\D/g, ''))
   })
   // Then let's split that array into 2: one with all the items ABOVE the current item, and one with those BELOW.
   const itemHeightAbove = allItemHeights.filter((item, index) => {
-    if (index < currentIndex) {
-      return item
+    if (index == currentIndex - 1) {
+      return parseInt(item)
     }
   })
-  console.log(itemHeightAbove)
+  const itemHeightBelow = allItemHeights.filter((item, index) => {
+    if (index > currentIndex && index < currentIndex + 2) {
+      return parseInt(item)
+    }
+  })
 
   // Next, for each array, get the sum of the heights (minus the top margin)
+  // Top array + header height = height the window needs to scroll to AND the 'top' property for the current item
+  const totalAbove =
+    headerHeight +
+    currentItem.offsetHeight +
+    itemHeightAbove.reduce((prev, current) => {
+      return prev + current
+    }, 0)
+  const totalBelow = itemHeightBelow.reduce((prev, current) => {
+    return prev + current
+  }, 0)
 
   // Panel Height (100vh - ?) = Header + Top + Bottom  + Current Item height
-
-  // Top array + header height = height the window needs to scroll to AND the 'top' property for the current item
+  // return [totalAbove, totalAbove + totalBelow + currentItem.offsetHeight]
+  return [totalAbove, totalAbove + totalBelow + currentItem.offsetHeight]
 }

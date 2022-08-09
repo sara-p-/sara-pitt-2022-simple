@@ -32,6 +32,8 @@ body {
 .section {
   $self: &;
   position: relative;
+  // position: sticky;
+  // top: 72px;
   width: 100%;
   margin-bottom: 0;
   padding: 0 0 1rem 0;

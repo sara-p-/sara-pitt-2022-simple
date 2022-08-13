@@ -1,5 +1,7 @@
 import '../scss/style.scss'
 
+import Prism from 'prismjs'
+
 import maskMove from './modules/mask'
 import pageSwitch from './modules/page-switch'
 import linkingTheElements from './modules/linking-the-elements'
@@ -8,8 +10,8 @@ import { socialMenu } from './modules/menu'
 import accordion from './modules/accordion'
 
 pageSwitch()
-maskMove()
+// maskMove()
 linkingTheElements()
 hoverAnimations()
 socialMenu()
-// accordion()
+accordion()

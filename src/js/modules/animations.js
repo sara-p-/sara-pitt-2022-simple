@@ -195,49 +195,20 @@ export function accordionSwitch(element, closeIndex, openIndex) {
   return t1
 }
 
-// This is the all the separate timelines as one giant one. I don't think it's ideal because I need more granular control
-// // Accordion - animate the individual accordion items so that they are smaller and stack on top of each other
-// export function shrinkTheAccordion(element, clickedIndex) {
-//   // The 'element' is the general accordion, so let's get all of the child items
-//   const items = element.querySelectorAll('.accordion__item')
-//   const buttons = element.querySelectorAll('.accordion__button')
-//   const panels = element.querySelectorAll('.panel')
-//   const t1 = gsap.timeline({ paused: true })
+// Accordion (new) - Open a panel
+export function openFixedPanel(element) {
+  const t1 = gsap.timeline({ paused: true })
 
-//   // First let's move the clicked button to the top of the screen. To do this while maintaining the flow/order of the page, we need to:
-//   // Get the number of pixels between the clicked button and the top of the screen, subtract the height of the header from that number (because we want the top of the button to sit right under the header), and finally scroll the entire window to that number.
-//   const windowScrollAmount = scrollAmount(buttons[clickedIndex])
+  t1.fromTo(
+    element,
+    {
+      height: 0,
+    },
+    {
+      height: '100vh',
+      duration: 1,
+    }
+  )
 
-//   // Also, before we start animating, we need an array of all the items, excluding the clicked item, and the item beneath it. Since we want to push the clicked button to the top of the window, we don't want its margin-top to animate. Additionally, we don't want the margin-top of the next item to animate, because we don't want it to 'stack' on top of the clicked button
-//   const unclickedItems = arrayOfUnclickedItems(items, clickedIndex)
-
-//   // But before we scroll, let's animate the button font-size and padding so they get "smaller"
-//   t1.to(buttons, {
-//     fontSize: 24,
-//     padding: 16,
-//     stagger: 0.03,
-//     duration: 0.1,
-//   })
-//   // Now that we know how far to scroll, let's do it:
-//   t1.to(window, {
-//     scrollTo: windowScrollAmount,
-//     duration: 0.5,
-//   })
-//   // Then we'll 'stack' all the items, EXCEPT for the one BELOW the one that was clicked
-//   t1.to(
-//     unclickedItems,
-//     {
-//       marginTop: '-32px',
-//       stagger: 0.03,
-//       duration: 0.3,
-//     },
-//     '<'
-//   )
-//   // Now we can open the panel beneath the clicked button
-//   t1.to(panels[clickedIndex], {
-//     height: '100%',
-//     duration: 1,
-//   })
-
-//   return t1
-// }
+  return t1
+}

@@ -1,0 +1,37 @@
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+
+.modal {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  height: calc(100vh - 72px);
+  width: 100%;
+  background-color: var(--primary-color);
+  border-left: $base-border;
+  overflow: scroll;
+  display: none;
+  &__wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    max-width: var(--site-width-m);
+    margin: auto;
+    padding: var(--spacing-120) 0;
+  }
+  &__close {
+    @include clear-button;
+    position: absolute;
+    right: var(--spacing-16);
+    top: var(--spacing-16);
+    line-height: 1;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      background: transparent;
+    }
+  }
+}

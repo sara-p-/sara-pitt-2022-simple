@@ -137,4 +137,10 @@
       content: '\f02d';
     }
   }
+  &--xmark {
+    @extend .icon;
+    &:after {
+      content: '\f00d';
+    }
+  }
 }

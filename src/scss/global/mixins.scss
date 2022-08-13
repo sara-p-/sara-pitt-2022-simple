@@ -33,7 +33,8 @@
   font-weight: 500;
   line-height: 1.2;
   font-size: $size;
-  margin: 0;
+  margin-bottom: var(--spacing-24);
+  margin-top: 0;
   color: var(--secondary-color);
 }
 

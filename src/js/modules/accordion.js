@@ -7,6 +7,7 @@ import {
   openThePanel,
   scrollTheWindow,
   shrinkTheAccordion,
+  openFixedPanel,
 } from './animations'
 import {
   heightOfOtherElements,
@@ -15,77 +16,14 @@ import {
 } from './helpers'
 
 export default function accordion() {
-  const items = document.querySelectorAll('.accordion__item')
+  // First let's grab the accordion items/buttons
   const itemButtons = document.querySelectorAll('.accordion__button')
-  const itemPanels = document.querySelectorAll('.panel')
-  const theAccordion = document.querySelector('.accordion')
 
-  gsap.set(items, {
-    marginTop: '-3px',
-  })
-
-  itemButtons.forEach((button, index) => {
+  // On the click of a button, set the panel height to 100%
+  itemButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
-      // Okay, first lets store the various data states in variables
-      const accordionElementState = theAccordion.getAttribute(
-        'data-accordion-active'
-      )
-      const accordionButtonState = button.getAttribute('aria-expanded')
-      // const accordionPanelState = itemPanels[index].getAttribute('aria-hidden')
-
-      // So, let's do it! On click:
-      // 1. If the accordion element is not 'active':
-      if (accordionElementState !== 'true') {
-        //1a. Make it active
-        theAccordion.setAttribute('data-accordion-active', 'true')
-        // 1ab. Grab the height measurements (for the top and the bottom)
-        const [toTop, subtractAmount] = heightOfOtherElements(
-          button.parentElement,
-          index
-        )
-        //1b. Animate the opening of the accordion panel
-        accordionOpen(theAccordion, index, toTop, subtractAmount).play()
-
-        //1c. Switch out all of the aria properties of the button and panel
-        button.setAttribute('aria-expanded', 'true')
-        itemPanels[index].setAttribute('aria-hidden', 'false')
-        // 1d. Set the accordion item to be 'sticky'
-        items[index].setAttribute('data-item-sticky', 'true')
-
-        console.log(`toTop: ${toTop}, subtractAmount: ${subtractAmount}`)
-
-        // 2. If the accordion element is 'active', that means that another button is still open. So:
-      } else {
-        // If the user is clicking on the same button, close everything and deactivate the accordion
-        if (accordionButtonState == 'true') {
-          // a. Use the index to set the aria attributes of the panel and the button to the 'inactive' state
-          itemButtons[index].setAttribute('aria-expanded', 'false')
-          itemPanels[index].setAttribute('aria-hidden', 'true')
-          // b. Set the 'sticky' state of the accordion item to 'false
-          items[index].setAttribute('data-item-sticky', 'false')
-          // c. Use the same index to target the right item for the closing animation
-          accordionClose(theAccordion, index).restart()
-          // d. Set the Accordion Element 'active' state to 'false'
-          theAccordion.setAttribute('data-accordion-active', 'false')
-        } else {
-          // Else if the user is clicking on a new button, close the old one and open the new one
-          // 2a. Create variable that loops over all the other items, and pulls out the index of the 'active' item
-          const activeButtonIndex = [...itemButtons]
-            .map((button) => button.getAttribute('aria-expanded'))
-            .indexOf('true')
-          // 2b. Use that index to set the aria attributes of the panel and the button to the 'inactive' state
-          itemButtons[activeButtonIndex].setAttribute('aria-expanded', 'false')
-          itemPanels[activeButtonIndex].setAttribute('aria-hidden', 'true')
-          // 2c. Set the 'sticky' state of the accordion item to 'false
-          items[activeButtonIndex].setAttribute('data-item-sticky', 'false')
-          items[index].setAttribute('data-item-sticky', 'true')
-          // 2d. Close the old panel and open the other
-          accordionSwitch(theAccordion, activeButtonIndex, index).restart()
-
-          button.setAttribute('aria-expanded', 'true')
-          itemPanels[index].setAttribute('aria-hidden', 'false')
-        }
-      }
+      button.nextElementSibling.setAttribute('data-state', 'active')
+      openFixedPanel(button.nextElementSibling).play()
     })
   })
 }

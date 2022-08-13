@@ -78,6 +78,22 @@ h6,
   }
 }
 
-span.bounce-letter {
-  display: inline-block;
+.text {
+  &-align {
+    &--center {
+      text-align: center;
+    }
+    &--left {
+      text-align: center;
+      @include tablet-landscape-up {
+        text-align: left;
+      }
+    }
+    &--right {
+      text-align: center;
+      @include tablet-landscape-up {
+        text-align: right;
+      }
+    }
+  }
 }

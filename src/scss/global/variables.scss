@@ -41,29 +41,10 @@
   --cultured: #f0f0f0ff;
   --white: hsla(0, 0%, 100%, 1);
 
-  // --white: #ffffff;
-  // --black: #000000;
-  // --pale-silver: #bcb8b1ff;
-
-  // --deep-space-sparkle: hsla(193, 34%, 30%, 1);
-  // --blue-sapphire: hsla(190, 100%, 23%, 1);
-  // --viridian-green: hsla(181, 88%, 31%, 1);
-  // --middle-blue-green: hsla(160, 41%, 70%, 1);
-  // --dark-olive-green: hsla(74, 32%, 32%, 1);
-
-  // --timberwolf: hsla(35, 17%, 86%, 1);
-  // --linen: hsla(31, 51%, 92%, 1);
-  // --bone: hsla(31, 30%, 86%, 1);
-  // --champagne-pink: hsla(26, 31%, 84%, 1);
-  // --desert-sand: hsla(22, 31%, 76%, 1);
-  // --desert-sand2: #e7cbb0;
-
-  --color0: var(--timberwolf);
-  --color1: var(--pale-silver);
-  --color2: var(--linen);
-  --color3: var(--champagne-pink);
-  --color4: var(--desert-sand);
-  --color5: var(--bone);
+  --white: #ffffff;
+  --black: #363636;
+  --orange-red-crayola: hsla(0, 100%, 68%, 1);
+  --slate-blue: hsla(240, 50%, 56%, 1);
 
   // Fonts
   --base-font-family: 'Poppins', sans-serif;
@@ -119,16 +100,22 @@
 
 [data-theme='default'] {
   // Colors
-  --primary-color: var(--isabelline);
-  --secondary-color: var(--dark-lava);
-  --accent-color: var(--granite-gray);
+  // --primary-color: var(--isabelline);
+  // --secondary-color: var(--dark-lava);
+  // --accent-color: var(--granite-gray);
+  --primary-color: var(--white);
+  --secondary-color: var(--black);
+  --accent-color: var(--slate-blue);
 }
 
 [data-theme='alt'] {
   // Colors
-  --primary-color: var(--camel);
-  --secondary-color: var(--green-dark);
-  --accent-color: var(--onyx);
+  --primary-color: var(--black);
+  --secondary-color: var(--white);
+  --accent-color: var(--orange-red-crayola);
+  // --primary-color: var(--camel);
+  // --secondary-color: var(--green-dark);
+  // --accent-color: var(--onyx);
 }
 
 // Border

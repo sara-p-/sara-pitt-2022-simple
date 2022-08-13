@@ -32,30 +32,17 @@ body {
 .section {
   $self: &;
   position: relative;
-  // position: sticky;
-  // top: 72px;
   width: 100%;
+  // margin-top: -3px;
   margin-bottom: 0;
-  padding: 0 0 1rem 0;
-  border-bottom: $base-border;
+  // padding: 1rem 0 1rem 0;
+  // border-bottom: $base-border;
+  // border-top: $base-border;
   background: var(--primary-color);
-  &--accordion {
-    @extend .section;
-    padding: 0;
-    border-bottom: none;
-  }
-  &--medium {
-    @extend .section;
-    padding: 3rem 0;
-  }
-  &--large {
-    @extend .section;
-    padding: 10rem 0 1rem;
-  }
   &__wrapper {
     width: 100%;
     max-width: var(--site-width-xl);
-    margin-right: auto;
+    margin: auto;
     padding: 0 var(--spacing-32);
   }
   &__row {
@@ -65,16 +52,17 @@ body {
     padding: 1rem 0;
   }
   &__col {
-    width: 100%;
-    max-width: 800px;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin-bottom: 1rem;
-    }
+    flex: 1;
+    // width: 100%;
+    // max-width: 800px;
+    // h1,
+    // h2,
+    // h3,
+    // h4,
+    // h5,
+    // h6 {
+    //   margin-bottom: 1rem;
+    // }
   }
 }
 
@@ -92,6 +80,14 @@ body {
   width: 0;
   height: 0;
   opacity: 0;
+}
+
+// ********************* POSITION MODIFIERS ********************** //
+.position {
+  &--sticky {
+    position: sticky;
+    top: 72px;
+  }
 }
 
 // ********************* FLEXBOX ********************** //

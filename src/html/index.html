@@ -6,6 +6,10 @@
       src="https://kit.fontawesome.com/d2d9bdc7cf.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body class="body" data-theme="default">
     <header class="header">
@@ -85,475 +89,40 @@
     </header>
 
     <main class="main">
-      <div class="mask-parent mask-section" data-theme="default">
-        <section id="about" class="section--large">
-          <div class="section__wrapper">
-            <h1 class="h1--large letters">Hello.</h1>
-            <h2 class="letters">
-              My name is Sara. I am a web developer and artist.
-            </h2>
-          </div>
-        </section>
-        <section class="section--medium">
-          <div class="section__wrapper">
-            <h3 class="letters">Here are some things I have made.</h3>
-          </div>
-        </section>
-        <!-- Ghost Section -->
-        <div
-          data-theme="alt"
-          class="mask-section mask-child ghost mask-target"
-          aria-hidden="true"
-          data-active="false"
-        >
-          <section class="section--large">
-            <div class="section__wrapper">
-              <h1 class="h1--large letters">Hello.</h1>
-              <h2 class="letters">
-                My name is Sara. I am a web developer and artist.
-              </h2>
-            </div>
-          </section>
-          <section class="section--medium">
-            <div class="section__wrapper">
-              <h3 class="letters">Here are some things I have made.</h3>
-            </div>
-          </section>
+      <section id="about" class="section">
+        <div class="section__wrapper">
+          <h1 class="h1--large letters">Hello.</h1>
+          <h2 class="letters">
+            My name is Sara. I am a web developer and artist.
+          </h2>
         </div>
-      </div>
-      <section id="work" class="section--accordion">
-        <ul class="accordion" data-accordion-active="false">
-          <li class="accordion__item">
-            <button
-              type="button"
-              aria-expanded="false"
-              aria-controls="accordion__panel1"
-              class="accordion__button"
-              id="accordion__button1"
-            >
-              <span class="accordion__title">Red Ball Recycling</span>
-              <span class="accordion__icon icon--angle-down"></span>
-            </button>
-            <div
-              id="accordion__panel1"
-              class="panel"
-              role="region"
-              aria-labelledby="accordion__button1"
-              aria-hidden="true"
-            >
-              <div class="panel__wrapper">
-                <div class="panel__row">
-                  <div class="panel__col">
-                    <figure class="panel__figure">
-                      <img
-                        src="<%=require('../../images/redball.jpg')%>"
-                        alt="Red Ball Recycling Homepage Screenshot"
-                        class="panel__image image--contain"
-                      />
-                    </figure>
-                  </div>
-                  <div class="panel__col">
-                    <h1 class="h6">
-                      Red Ball is a bomb-ass scrapyard with incredible taste.
-                    </h1>
-                    <p>
-                      Aside from a lot of subtle animations and parallax
-                      elements, this site utilized some special styling and a
-                      JQuery plugin called slabtext.js to achieve print-ad text
-                      effects.
-                    </p>
-                    <div class="buttons">
-                      <a
-                        href="/"
-                        target="_blank"
-                        class="panel__link icon--angle-right"
-                        >Visit
-                        <span class="visually-hidden">Redball Recycling</span>
-                        Website</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      </section>
+      <section class="section">
+        <div class="section__wrapper">
+          <h3 class="letters">Here are some things I have made.</h3>
+        </div>
+      </section>
+      <section id="work" class="section--list">
+        <ul class="list">
+          <li class="list__item">
+            <a href="single.html" class="list__link">Red Ball Recycling</a>
           </li>
-          <li class="accordion__item">
-            <button
-              type="button"
-              aria-expanded="false"
-              aria-controls="accordion__panel2"
-              class="accordion__button"
-              id="accordion__button2"
-            >
-              <span class="accordion__title">IMC Licensing</span>
-              <span class="accordion__icon icon--angle-down"></span>
-            </button>
-            <div
-              id="accordion__panel2"
-              class="panel"
-              role="region"
-              aria-labelledby="accordion__button2"
-              aria-hidden="true"
-            >
-              <div class="panel__wrapper">
-                <div class="panel__row">
-                  <div class="panel__col">
-                    <figure class="panel__figure">
-                      <img
-                        src="<%=require('../../images/redball.jpg')%>"
-                        alt="Red Ball Recycling Homepage Screenshot"
-                        class="panel__image image--contain"
-                      />
-                    </figure>
-                  </div>
-                  <div class="panel__col">
-                    <h1 class="h6">
-                      Red Ball is a bomb-ass scrapyard with incredible taste.
-                    </h1>
-                    <p>
-                      Aside from a lot of subtle animations and parallax
-                      elements, this site utilized some special styling and a
-                      JQuery plugin called slabtext.js to achieve print-ad text
-                      effects.
-                    </p>
-                    <div class="buttons">
-                      <a
-                        href="/"
-                        target="_blank"
-                        class="panel__link icon--angle-right"
-                        >Visit
-                        <span class="visually-hidden">Redball Recycling</span>
-                        Website</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <li class="list__item">
+            <a href="" class="list__link">IMC Licensing</a>
           </li>
-          <li class="accordion__item">
-            <button
-              type="button"
-              aria-expanded="false"
-              aria-controls="accordion__panel3"
-              class="accordion__button"
-              id="accordion__button3"
-            >
-              <span class="accordion__title">1SI</span>
-              <span class="accordion__icon icon--angle-down"></span>
-            </button>
-            <div
-              id="accordion__panel3"
-              class="panel"
-              role="region"
-              aria-labelledby="accordion__button3"
-              aria-hidden="true"
-            >
-              <div class="panel__wrapper">
-                <div class="panel__row">
-                  <div class="panel__col">
-                    <figure class="panel__figure">
-                      <img
-                        src="<%=require('../../images/redball.jpg')%>"
-                        alt="Red Ball Recycling Homepage Screenshot"
-                        class="panel__image image--contain"
-                      />
-                    </figure>
-                  </div>
-                  <div class="panel__col">
-                    <h1 class="h6">
-                      Red Ball is a bomb-ass scrapyard with incredible taste.
-                    </h1>
-                    <p>
-                      Aside from a lot of subtle animations and parallax
-                      elements, this site utilized some special styling and a
-                      JQuery plugin called slabtext.js to achieve print-ad text
-                      effects.
-                    </p>
-                    <div class="buttons">
-                      <a
-                        href="/"
-                        target="_blank"
-                        class="panel__link icon--angle-right"
-                        >Visit
-                        <span class="visually-hidden">Redball Recycling</span>
-                        Website</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <li class="list__item"><a href="" class="list__link">1SI</a></li>
+          <li class="list__item">
+            <a href="" class="list__link">American Printing House</a>
           </li>
-          <li class="accordion__item">
-            <button
-              type="button"
-              aria-expanded="false"
-              aria-controls="accordion__panel4"
-              class="accordion__button"
-              id="accordion__button4"
-            >
-              <span class="accordion__title">American Printing House</span>
-              <span class="accordion__icon icon--angle-down"></span>
-            </button>
-            <div
-              id="accordion__panel4"
-              class="panel"
-              role="region"
-              aria-labelledby="accordion__button4"
-              aria-hidden="true"
-            >
-              <div class="panel__wrapper">
-                <div class="panel__row">
-                  <div class="panel__col">
-                    <figure class="panel__figure">
-                      <img
-                        src="<%=require('../../images/redball.jpg')%>"
-                        alt="Red Ball Recycling Homepage Screenshot"
-                        class="panel__image image--contain"
-                      />
-                    </figure>
-                  </div>
-                  <div class="panel__col">
-                    <h1 class="h6">
-                      Red Ball is a bomb-ass scrapyard with incredible taste.
-                    </h1>
-                    <p>
-                      Aside from a lot of subtle animations and parallax
-                      elements, this site utilized some special styling and a
-                      JQuery plugin called slabtext.js to achieve print-ad text
-                      effects.
-                    </p>
-                    <div class="buttons">
-                      <a
-                        href="/"
-                        target="_blank"
-                        class="panel__link icon--angle-right"
-                        >Visit
-                        <span class="visually-hidden">Redball Recycling</span>
-                        Website</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <li class="list__item"><a href="" class="list__link">NBA2Lou</a></li>
+          <li class="list__item">
+            <a href="" class="list__link">Frost Brown Todd</a>
           </li>
-          <li class="accordion__item">
-            <button
-              type="button"
-              aria-expanded="false"
-              aria-controls="accordion__panel5"
-              class="accordion__button"
-              id="accordion__button5"
-            >
-              <span class="accordion__title">NBA2Lou</span>
-              <span class="accordion__icon icon--angle-down"></span>
-            </button>
-            <div
-              id="accordion__panel5"
-              class="panel"
-              role="region"
-              aria-labelledby="accordion__button5"
-              aria-hidden="true"
-            >
-              <div class="panel__wrapper">
-                <div class="panel__row">
-                  <div class="panel__col">
-                    <figure class="panel__figure">
-                      <img
-                        src="<%=require('../../images/redball.jpg')%>"
-                        alt="Red Ball Recycling Homepage Screenshot"
-                        class="panel__image image--contain"
-                      />
-                    </figure>
-                  </div>
-                  <div class="panel__col">
-                    <h1 class="h6">
-                      Red Ball is a bomb-ass scrapyard with incredible taste.
-                    </h1>
-                    <p>
-                      Aside from a lot of subtle animations and parallax
-                      elements, this site utilized some special styling and a
-                      JQuery plugin called slabtext.js to achieve print-ad text
-                      effects.
-                    </p>
-                    <div class="buttons">
-                      <a
-                        href="/"
-                        target="_blank"
-                        class="panel__link icon--angle-right"
-                        >Visit
-                        <span class="visually-hidden">Redball Recycling</span>
-                        Website</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <li class="list__item">
+            <a href="" class="list__link">The Parklands</a>
           </li>
-          <li class="accordion__item">
-            <button
-              type="button"
-              aria-expanded="false"
-              aria-controls="accordion__panel6"
-              class="accordion__button"
-              id="accordion__button6"
-            >
-              <span class="accordion__title">Frost Brown Todd</span>
-              <span class="accordion__icon icon--angle-down"></span>
-            </button>
-            <div
-              id="accordion__panel6"
-              class="panel"
-              role="region"
-              aria-labelledby="accordion__button6"
-              aria-hidden="true"
-            >
-              <div class="panel__wrapper">
-                <div class="panel__row">
-                  <div class="panel__col">
-                    <figure class="panel__figure">
-                      <img
-                        src="<%=require('../../images/redball.jpg')%>"
-                        alt="Red Ball Recycling Homepage Screenshot"
-                        class="panel__image image--contain"
-                      />
-                    </figure>
-                  </div>
-                  <div class="panel__col">
-                    <h1 class="h6">
-                      Red Ball is a bomb-ass scrapyard with incredible taste.
-                    </h1>
-                    <p>
-                      Aside from a lot of subtle animations and parallax
-                      elements, this site utilized some special styling and a
-                      JQuery plugin called slabtext.js to achieve print-ad text
-                      effects.
-                    </p>
-                    <div class="buttons">
-                      <a
-                        href="/"
-                        target="_blank"
-                        class="panel__link icon--angle-right"
-                        >Visit
-                        <span class="visually-hidden">Redball Recycling</span>
-                        Website</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="accordion__item">
-            <button
-              type="button"
-              aria-expanded="false"
-              aria-controls="accordion__panel7"
-              class="accordion__button"
-              id="accordion__button7"
-            >
-              <span class="accordion__title">The Parklands</span>
-              <span class="accordion__icon icon--angle-down"></span>
-            </button>
-            <div
-              id="accordion__panel7"
-              class="panel"
-              role="region"
-              aria-labelledby="accordion__button7"
-              aria-hidden="true"
-            >
-              <div class="panel__wrapper">
-                <div class="panel__row">
-                  <div class="panel__col">
-                    <figure class="panel__figure">
-                      <img
-                        src="<%=require('../../images/redball.jpg')%>"
-                        alt="Red Ball Recycling Homepage Screenshot"
-                        class="panel__image image--contain"
-                      />
-                    </figure>
-                  </div>
-                  <div class="panel__col">
-                    <h1 class="h6">
-                      Red Ball is a bomb-ass scrapyard with incredible taste.
-                    </h1>
-                    <p>
-                      Aside from a lot of subtle animations and parallax
-                      elements, this site utilized some special styling and a
-                      JQuery plugin called slabtext.js to achieve print-ad text
-                      effects.
-                    </p>
-                    <div class="buttons">
-                      <a
-                        href="/"
-                        target="_blank"
-                        class="panel__link icon--angle-right"
-                        >Visit
-                        <span class="visually-hidden">Redball Recycling</span>
-                        Website</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="accordion__item">
-            <button
-              type="button"
-              aria-expanded="false"
-              aria-controls="accordion__panel8"
-              class="accordion__button"
-              id="accordion__button8"
-            >
-              <span class="accordion__title">New Directions</span>
-              <span class="accordion__icon icon--angle-down"></span>
-            </button>
-            <div
-              id="accordion__panel8"
-              class="panel"
-              role="region"
-              aria-labelledby="accordion__button8"
-              aria-hidden="true"
-            >
-              <div class="panel__wrapper">
-                <div class="panel__row">
-                  <div class="panel__col">
-                    <figure class="panel__figure">
-                      <img
-                        src="<%=require('../../images/redball.jpg')%>"
-                        alt="Red Ball Recycling Homepage Screenshot"
-                        class="panel__image image--contain"
-                      />
-                    </figure>
-                  </div>
-                  <div class="panel__col">
-                    <h1 class="h6">
-                      Red Ball is a bomb-ass scrapyard with incredible taste.
-                    </h1>
-                    <p>
-                      Aside from a lot of subtle animations and parallax
-                      elements, this site utilized some special styling and a
-                      JQuery plugin called slabtext.js to achieve print-ad text
-                      effects.
-                    </p>
-                    <div class="buttons">
-                      <a
-                        href="/"
-                        target="_blank"
-                        class="panel__link icon--angle-right"
-                        >Visit
-                        <span class="visually-hidden">Redball Recycling</span>
-                        Website</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <li class="list__item">
+            <a href="" class="list__link">New Directions</a>
           </li>
         </ul>
       </section>
@@ -612,5 +181,71 @@
         </div>
       </section>
     </footer>
+    <div class="modal" id="modal-1" aria-hidden="true">
+      <button class="modal__close icon--xmark">
+        <span class="visually-hidden">Close modal</span>
+      </button>
+      <div class="modal__wrapper">
+        <div
+          class="modal__content"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-1-title"
+        >
+          <section class="section">
+            <div class="section__wrapper">
+              <div class="section__row">
+                <div class="section__col text-align--center">
+                  <h1 id="modal-1-title" class="h3">Red Ball Recycling</h1>
+                  <figure class="figure">
+                    <img
+                      class="image--contain"
+                      src="<%=require('../../images/redball.jpg')%>"
+                      alt="Red Ball Recycling website screenshot."
+                    />
+                  </figure>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Esse architecto, at aperiam asperiores doloremque obcaecati
+                    exercitationem ratione quas libero a animi nisi molestias
+                    iusto dolore quaerat maiores, beatae iste quod rem labore
+                    magnam, est cupiditate. Id eius eos maiores aspernatur
+                    delectus praesentium quia corporis doloribus, nulla quod
+                    nemo, ipsum nesciunt.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Esse architecto, at aperiam asperiores doloremque obcaecati
+                    exercitationem ratione quas libero a animi nisi molestias
+                    iusto dolore quaerat maiores, beatae iste quod rem labore
+                    magnam, est cupiditate. Id eius eos maiores aspernatur
+                    delectus praesentium quia corporis doloribus, nulla quod
+                    nemo, ipsum nesciunt.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Esse architecto, at aperiam asperiores doloremque obcaecati
+                    exercitationem ratione quas libero a animi nisi molestias
+                    iusto dolore quaerat maiores, beatae iste quod rem labore
+                    magnam, est cupiditate. Id eius eos maiores aspernatur
+                    delectus praesentium quia corporis doloribus, nulla quod
+                    nemo, ipsum nesciunt.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Esse architecto, at aperiam asperiores doloremque obcaecati
+                    exercitationem ratione quas libero a animi nisi molestias
+                    iusto dolore quaerat maiores, beatae iste quod rem labore
+                    magnam, est cupiditate. Id eius eos maiores aspernatur
+                    delectus praesentium quia corporis doloribus, nulla quod
+                    nemo, ipsum nesciunt.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
